@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Financing – Maik Isaak</title>
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="project-page">
+  <div id="stars-layer"></div>
+    <header>
+      <nav class="navbar">
+        <a href="../index.html" class="logo" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" alt="Maik Isaak Logo" viewBox="0 0 24 24">
+            <path class="color-1" d="M20,3.07v17.85c2.45-2.2,4-5.38,4-8.93s-1.55-6.73-4-8.93Z" />
+            <path class="color-1" d="M4,3.07C1.55,5.27,0,8.45,0,12s1.55,6.73,4,8.93V3.07Z" />
+            <path class="color-2" d="M16,8.64l-4,4-4-4v14.66c1.25.44,2.6.7,4,.7s2.75-.25,4-.7v-14.66Z" />
+            <path class="color-2" d="M12,6.99l5.6-5.6c-1.67-.88-3.58-1.39-5.6-1.39s-3.93.51-5.6,1.39l5.6,5.6Z" />
+          </svg>
+        </a>
+        <ul>
+          <li class="navigation-item"><a href="../index.html">Home</a></li>
+          <li class="navigation-item"><a href="#about">About</a></li>
+          <li class="navigation-item"><a href="#archiv">Archiv</a></li>
+          <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
+          <li class="language-item" id="language-switcher">
+            <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <mask id="a-current" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                  <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                    fill="#fff" />
+                </mask>
+                <g mask="url(#a-current)">
+                  <path
+                    d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                    fill="#eee" />
+                  <path
+                    d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                    fill="#0052b4" />
+                  <path
+                    d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                    fill="#d80027" />
+                </g>
+              </svg>
+            </button>
+            <div class="language-dropdown" role="menu">
+              <button class="language-option active" data-lang="en" role="menuitemradio" aria-checked="true">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="a-desktop-en" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                    <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                      fill="#fff" />
+                  </mask>
+                  <g mask="url(#a-desktop-en)">
+                    <path
+                      d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                      fill="#eee" />
+                    <path
+                      d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                      fill="#0052b4" />
+                    <path
+                      d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                      fill="#d80027" />
+                  </g>
+                </svg>
+                <span>English</span>
+              </button>
+              <button class="language-option" data-lang="de" role="menuitemradio" aria-checked="false">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_307_1346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6"
+                    width="36" height="36">
+                    <path
+                      d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                      fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_307_1346)">
+                    <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                    <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                    <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                  </g>
+                </svg>
+                <span>Deutsch</span>
+              </button>
+            </div>
+          </li>
+          <li class="mobile-menu-item" id="mobile-menu">
+            <button class="mobile-menu-button" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+              <svg class="mobile-menu-icon mobile-menu-icon--burger" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg class="mobile-menu-icon mobile-menu-icon--close" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <div class="mobile-menu-dropdown" role="menu">
+              <a class="mobile-navigation-link" href="../index.html">Home</a>
+              <a class="mobile-navigation-link" href="#about">About</a>
+              <a class="mobile-navigation-link" href="#archiv">Archiv</a>
+              <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
+              <div class="mobile-language-group">
+                <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
+                <div class="mobile-language-options">
+                  <button class="mobile-language-option active" data-lang="en" type="button">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="a-mobile" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                        <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                          fill="#fff" />
+                      </mask>
+                      <g mask="url(#a-mobile)">
+                        <path
+                          d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                          fill="#eee" />
+                        <path
+                          d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                          fill="#0052b4" />
+                        <path
+                          d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                          fill="#d80027" />
+                      </g>
+                    </svg>
+                    <span>English</span>
+                  </button>
+                  <button class="mobile-language-option" data-lang="de" type="button">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_307_1346_mobile" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6"
+                        y="6" width="36" height="36">
+                        <path
+                          d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                          fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_307_1346_mobile)">
+                        <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                        <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                        <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                      </g>
+                    </svg>
+                    <span>Deutsch</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="shadow-bar"></div>
+    <main>
+      <section class="project-intro">
+        <h1>Device Financing</h1>
+        <div class="project-intro-text">
+          <p class="subline">Flexible Ratenzahlungen über 12, 24 oder 36 Monate beim Kauf eines Smartphones mit Tarif in Kooperation mit der Bank.</p>
+          <ul class="info-group icon-text-list">
+            <li class="icon-text">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.6666 2.66675C19.7275 2.66675 20.7449 3.08818 21.4951 3.83832C22.2452 4.58847 22.6666 5.60588 22.6666 6.66675V8.00008H25.3333C26.3942 8.00008 27.4116 8.42151 28.1617 9.17166C28.9119 9.9218 29.3333 10.9392 29.3333 12.0001V24.0001C29.3333 25.0609 28.9119 26.0784 28.1617 26.8285C27.4116 27.5787 26.3942 28.0001 25.3333 28.0001H6.66663C5.60576 28.0001 4.58834 27.5787 3.8382 26.8285C3.08805 26.0784 2.66663 25.0609 2.66663 24.0001V12.0001C2.66663 10.9392 3.08805 9.9218 3.8382 9.17166C4.58834 8.42151 5.60576 8.00008 6.66663 8.00008H9.33329V6.66675C9.33329 5.60588 9.75472 4.58847 10.5049 3.83832C11.255 3.08818 12.2724 2.66675 13.3333 2.66675H18.6666ZM18.6666 5.33342H13.3333C12.9797 5.33342 12.6405 5.47389 12.3905 5.72394C12.1404 5.97399 12 6.31313 12 6.66675V8.00008H20V6.66675C20 6.31313 19.8595 5.97399 19.6094 5.72394C19.3594 5.47389 19.0202 5.33342 18.6666 5.33342Z" />
+              </svg>
+              <span>Unternehmensprojekt</span>
+            </li>
+            <li class="icon-text">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16 2.66663C13.3629 2.66663 10.7851 3.44861 8.59242 4.9137C6.39977 6.37878 4.6908 8.46116 3.68163 10.8975C2.67246 13.3339 2.40842 16.0147 2.92289 18.6012C3.43736 21.1876 4.70724 23.5633 6.57194 25.428C8.43664 27.2927 10.8124 28.5626 13.3988 29.0771C15.9852 29.5916 18.6661 29.3275 21.1025 28.3184C23.5388 27.3092 25.6212 25.6002 27.0863 23.4076C28.5514 21.2149 29.3334 18.637 29.3334 16C29.3334 14.249 28.9885 12.5152 28.3184 10.8975C27.6484 9.27984 26.6662 7.80998 25.4281 6.57187C24.19 5.33375 22.7201 4.35163 21.1025 3.68157C19.4848 3.0115 17.751 2.66663 16 2.66663ZM19.4 21.1066C19.1853 21.257 18.9288 21.3363 18.6667 21.3333C18.4471 21.3322 18.2312 21.2768 18.0381 21.1721C17.845 21.0674 17.6808 20.9167 17.56 20.7333L14.8934 16.7333C14.7476 16.5163 14.6687 16.2613 14.6667 16V9.33329C14.6667 8.97967 14.8072 8.64053 15.0572 8.39048C15.3073 8.14044 15.6464 7.99996 16 7.99996C16.3536 7.99996 16.6928 8.14044 16.9428 8.39048C17.1929 8.64053 17.3334 8.97967 17.3334 9.33329V15.6L19.7734 19.2666C19.9663 19.5606 20.0354 19.9189 19.9655 20.2635C19.8955 20.6081 19.6923 20.9111 19.4 21.1066Z" />
+              </svg>
+              <span>2 Jahre +</span>
+            </li>
+            <li class="icon-text">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.96228 27.3372C1.96228 28.7864 3.30603 29.9622 4.96228 29.9622H26.9623C28.6185 29.9622 29.9623 28.7864 29.9623 27.3372V12.4622H1.96228V27.3372ZM21.9623 16.6184C21.9623 16.2575 22.2998 15.9622 22.7123 15.9622H25.2123C25.6248 15.9622 25.9623 16.2575 25.9623 16.6184V18.8059C25.9623 19.1668 25.6248 19.4622 25.2123 19.4622H22.7123C22.2998 19.4622 21.9623 19.1668 21.9623 18.8059V16.6184ZM21.9623 23.6184C21.9623 23.2575 22.2998 22.9622 22.7123 22.9622H25.2123C25.6248 22.9622 25.9623 23.2575 25.9623 23.6184V25.8059C25.9623 26.1668 25.6248 26.4622 25.2123 26.4622H22.7123C22.2998 26.4622 21.9623 26.1668 21.9623 25.8059V23.6184ZM13.9623 16.6184C13.9623 16.2575 14.2998 15.9622 14.7123 15.9622H17.2123C17.6248 15.9622 17.9623 16.2575 17.9623 16.6184V18.8059C17.9623 19.1668 17.6248 19.4622 17.2123 19.4622H14.7123C14.2998 19.4622 13.9623 19.1668 13.9623 18.8059V16.6184ZM13.9623 23.6184C13.9623 23.2575 14.2998 22.9622 14.7123 22.9622H17.2123C17.6248 22.9622 17.9623 23.2575 17.9623 23.6184V25.8059C17.9623 26.1668 17.6248 26.4622 17.2123 26.4622H14.7123C14.2998 26.4622 13.9623 26.1668 13.9623 25.8059V23.6184ZM5.96228 16.6184C5.96228 16.2575 6.29978 15.9622 6.71228 15.9622H9.21228C9.62478 15.9622 9.96228 16.2575 9.96228 16.6184V18.8059C9.96228 19.1668 9.62478 19.4622 9.21228 19.4622H6.71228C6.29978 19.4622 5.96228 19.1668 5.96228 18.8059V16.6184ZM5.96228 23.6184C5.96228 23.2575 6.29978 22.9622 6.71228 22.9622H9.21228C9.62478 22.9622 9.96228 23.2575 9.96228 23.6184V25.8059C9.96228 26.1668 9.62478 26.4622 9.21228 26.4622H6.71228C6.29978 26.4622 5.96228 26.1668 5.96228 25.8059V23.6184ZM26.9623 5.46216H23.9623V2.83716C23.9623 2.35591 23.5123 1.96216 22.9623 1.96216H20.9623C20.4123 1.96216 19.9623 2.35591 19.9623 2.83716V5.46216H11.9623V2.83716C11.9623 2.35591 11.5123 1.96216 10.9623 1.96216H8.96228C8.41228 1.96216 7.96228 2.35591 7.96228 2.83716V5.46216H4.96228C3.30603 5.46216 1.96228 6.63794 1.96228 8.08716V10.7122H29.9623V8.08716C29.9623 6.63794 28.6185 5.46216 26.9623 5.46216Z" />
+              </svg>
+              <span>2022</span>
+            </li>
+            <li class="icon-text">
+              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M20.79 4.03625C19.5737 2.72313 17.875 2 16 2C14.115 2 12.4106 2.71875 11.2 4.02375C9.97624 5.34312 9.37999 7.13625 9.51999 9.0725C9.79749 12.8925 12.7044 16 16 16C19.2956 16 22.1975 12.8931 22.4794 9.07375C22.6212 7.155 22.0212 5.36562 20.79 4.03625ZM27 30H4.99999C4.71203 30.0037 4.42686 29.9433 4.16522 29.8229C3.90358 29.7026 3.67206 29.5254 3.48749 29.3044C3.08124 28.8187 2.91749 28.1556 3.03874 27.485C3.56624 24.5588 5.21249 22.1006 7.79999 20.375C10.0987 18.8431 13.0106 18 16 18C18.9894 18 21.9012 18.8437 24.2 20.375C26.7875 22.1 28.4337 24.5581 28.9612 27.4844C29.0825 28.155 28.9187 28.8181 28.5125 29.3037C28.328 29.5249 28.0965 29.7022 27.8349 29.8226C27.5732 29.9431 27.288 30.0037 27 30Z" />
+              </svg>
+              <span>10 Personen +</span>
+            </li>
+          </ul>
+          <ul class="tags">
+            <li class="tag">UX/UI-Design</li>
+            <li class="tag">Prototyping</li>
+            <li class="tag">UX-Research</li>
+            <li class="tag">Accessibility</li>
+            <li class="tag">UI-Komponentenentwicklung</li>
+          </ul>
+        </div>
+        <div class="project-intro-image">
+          <img src="../img/device-financing/project-card-5.jpg" alt="Projektbild Device Financing">
+        </div>
+      </section>
+      <section class="project-two-column">
+        <h2 class="h2-section">
+          <span class="title-text">
+            Problem & Goals
+          </span>
+        </h2>
+        <p class="project-details-text">
+          Mit der Einführung von <strong>zwei neuen Laufzeitoptionen</strong> (12 und 36 Monate) für die Gerätefinanzierung ergeben sich mehrere Anpassungen im New Customer Flow: neue Rabattierung der Ratenzahlung, transparente Preiskommunikation der verschiedenen Laufzeiten sowie rechtssichere Kommunikation. Damit dies langfristig konsistent umgesetzt werden kann, müssen zahlreiche Schnittstellen zwischen Legal, Editorial, Frontend und Backend abgestimmt werden.
+        </p>
+        <ul class="info-group project-details-list icon-text-list">
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+        </svg>
+        <span>Entwicklung und Konzeption neuer und existierender UI-Komponenten im Neukundenflow, speziell für das Device Financing Modell</span>
+          </li>
+           <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+        </svg>
+        <span>Anfertigung detaillierter Spezifikation, Abstimmung und Präsentation für Stakeholder, Entwickler und Projektmanager</span>
+          </li>
+           <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+        </svg>
+        <span>Überprüfung und Auditierung dieser Komponenten anhand aktueller WCAG-Accessibility-Kriterien</span>
+          </li>
+        </ul>
+        
+      </section>
+      <section>
+     <h2 class="h2-section">
+          <span class="title-text">
+            Prozess
+          </span>
+        </h2>
+        <div class="processbar">
+          <article class="process-step">
+            <a class="step-number" href="#research" aria-label="Zum Abschnitt Research">1</a>
+            <div class="step-content">
+              <h3 class="h3-step-text">Research</h3>
+              <ul class="step-text">
+                <li>Analyse des Userflows</li>
+                <li>Insights & Kennzahlen</li>
+                <li>User Personas</li>
+              </ul>
+            </div>
+          </article>
+          <article class="process-step">
+            <a class="step-number" href="#synthese" aria-label="Zum Abschnitt Synthese">2</a>
+            <div class="step-content">
+              <h3 class="h3-step-text">Synthese</h3>
+              <ul class="step-text">
+                <li>Fallbeispiele der Konkurrenz</li>
+              </ul>
+            </div>
+          </article>
+          <article class="process-step">
+            <a class="step-number" href="#ideation" aria-label="Zum Abschnitt Ideation">3</a>
+            <div class="step-content">
+              <h3 class="h3-step-text">Ideation</h3>
+              <ul class="step-text">
+                <li>Low Fidelity</li>
+                <li>High Fidelity</li>
+              </ul>
+            </div>
+          </article>
+          <article class="process-step">
+            <a class="step-number" href="#umsetzung" aria-label="Zum Abschnitt Umsetzung">4</a>
+            <div class="step-content">
+              <h3 class="h3-step-text">Umsetzung</h3>
+              <ul class="step-text">
+                <li>Prototype</li>
+                <li>Usability Testing</li>
+                <li>Tarif-Upgrade</li>
+                <li>Vertragsverlängerung mit Smartphone</li>
+                <li>Vertragsverlängerung ohne Smartphone</li>
+              </ul>
+            </div>
+          </article>
+          <article class="process-step">
+            <a class="step-number" href="#reflektion" aria-label="Zum Abschnitt Reflektion">5</a>
+            <div class="step-content">
+              <h3 class="h3-step-text">Reflektion</h3>
+              <ul class="step-text">
+                <li>Ergebnisse</li>
+                <li>Weiteres Vorgehen</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="project-synthesis" id="synthese">
+        <h2 class="h2-section">
+          <span class="title-text">Synthese</span>
+        </h2>
+        <div class="project-synthesis-content">
+          <div class="project-synthesis-text">
+            <h3>Insights</h3>
+            <p>
+              Ich bin Ende 2023 während der Entwicklungsphase zum Team gestoßen, das den Mobilfunk- und
+              Tarif-Neukundenflow überarbeiten sollte. Neben dem bestehenden Design mussten große Teile des
+              gesamten Flows zum Thema Device Financing neu gedacht und mit verschiedenen Stakeholdern
+              abgestimmt werden.
+            </p>
+            <h3>Appinio Testing</h3>
+            <p>
+              Bereits zuvor wurden mehrere Tests durchgeführt, sodass viele Grundideen bereits validiert waren.
+              Ein großer Online-Test mit 1.000 Teilnehmer*innen stand noch aus. Dafür entwickelte ich einen
+              kompakten Prototypen, der über den unabhängigen Marktforschungsanbieter Appinio getestet wurde.
+              Appinio ist eine Plattform, über die anonymisierte und DSGVO-konforme Nutzerbefragungen durchgeführt werden.
+              Die wichtigsten Erkenntnisse:
+            </p>
+            <div class="project-synthesis-insights">
+              <div class="project-synthesis-insight-card project-synthesis-insight-card--positive">
+                <ul class="icon-text-list">
+                  <li>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path
+                        d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+                    </svg>
+                    <span>Die Finanzierung von Smartphones in Kombination mit einem Mobilfunktarif ist ein etabliertes und vertrautes Modell.</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="project-synthesis-insight-card project-synthesis-insight-card--pain">
+                <ul class="icon-text-list">
+                  <li>
+                    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                      <path d="M16 2C23.732 2 30 8.26801 30 16C30 23.732 23.732 30 16 30C8.26801 30 2 23.732 2 16C2 8.26801 8.26801 2 16 2ZM22.6211 9.37988C22.1148 8.8738 21.2934 8.87384 20.7871 9.37988L16 14.166L11.2129 9.37988C10.7066 8.87374 9.88615 8.87369 9.37988 9.37988C8.87389 9.88617 8.87381 10.7067 9.37988 11.2129L14.167 16L9.37988 20.7871C8.87389 21.2934 8.87384 22.1139 9.37988 22.6201C9.88613 23.1261 10.7067 23.1261 11.2129 22.6201L16 17.833L20.7871 22.6201C21.2934 23.1258 22.115 23.1261 22.6211 22.6201C23.1267 22.114 23.1266 21.2933 22.6211 20.7871L17.833 16L22.6211 11.2129C23.1269 10.7068 23.1266 9.88616 22.6211 9.37988Z"/>
+                    </svg>
+                    <span>Dennoch gab es Unklarheiten im Flow insbesondere bei Ratenzahlung, Rabatt-Logik und der komplexen Preisübersicht mit Promotions.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <p>
+              Darauf aufbauend konzipierten wir als Team mehrere iterative Lösungsansätze. Diese sind vertraulich
+              und können daher hier nicht weiter ausgeführt werden.
+            </p>
+          </div>
+          <div class="project-synthesis-image project-research-media">
+            <img src="../img/device-financing/01.png" alt="Vergleich mehrerer Device-Financing-Flows für 12, 24 und 36 Raten">
+          </div>
+        </div>
+      </section>
+      <section class="project-specification">
+        <h2 class="h2-section">
+          <span class="title-text">Spezifikation</span>
+        </h2>
+        <div class="project-research-content">
+          <div class="project-research-text">
+            <p>
+              Für alle neu entwickelten oder überarbeiteten Komponenten habe ich detaillierte
+              <strong>Spezifikationen</strong> erstellt, die als „Bauanleitung“ für das Entwicklerteam dienten.
+              Diese wurden iterativ mit UX-Teams und weiteren Stakeholdern in Alignments und Refinements verfeinert.
+              Die Spezifikationen umfassten unter anderem:
+            </p>
+            <ul class="project-bullets icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Component Anatomy inkl. SEO-, Editorial- und Dev-Richtlinien</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Definition aller Variationen &amp; States (z. B. Hover, Selected, Disabled)</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Design Tokens für konsistente Werte wie Spacing, Farben und Typografie</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Responsives Verhalten für Desktop, Tablet und Mobile</span>
+              </li>
+            </ul>
+          </div>
+          <figure class="project-research-phone">
+            <img src="../img/device-financing/10.jpg" alt="Anatomy-Spezifikation einer Device-Financing-Komponente">
+          </figure>
+        </div>
+        <figure class="project-research-media project-execution-image">
+          <img src="../img/device-financing/11.jpg" alt="Design Tokens und Spezifikationsübersicht">
+        </figure>
+        <figure class="project-research-media project-execution-image">
+          <img src="../img/device-financing/12.jpg" alt="Grid Behaviour und responsive Spezifikation">
+        </figure>
+      </section>
+      <section class="project-accessibility">
+        <h2 class="h2-section">
+          <span class="title-text">Accessibility</span>
+        </h2>
+        <div class="project-research-split">
+          <div class="project-research-text project-research-half project-research-half--left">
+            <h3>AKT I – Audits für UI-Komponenten</h3>
+            <p>
+              Parallel zum Device-Financing-Projekt habe ich alle spezifizierten UI-Komponenten hinsichtlich digitaler
+              Barrierefreiheit überprüft.
+            </p>
+            <p>
+              Grundlage bildete die <strong>BITV</strong>, die als deutsche Verordnung die
+              <strong>WCAG 2.1/2.2 Level AA</strong> verbindlich macht. So wurde sichergestellt, dass die Produkte
+              sowohl die gesetzlichen Anforderungen des <strong>EU Accessibility Acts 2025</strong> erfüllen als auch
+              Menschen mit Einschränkungen gerecht werden. Die Ergebnisse flossen ebenfalls in die UI-Spezifikationen ein.
+            </p>
+            <h4>Aufgaben</h4>
+            <ul class="project-bullets icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Auditierung von Online-Sales-Komponenten (z. B. ProductCard, PromoPrice, Sticky Bar) und Dokumentation im Vodafone-Intranet (Confluence).</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Erstellung von Empfehlungen &amp; UX-Guidelines für die barrierefreie Weiterentwicklung des Design Systems.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Unterstützung und Beratung des Entwicklerteams bei der Implementierung barrierefreier Patterns.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="project-research-text project-research-half project-research-half--right">
+            <h3>AKT II – Re-Audits (2025)</h3>
+            <p>
+              Während der erste Audit-Zyklus komponentenbasiert stattfand, gewann das Thema Barrierefreiheit zunehmend an
+              Bedeutung. 2025 folgten daher vollständige <strong>Seiten-Audits</strong>, die stärker flow-basiert nach
+              aktuellen BITV-Vorgaben bewertet wurden.
+            </p>
+            <h4>Aufgaben</h4>
+            <ul class="project-bullets icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Auditierung kompletter Seiten im Neukunden- sowie im Vertragsverlängerungsflow (Hardware &amp; Propositions) anhand der aktuellen BITV-Kriterien, inkl. Dokumentation in Confluence.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Unterstützung und Austausch mit dem Entwicklerteam zur barrierefreien Umsetzung der optimierten Seiten.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="project-research project-takeaways">
+        <h2 class="h2-section">
+          <span class="title-text">Project Takeaways</span>
+        </h2>
+        <div class="project-research-split">
+          <div class="project-research-text project-research-half project-research-half--left">
+            <ul class="project-bullets project-takeaways-list icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+                </svg>
+                <span><strong>Präsentation:</strong><br>Vorbereitung und Durchführung von Präsentationen für unterschiedliche Stakeholder.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+                </svg>
+                <span><strong>Designsystem:</strong><br>Dokumentation und Spezifikation von UI-Komponenten.</span>
+              </li>
+            </ul>
+          </div>
+          <div class="project-research-text project-research-half project-research-half--right">
+            <ul class="project-bullets project-takeaways-list icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+                </svg>
+                <span><strong>Figma:</strong><br>Kenntnisse professionell erweitert (Auto-Layout und Komponentenerstellung).</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path
+                    d="M16 2C19.713 2 23.274 3.475 25.8995 6.1005C28.525 8.72601 30 12.287 30 16C30 19.713 28.525 23.274 25.8995 25.8995C23.274 28.525 19.713 30 16 30C12.287 30 8.72601 28.525 6.1005 25.8995C3.475 23.274 2 19.713 2 16C2 12.287 3.475 8.72601 6.1005 6.1005C8.72601 3.475 12.287 2 16 2ZM14.256 18.762L11.146 15.65C11.0345 15.5385 10.9021 15.4501 10.7565 15.3897C10.6108 15.3294 10.4547 15.2983 10.297 15.2983C10.1393 15.2983 9.9832 15.3294 9.83752 15.3897C9.69185 15.4501 9.55949 15.5385 9.448 15.65C9.22283 15.8752 9.09633 16.1806 9.09633 16.499C9.09633 16.8174 9.22283 17.1228 9.448 17.348L13.408 21.308C13.5192 21.4201 13.6514 21.509 13.7972 21.5697C13.9429 21.6304 14.0992 21.6616 14.257 21.6616C14.4148 21.6616 14.5711 21.6304 14.7168 21.5697C14.8626 21.509 14.9948 21.4201 15.106 21.308L23.306 13.106C23.419 12.995 23.5089 12.8627 23.5705 12.7167C23.6321 12.5708 23.6641 12.4141 23.6649 12.2557C23.6656 12.0973 23.635 11.9403 23.5748 11.7938C23.5145 11.6473 23.4259 11.5142 23.3139 11.4021C23.202 11.29 23.069 11.2012 22.9225 11.1408C22.7761 11.0804 22.6191 11.0496 22.4607 11.0501C22.3023 11.0507 22.1456 11.0826 21.9996 11.144C21.8536 11.2054 21.7212 11.2951 21.61 11.408L14.256 18.762Z" />
+                </svg>
+                <span><strong>Accessibility:</strong><br>Vertiefte Beschäftigung mit WCAG 2.2 und BITV-Richtlinien zur barrierefreien Gestaltung.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  <footer>
+    <div class="footer-content">
+      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="mailto:maik.isaak94@gmail.com" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Linkedin-Icon" viewBox="0 0 48 48">
+                <path class="color-2"
+                  d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+                <path class="color-1"
+                  d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM37.4561 18.8096C37.4561 18.8096 24.9778 27.4101 23.7627 27.8574C22.5696 27.4314 10.0273 18.8096 10.0273 18.8096V31.001C10.0274 32.6937 10.3914 33.0322 12.085 33.0322H35.3994C37.1331 33.0322 37.456 32.7348 37.4561 31.001V18.8096ZM12.085 14.7461C10.3638 14.7461 10.0273 15.2752 10.0273 16.5078L10.0479 16.6973C10.0479 16.6973 22.4386 25.1215 23.7627 25.582C25.1598 25.047 37.3913 16.5528 37.4561 16.5078L37.4365 16.4199C37.4365 15.1868 37.0722 14.7462 35.3994 14.7461H12.085Z" />
+              </svg>
+              <span class="contact-email-label">Email</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/maikisaak" target="_blank" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Email-Icon" viewBox="0 0 48 48">
+                <path class="color-2"
+                  d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+                <path class="color-1"
+                  d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM12.4238 34.2861H17.7256V18.2197H12.4238V34.2861ZM31.6172 17.8975C28.8609 17.8975 27.1526 19.1492 26.2627 20.2812V18.2197H20.9609V34.2861H26.2627C26.2627 34.2861 26.2627 29.2278 26.2627 26.0654C26.2627 24.1674 26.9105 22.261 29.4961 22.2607C32.4184 22.2607 32.4014 24.7445 32.3877 26.6689C32.3699 29.1843 32.4121 31.7522 32.4121 34.2861H37.7148V25.8066C37.6699 20.3924 36.2586 17.8975 31.6172 17.8975ZM15.1016 10.2861C13.3886 10.2862 12 11.5845 12 13.1865C12 14.7886 13.3886 16.0878 15.1016 16.0879C16.8145 16.0879 18.2031 14.7886 18.2031 13.1865C18.2031 11.5845 16.8145 10.2861 15.1016 10.2861Z" />
+              </svg>
+              <span class="contact-linkedin-label">LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>&copy;2026. Created by Maik Isaak.</p>
+    </div>
+  </footer>
+
+</body>
+
+<!-- Sterne Script -->
+
+<script>
+  const starsLayer = document.getElementById("stars-layer");
+  const isMobileStarsViewport = window.matchMedia("(max-width: 639px)").matches;
+  const starCount = isMobileStarsViewport ? 500 : 1000;
+  const appearDuration = 60;
+
+  // Schleife, die Sterne nacheinander erzeugt
+  for (let i = 0; i < starCount; i++) {
+    // Erstelle ein neues <div>-Element (ein Kasten)
+    const star = document.createElement("div");
+    // Weise ihm die CSS-Klasse "star" zu
+    star.className = "star";
+
+    // Zufällige horizontale und vertikale Position (zwischen 0 und 100 Viewport-Breiten bzw. Höhen)
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+
+    // Zufällige Größe zwischen 1px und 3px
+    const size = Math.random() * 2 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    starsLayer.appendChild(star);
+
+    // Zufällige Dauer der Animationen
+    const riseDuration = 75 + Math.random() * 150; // Dauer des "Aufsteigens"
+    const blinkDuration = 5 + Math.random() * 10; // Dauer des "Blinkens"
+
+    // Setze Animations-Dauer für beide Animationen (Blinken und Aufsteigen)
+    star.style.animationDuration = `${blinkDuration}s, ${riseDuration}s`;
+
+    // Jeder Stern bekommt eine zufällige Startverzögerung zwischen 0 und 45s
+    const delay = Math.random() * appearDuration;
+    star.style.animationDelay = `${delay}s, ${delay}s`;
+  }
+
+
+
+  const switcher = document.getElementById("language-switcher");
+  const languageButton = switcher.querySelector(".language-button");
+  const options = switcher.querySelectorAll(".language-option");
+
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
+  const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
+  const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
+
+  const i18n = {
+    en: {
+      metaTitle: "Device Financing - Maik Isaak",
+      logoAriaLabel: "Home",
+      languageButtonAriaLabel: "Choose language",
+      mobileMenuButtonAriaLabel: "Open menu",
+      mobileLanguageLabel: "Language",
+      nav: ["Home", "About", "Archive", "Resume"],
+      sectionTitles: ["Problem & Goals", "Process", "Synthesis", "Specification", "Accessibility", "Project Takeaways"],
+      sectionTitlesMobile: ["Problem & Goals", "Process", "Synthesis", "Specification", "Accessibility", "Takeaways"],
+      processTitles: ["Research", "Synthesis", "Ideation", "Execution", "Reflection"],
+      processItems: [
+        "User flow analysis",
+        "Insights & metrics",
+        "User personas",
+        "Competitor benchmarks",
+        "Low fidelity",
+        "High fidelity",
+        "Prototype",
+        "Usability testing",
+        "Plan upgrade",
+        "Contract renewal with smartphone",
+        "Renewal without smartphone",
+        "Results",
+        "Next steps"
+      ],
+      projectHeadings: [
+        "User Flow Analysis",
+        "Insights & Metrics",
+        "User Personas",
+        "Competitor Benchmarks",
+        "Low Fidelity: Concept Sketches & Gallery Walk",
+        "High Fidelity: Final Concept",
+        "Prototype",
+        "Usability Testing",
+        "Plan Upgrade (Month 1-21)",
+        "Contract Renewal with Smartphone (Months 22-23)",
+        "Renewal without Smartphone (from Month 24)",
+        "Results",
+        "Next Steps"
+      ],
+      reflectionSubheadings: ["What Worked Well", "Pain Points"],
+      introTitle: "Device Financing",
+      introSubline: "Flexible installment payments over 12, 24, or 36 months when purchasing a smartphone with a tariff in cooperation with the bank.",
+      introInfo: ["Enterprise project", "2 years +", "2022", "10 people +"],
+      introTags: ["UX/UI Design", "Prototyping", "UX Research", "Accessibility", "UI Component Development"],
+      problemText: "With the introduction of <strong>two new financing terms</strong> (12 and 36 months) for device financing, several adjustments are required in the New Customer Flow: new installment discounting, transparent price communication across terms, and legally compliant communication. To ensure long-term consistency, numerous interfaces between Legal, Editorial, Frontend, and Backend must be aligned.",
+      problemItems: [
+        "Design and concept new and existing UI components in the new-customer flow, specifically for the Device Financing model.",
+        "Create detailed specifications, align with stakeholders, and present to developers and project managers.",
+        "Review and audit these components based on current WCAG accessibility criteria."
+      ],
+      research: {
+        introText: "Our analysis of the current contract renewal flow showed that the journey strongly depends on the remaining contract duration, which leads users into different paths depending on timing:",
+        bullets: [
+          "<strong>Upgrade during the first 21 months:</strong><br>Direct handoff to tariff configuration.",
+          "<strong>Early renewal (last 3 months):</strong><br>Selection of a new tariff including smartphone.",
+          "<strong>Regular renewal (last 30 days):</strong><br>Entry via a funnel page with the option to renew with or without a smartphone."
+        ],
+        outroText: "This <strong>funnel page</strong> in particular revealed untapped potential:<br>It allows a basic choice, but the presentation of offers, recommendations, and benefits remains unclear.<br>That led us to the idea of unifying the journey across all contract phases to improve orientation and decision-making.",
+        insights: [
+          "With expert input from the enterprise area, we were able to use first user-testing signals on recommendations.",
+          "In general, users want <strong>personalized suggestions</strong> while still wanting to <strong>keep all options open</strong>. Overly generic recommendations are less convincing, and many users prefer to decide independently."
+        ],
+        personasText: "We used existing Vodafone personas to derive typical behaviors and expectations in the contract-renewal process. The user groups are:",
+        personas: [
+          "<strong>Confident Trendsetter</strong>",
+          "<strong>Security-Oriented Community Person</strong>",
+          "<strong>Demanding Quality Seeker</strong>"
+        ]
+      },
+      synthesis: {
+        text: [
+          "Each team member analyzed websites with strong recommendation approaches.",
+          "We collected relevant modules and screenshots, presented them to the team, and discussed best practices that could be transferred to our project."
+        ]
+      },
+      ideation: {
+        lowFi: [
+          "In a gallery walk, each person presented concept sketches and low-fidelity designs, including short descriptions and the related benefits.",
+          "Through shared voting (point scoring), we identified the strongest ideas, flows, and modules. The resulting heatmap became the basis for the first high-fidelity screen designs."
+        ],
+        finalIntro: "The final RecoPage combines all relevant information and guides users directly into the right flow. It includes:",
+        finalBulletsLeft: [
+          "A funnel/reco page as a central branching point",
+          "A new timeline UI component that makes the full contract process easier to understand",
+          "Individual benefits and actions for renewals"
+        ],
+        finalBulletsRight: [
+          "All current contract data at a glance",
+          "Notification options for upcoming renewals",
+          "Personalized cross-sell offers via discovery cards"
+        ]
+      },
+      execution: {
+        prototype: [
+          "When building the prototype, we combined central components into a new flow. The original funnel page evolved into the new <strong>Recommendation Page</strong> and is accessible to all users after login.",
+          "In short team reviews, we continuously checked whether each element supported the user flow clearly and where adjustments were needed. The result was a coherent, user-centered prototype."
+        ],
+        testingLeftIntro: "For testing, we created three use cases:",
+        testingCases: [
+          "Plan upgrade (<strong>Month 0-20</strong>)",
+          "Contract renewal with smartphone (<strong>from Month 21</strong>)",
+          "Renewal without smartphone (<strong>from Month 23</strong>)"
+        ],
+        testingLeftOutro: "<strong>Five</strong> test participants went through all use cases. The RecoPage served as the entry point and guided users into the next relevant flow. All testing was conducted <strong>mobile-first</strong>.",
+        testingRight: [
+          "Want to try a mini prototype yourself? Scan the <strong>QR code</strong> and start directly.",
+          "This QR code opens the following case:<br><strong>“Contract renewal with smartphone (from Month 21)”</strong>"
+        ]
+      },
+      reflection: {
+        intro: "After testing, we consolidated all key points and optimized smaller details such as wording, text length, and selected UI elements. The most important insights were:",
+        positive: [
+          "<strong>Text-icon combination</strong><br>Makes options clearly recognizable across phases",
+          "<strong>Timeline</strong><br>Gives a good overview of phases/options, but can be partly misunderstood",
+          "<strong>Customer benefits</strong><br>Generally rated positively, but some are seen as less relevant (e.g. Easy Travel, additional cards)",
+          "<strong>Reminder function</strong><br>Appreciated by all users"
+        ],
+        pain: [
+          "<strong>Tariff details</strong><br>More information about the current tariff is missing",
+          "<strong>Benefits</strong><br>Unclear which are available immediately and which later",
+          "<strong>Wording (“renewal with/without phone”)</strong><br>Should be more precise",
+          "<strong>“You might also be interested in”</strong><br>Is perceived as irrelevant by users"
+        ],
+        next: [
+          "Overall, testing was successful: many usability friction points were minor and could be resolved directly.",
+          "At the same time, it became clear that the topic of “recommendation” in the current setup could only be evaluated to a limited extent. Missing or hypothetical promo communication and planned changes in internal financing logic would have significantly affected the final outcome.",
+          "Therefore, the project was paused after testing and will be revisited later with real data, updated constraints, and a clear recommendation strategy."
+        ]
+      },
+      takeaways: [
+        "<strong>Presentation:</strong><br>Preparation and delivery of presentations for different stakeholders.",
+        "<strong>Design system:</strong><br>Documentation and specification of UI components.",
+        "<strong>Figma:</strong><br>Expanded skills professionally (auto layout and component creation).",
+        "<strong>Accessibility:</strong><br>Deepened work with WCAG 2.2 and BITV guidelines for accessible design."
+      ],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "Email",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    },
+    de: {
+      metaTitle: "Device Financing - Maik Isaak",
+      logoAriaLabel: "Startseite",
+      languageButtonAriaLabel: "Sprache auswählen",
+      mobileMenuButtonAriaLabel: "Menü öffnen",
+      mobileLanguageLabel: "Sprache",
+      nav: ["Home", "About", "Archiv", "Lebenslauf"],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "E-Mail",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    }
+  };
+
+  const originalContent = {};
+
+  function captureOriginals() {
+    originalContent.introTitle = document.querySelector(".project-intro h1")?.innerHTML || "";
+    originalContent.introSubline = document.querySelector(".project-intro .subline")?.innerHTML || "";
+    originalContent.introInfo = Array.from(document.querySelectorAll(".project-intro .info-group .icon-text span")).map((el) => el.textContent);
+    originalContent.introTags = Array.from(document.querySelectorAll(".project-intro .tags .tag")).map((el) => el.textContent);
+    originalContent.sectionTitles = Array.from(document.querySelectorAll(".h2-section .title-text")).map((el) => el.textContent);
+    originalContent.processTitles = Array.from(document.querySelectorAll(".process-step .h3-step-text")).map((el) => el.textContent);
+    originalContent.processItems = Array.from(document.querySelectorAll(".process-step .step-text li")).map((el) => el.textContent);
+    originalContent.projectHeadings = Array.from(document.querySelectorAll("main > section.project-research h3")).map((el) => el.textContent);
+    originalContent.reflectionSubheadings = Array.from(document.querySelectorAll(".project-reflection h4")).map((el) => el.textContent);
+    originalContent.takeaways = Array.from(document.querySelectorAll(".project-takeaways-list span")).map((el) => el.innerHTML);
+    originalContent.problemText = document.querySelector(".project-two-column .project-details-text")?.innerHTML || "";
+    originalContent.problemItems = Array.from(document.querySelectorAll(".project-two-column .project-details-list .icon-text span")).map((el) => el.innerHTML);
+
+    const researchSections = document.querySelectorAll("main > section.project-research");
+    const researchSection = researchSections[0];
+    if (researchSection) {
+      const researchText = researchSection.querySelector(".project-research-content > .project-research-text");
+      if (researchText) {
+        const paragraphs = researchText.querySelectorAll("p");
+        originalContent.researchIntroText = paragraphs[0]?.innerHTML || "";
+        originalContent.researchOutroText = paragraphs[1]?.innerHTML || "";
+        originalContent.researchBullets = Array.from(researchText.querySelectorAll(".project-bullets span")).map((el) => el.innerHTML);
+      }
+
+      const insightsText = researchSection.querySelector(".project-research-split--insights .project-research-text");
+      if (insightsText) {
+        const p = insightsText.querySelectorAll("p");
+        originalContent.researchInsights = [p[0]?.innerHTML || "", p[1]?.innerHTML || ""];
+      }
+
+      originalContent.personasText = researchSection.querySelector(".project-research-split--personas .project-research-half--left p")?.innerHTML || "";
+      originalContent.personasList = Array.from(researchSection.querySelectorAll(".project-research-split--personas .project-research-half--right .project-bullets span")).map((el) => el.innerHTML);
+    }
+
+    const synthesisSection = researchSections[1];
+    if (synthesisSection) {
+      originalContent.synthesisText = Array.from(synthesisSection.querySelectorAll(".project-research-text--right p")).map((el) => el.innerHTML);
+    }
+
+    const ideationSection = researchSections[2];
+    if (ideationSection) {
+      originalContent.ideationLowFi = Array.from(ideationSection.querySelectorAll(".project-research-text--left p")).map((el) => el.innerHTML);
+      originalContent.ideationFinalIntro = ideationSection.querySelector(".project-ideation-final > p")?.innerHTML || "";
+      originalContent.ideationFinalLeft = Array.from(ideationSection.querySelectorAll(".project-ideation-bullets ul:first-child .project-bullets span")).map((el) => el.innerHTML);
+      originalContent.ideationFinalRight = Array.from(ideationSection.querySelectorAll(".project-ideation-bullets ul:last-child .project-bullets span")).map((el) => el.innerHTML);
+    }
+
+    const executionSection = document.querySelector("main > section.project-research.project-execution");
+    if (executionSection) {
+      const prototypeParagraphs = executionSection.querySelectorAll(".project-research-split > .project-research-text p");
+      originalContent.executionPrototype = [prototypeParagraphs[0]?.innerHTML || "", prototypeParagraphs[1]?.innerHTML || ""];
+
+      const testingLeft = executionSection.querySelector(".project-research-split--testing .project-research-half--left");
+      if (testingLeft) {
+        const p = testingLeft.querySelectorAll("p");
+        originalContent.executionTestingLeft = [p[0]?.innerHTML || "", p[1]?.innerHTML || ""];
+        originalContent.executionTestingCases = Array.from(testingLeft.querySelectorAll(".project-bullets span")).map((el) => el.innerHTML);
+      }
+
+      const testingRight = executionSection.querySelector(".project-research-split--testing .project-research-half--right");
+      if (testingRight) {
+        originalContent.executionTestingRight = Array.from(testingRight.querySelectorAll("p")).map((el) => el.innerHTML);
+      }
+    }
+
+    const reflectionSection = document.querySelector("main > section.project-research.project-reflection");
+    if (reflectionSection) {
+      originalContent.reflectionIntro = reflectionSection.querySelector(".project-reflection-intro p")?.innerHTML || "";
+      originalContent.reflectionPositive = Array.from(reflectionSection.querySelectorAll(".project-reflection-list--positive span")).map((el) => el.innerHTML);
+      originalContent.reflectionPain = Array.from(reflectionSection.querySelectorAll(".project-reflection-list--pain span")).map((el) => el.innerHTML);
+      originalContent.reflectionNext = Array.from(reflectionSection.querySelectorAll(".project-reflection-next .project-research-text p")).map((el) => el.innerHTML);
+    }
+    originalContent.footerHeading = document.querySelector(".h2-footer")?.textContent || "";
+    originalContent.footerEmailLabel = document.querySelector(".contact-email-label")?.textContent || "";
+    originalContent.footerLinkedInLabel = document.querySelector(".contact-linkedin-label")?.textContent || "";
+    originalContent.footerCopyright = document.querySelector(".footer-content > p")?.innerHTML || "";
+  }
+
+  function setTextList(selector, values) {
+    const nodes = document.querySelectorAll(selector);
+    nodes.forEach((node, index) => {
+      if (values[index] !== undefined) {
+        node.textContent = values[index];
+      }
+    });
+  }
+
+  function setHtmlList(selector, values) {
+    const nodes = document.querySelectorAll(selector);
+    nodes.forEach((node, index) => {
+      if (values[index] !== undefined) {
+        node.innerHTML = values[index];
+      }
+    });
+  }
+
+  function setHtml(node, value) {
+    if (node && value !== undefined) {
+      node.innerHTML = value;
+    }
+  }
+
+  function closeLanguageMenu() {
+    switcher.classList.remove("open");
+    languageButton.setAttribute("aria-expanded", "false");
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("open");
+    mobileMenuButton.setAttribute("aria-expanded", "false");
+  }
+
+  function applyLanguage(lang) {
+    const selectedLang = i18n[lang] ? lang : "en";
+    const translations = i18n[selectedLang];
+
+    document.documentElement.lang = selectedLang;
+    document.title = translations.metaTitle;
+
+    const logo = document.querySelector(".logo");
+    const navLinks = document.querySelectorAll(".navigation-item a");
+    const footerHeading = document.querySelector(".h2-footer");
+    const emailLabel = document.querySelector(".contact-email-label");
+    const linkedInLabel = document.querySelector(".contact-linkedin-label");
+    const footerCopyright = document.querySelector(".footer-content > p");
+
+    logo.setAttribute("aria-label", translations.logoAriaLabel);
+    languageButton.setAttribute("aria-label", translations.languageButtonAriaLabel);
+    mobileMenuButton.setAttribute("aria-label", translations.mobileMenuButtonAriaLabel);
+    mobileLanguageLabelText.textContent = translations.mobileLanguageLabel;
+
+    navLinks.forEach((link, index) => {
+      link.textContent = translations.nav[index];
+    });
+    mobileNavLinks.forEach((link, index) => {
+      link.textContent = translations.nav[index];
+    });
+
+    if (selectedLang === "en") {
+      const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+      const currentSectionTitles = isMobileViewport && translations.sectionTitlesMobile
+        ? translations.sectionTitlesMobile
+        : translations.sectionTitles;
+      const introTitle = document.querySelector(".project-intro h1");
+      const introSubline = document.querySelector(".project-intro .subline");
+      if (introTitle) introTitle.innerHTML = translations.introTitle;
+      if (introSubline) introSubline.innerHTML = translations.introSubline;
+
+      setTextList(".project-intro .info-group .icon-text span", translations.introInfo);
+      setTextList(".project-intro .tags .tag", translations.introTags);
+      setTextList(".h2-section .title-text", currentSectionTitles);
+      setTextList(".process-step .h3-step-text", translations.processTitles);
+      setTextList(".process-step .step-text li", translations.processItems);
+      setTextList("main > section.project-research h3", translations.projectHeadings);
+      setTextList(".project-reflection h4", translations.reflectionSubheadings);
+      setHtmlList(".project-takeaways-list span", translations.takeaways);
+
+      setHtml(document.querySelector(".project-two-column .project-details-text"), translations.problemText);
+      setHtmlList(".project-two-column .project-details-list .icon-text span", translations.problemItems);
+
+      const researchSections = document.querySelectorAll("main > section.project-research");
+      const researchSection = researchSections[0];
+      if (researchSection) {
+        const researchText = researchSection.querySelector(".project-research-content > .project-research-text");
+        if (researchText) {
+          const paragraphs = researchText.querySelectorAll("p");
+          setHtml(paragraphs[0], translations.research.introText);
+          setHtml(paragraphs[1], translations.research.outroText);
+          const researchBullets = researchText.querySelectorAll(".project-bullets span");
+          researchBullets.forEach((node, index) => setHtml(node, translations.research.bullets[index]));
+        }
+
+        const insightsText = researchSection.querySelector(".project-research-split--insights .project-research-text");
+        if (insightsText) {
+          const p = insightsText.querySelectorAll("p");
+          setHtml(p[0], translations.research.insights[0]);
+          setHtml(p[1], translations.research.insights[1]);
+        }
+
+        const personasLeft = researchSection.querySelector(".project-research-split--personas .project-research-half--left p");
+        setHtml(personasLeft, translations.research.personasText);
+        setHtmlList(".project-research-split--personas .project-research-half--right .project-bullets span", translations.research.personas);
+      }
+
+      const synthesisSection = researchSections[1];
+      if (synthesisSection) {
+        const p = synthesisSection.querySelectorAll(".project-research-text--right p");
+        setHtml(p[0], translations.synthesis.text[0]);
+        setHtml(p[1], translations.synthesis.text[1]);
+      }
+
+      const ideationSection = researchSections[2];
+      if (ideationSection) {
+        const lowFiParagraphs = ideationSection.querySelectorAll(".project-research-text--left p");
+        setHtml(lowFiParagraphs[0], translations.ideation.lowFi[0]);
+        setHtml(lowFiParagraphs[1], translations.ideation.lowFi[1]);
+        setHtml(ideationSection.querySelector(".project-ideation-final > p"), translations.ideation.finalIntro);
+        setHtmlList(".project-ideation-bullets ul:first-child .project-bullets span", translations.ideation.finalBulletsLeft);
+        setHtmlList(".project-ideation-bullets ul:last-child .project-bullets span", translations.ideation.finalBulletsRight);
+      }
+
+      const executionSection = document.querySelector("main > section.project-research.project-execution");
+      if (executionSection) {
+        const prototypeParagraphs = executionSection.querySelectorAll(".project-research-split > .project-research-text p");
+        setHtml(prototypeParagraphs[0], translations.execution.prototype[0]);
+        setHtml(prototypeParagraphs[1], translations.execution.prototype[1]);
+
+        const testingLeft = executionSection.querySelector(".project-research-split--testing .project-research-half--left");
+        if (testingLeft) {
+          const p = testingLeft.querySelectorAll("p");
+          setHtml(p[0], translations.execution.testingLeftIntro);
+          setHtml(p[1], translations.execution.testingLeftOutro);
+          setHtmlList(".project-research-split--testing .project-research-half--left .project-bullets span", translations.execution.testingCases);
+        }
+
+        const testingRight = executionSection.querySelector(".project-research-split--testing .project-research-half--right");
+        if (testingRight) {
+          const p = testingRight.querySelectorAll("p");
+          setHtml(p[0], translations.execution.testingRight[0]);
+          setHtml(p[1], translations.execution.testingRight[1]);
+        }
+      }
+
+      const reflectionSection = document.querySelector("main > section.project-research.project-reflection");
+      if (reflectionSection) {
+        setHtml(reflectionSection.querySelector(".project-reflection-intro p"), translations.reflection.intro);
+        setHtmlList(".project-reflection-list--positive span", translations.reflection.positive);
+        setHtmlList(".project-reflection-list--pain span", translations.reflection.pain);
+        const nextParagraphs = reflectionSection.querySelectorAll(".project-reflection-next .project-research-text p");
+        setHtml(nextParagraphs[0], translations.reflection.next[0]);
+        setHtml(nextParagraphs[1], translations.reflection.next[1]);
+        setHtml(nextParagraphs[2], translations.reflection.next[2]);
+      }
+    } else {
+      const introTitle = document.querySelector(".project-intro h1");
+      const introSubline = document.querySelector(".project-intro .subline");
+      if (introTitle) introTitle.innerHTML = originalContent.introTitle;
+      if (introSubline) introSubline.innerHTML = originalContent.introSubline;
+
+      setTextList(".project-intro .info-group .icon-text span", originalContent.introInfo);
+      setTextList(".project-intro .tags .tag", originalContent.introTags);
+      setTextList(".h2-section .title-text", originalContent.sectionTitles);
+      setTextList(".process-step .h3-step-text", originalContent.processTitles);
+      setTextList(".process-step .step-text li", originalContent.processItems);
+      setTextList("main > section.project-research h3", originalContent.projectHeadings);
+      setTextList(".project-reflection h4", originalContent.reflectionSubheadings);
+      setHtmlList(".project-takeaways-list span", originalContent.takeaways);
+
+      setHtml(document.querySelector(".project-two-column .project-details-text"), originalContent.problemText);
+      setHtmlList(".project-two-column .project-details-list .icon-text span", originalContent.problemItems);
+
+      const researchSections = document.querySelectorAll("main > section.project-research");
+      const researchSection = researchSections[0];
+      if (researchSection) {
+        const researchText = researchSection.querySelector(".project-research-content > .project-research-text");
+        if (researchText) {
+          const paragraphs = researchText.querySelectorAll("p");
+          setHtml(paragraphs[0], originalContent.researchIntroText);
+          setHtml(paragraphs[1], originalContent.researchOutroText);
+          const researchBullets = researchText.querySelectorAll(".project-bullets span");
+          researchBullets.forEach((node, index) => setHtml(node, originalContent.researchBullets[index]));
+        }
+
+        const insightsText = researchSection.querySelector(".project-research-split--insights .project-research-text");
+        if (insightsText) {
+          const p = insightsText.querySelectorAll("p");
+          setHtml(p[0], originalContent.researchInsights?.[0]);
+          setHtml(p[1], originalContent.researchInsights?.[1]);
+        }
+
+        setHtml(researchSection.querySelector(".project-research-split--personas .project-research-half--left p"), originalContent.personasText);
+        setHtmlList(".project-research-split--personas .project-research-half--right .project-bullets span", originalContent.personasList || []);
+      }
+
+      const synthesisSection = researchSections[1];
+      if (synthesisSection) {
+        const p = synthesisSection.querySelectorAll(".project-research-text--right p");
+        setHtml(p[0], originalContent.synthesisText?.[0]);
+        setHtml(p[1], originalContent.synthesisText?.[1]);
+      }
+
+      const ideationSection = researchSections[2];
+      if (ideationSection) {
+        const lowFiParagraphs = ideationSection.querySelectorAll(".project-research-text--left p");
+        setHtml(lowFiParagraphs[0], originalContent.ideationLowFi?.[0]);
+        setHtml(lowFiParagraphs[1], originalContent.ideationLowFi?.[1]);
+        setHtml(ideationSection.querySelector(".project-ideation-final > p"), originalContent.ideationFinalIntro);
+        setHtmlList(".project-ideation-bullets ul:first-child .project-bullets span", originalContent.ideationFinalLeft || []);
+        setHtmlList(".project-ideation-bullets ul:last-child .project-bullets span", originalContent.ideationFinalRight || []);
+      }
+
+      const executionSection = document.querySelector("main > section.project-research.project-execution");
+      if (executionSection) {
+        const prototypeParagraphs = executionSection.querySelectorAll(".project-research-split > .project-research-text p");
+        setHtml(prototypeParagraphs[0], originalContent.executionPrototype?.[0]);
+        setHtml(prototypeParagraphs[1], originalContent.executionPrototype?.[1]);
+
+        const testingLeft = executionSection.querySelector(".project-research-split--testing .project-research-half--left");
+        if (testingLeft) {
+          const p = testingLeft.querySelectorAll("p");
+          setHtml(p[0], originalContent.executionTestingLeft?.[0]);
+          setHtml(p[1], originalContent.executionTestingLeft?.[1]);
+          setHtmlList(".project-research-split--testing .project-research-half--left .project-bullets span", originalContent.executionTestingCases || []);
+        }
+
+        const testingRight = executionSection.querySelector(".project-research-split--testing .project-research-half--right");
+        if (testingRight) {
+          const p = testingRight.querySelectorAll("p");
+          setHtml(p[0], originalContent.executionTestingRight?.[0]);
+          setHtml(p[1], originalContent.executionTestingRight?.[1]);
+        }
+      }
+
+      const reflectionSection = document.querySelector("main > section.project-research.project-reflection");
+      if (reflectionSection) {
+        setHtml(reflectionSection.querySelector(".project-reflection-intro p"), originalContent.reflectionIntro);
+        setHtmlList(".project-reflection-list--positive span", originalContent.reflectionPositive || []);
+        setHtmlList(".project-reflection-list--pain span", originalContent.reflectionPain || []);
+        const nextParagraphs = reflectionSection.querySelectorAll(".project-reflection-next .project-research-text p");
+        setHtml(nextParagraphs[0], originalContent.reflectionNext?.[0]);
+        setHtml(nextParagraphs[1], originalContent.reflectionNext?.[1]);
+        setHtml(nextParagraphs[2], originalContent.reflectionNext?.[2]);
+      }
+
+      const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+      if (isMobileViewport) {
+        const sectionTitles = document.querySelectorAll(".h2-section .title-text");
+        const lastTitle = sectionTitles[sectionTitles.length - 1];
+        if (lastTitle) {
+          lastTitle.textContent = "Takeaways";
+        }
+      }
+    }
+
+    footerHeading.textContent = translations.footerHeading;
+    emailLabel.textContent = translations.footerEmailLabel;
+    linkedInLabel.textContent = translations.footerLinkedInLabel;
+    footerCopyright.innerHTML = translations.footerCopyright;
+
+    options.forEach((option) => {
+      const isActive = option.dataset.lang === selectedLang;
+      option.classList.toggle("active", isActive);
+      option.setAttribute("aria-checked", isActive ? "true" : "false");
+    });
+    mobileLanguageOptions.forEach((option) => {
+      option.classList.toggle("active", option.dataset.lang === selectedLang);
+    });
+
+    const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+    const newSvg = activeOption.querySelector("svg").cloneNode(true);
+    languageButton.innerHTML = "";
+    languageButton.appendChild(newSvg);
+
+    localStorage.setItem("preferredLanguage", selectedLang);
+  }
+
+  languageButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !switcher.classList.contains("open");
+    switcher.classList.toggle("open");
+    languageButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    closeMobileMenu();
+  });
+
+  document.addEventListener("click", () => {
+    closeLanguageMenu();
+    closeMobileMenu();
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      applyLanguage(option.dataset.lang);
+      closeLanguageMenu();
+    });
+  });
+
+  mobileMenuButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !mobileMenu.classList.contains("open");
+    mobileMenu.classList.toggle("open");
+    mobileMenuButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    closeLanguageMenu();
+  });
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
+  });
+
+  mobileLanguageOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      applyLanguage(option.dataset.lang);
+      closeMobileMenu();
+    });
+  });
+
+  captureOriginals();
+  const savedLanguage = localStorage.getItem("preferredLanguage");
+  const browserLanguage = (navigator.language || "en").slice(0, 2).toLowerCase();
+  const initialLanguage = i18n[savedLanguage] ? savedLanguage : (i18n[browserLanguage] ? browserLanguage : "en");
+  applyLanguage(initialLanguage);
+
+  window.addEventListener("resize", () => {
+    applyLanguage(document.documentElement.lang || "en");
+  });
+</script>
+
+</html>
