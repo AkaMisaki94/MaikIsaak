@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maik Isaak – Portfolio</title>
+  <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+  <link rel="shortcut icon" href="favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div id="stars-layer"></div>
+    <header>
+      <nav class="navbar">
+        <a href="index.html" class="logo" aria-label="Startseite">
+          <svg xmlns="http://www.w3.org/2000/svg" alt="Maik Isaak Logo" viewBox="0 0 24 24">
+            <path class="color-1" d="M20,3.07v17.85c2.45-2.2,4-5.38,4-8.93s-1.55-6.73-4-8.93Z" />
+            <path class="color-1" d="M4,3.07C1.55,5.27,0,8.45,0,12s1.55,6.73,4,8.93V3.07Z" />
+            <path class="color-2" d="M16,8.64l-4,4-4-4v14.66c1.25.44,2.6.7,4,.7s2.75-.25,4-.7v-14.66Z" />
+            <path class="color-2" d="M12,6.99l5.6-5.6c-1.67-.88-3.58-1.39-5.6-1.39s-3.93.51-5.6,1.39l5.6,5.6Z" />
+          </svg>
+        </a>
+        <ul>
+          <li class="navigation-item"><a href="#home">Home</a></li>
+          <li class="navigation-item"><a href="#about">About</a></li>
+          <li class="navigation-item"><a href="#archiv">Archiv</a></li>
+          <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
+          <li class="language-item" id="language-switcher">
+            <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <mask id="a-current" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                  <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                    fill="#fff" />
+                </mask>
+                <g mask="url(#a-current)">
+                  <path
+                    d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                    fill="#eee" />
+                  <path
+                    d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                    fill="#0052b4" />
+                  <path
+                    d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                    fill="#d80027" />
+                </g>
+              </svg>
+            </button>
+            <div class="language-dropdown" role="menu">
+              <button class="language-option active" data-lang="en" role="menuitemradio" aria-checked="true">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="a-desktop-en" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                  <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                    fill="#fff" />
+                </mask>
+                  <g mask="url(#a-desktop-en)">
+                  <path
+                    d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                    fill="#eee" />
+                  <path
+                    d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                    fill="#0052b4" />
+                  <path
+                    d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                    fill="#d80027" />
+                </g>
+              </svg>
+                <span>English</span>
+              </button>
+              <button class="language-option" data-lang="de" role="menuitemradio" aria-checked="false">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_307_1346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6"
+                    width="36" height="36">
+                    <path
+                      d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                      fill="white" />
+                  </mask>
+                  <g mask="url(#mask0_307_1346)">
+                    <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                    <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                    <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                  </g>
+                </svg>
+                <span>Deutsch</span>
+              </button>
+            </div>
+          </li>
+          <li class="mobile-menu-item" id="mobile-menu">
+            <button class="mobile-menu-button" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+              <svg class="mobile-menu-icon mobile-menu-icon--burger" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg class="mobile-menu-icon mobile-menu-icon--close" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+            <div class="mobile-menu-dropdown" role="menu">
+              <a class="mobile-navigation-link" href="#home">Home</a>
+              <a class="mobile-navigation-link" href="#about">About</a>
+              <a class="mobile-navigation-link" href="#archiv">Archiv</a>
+              <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
+              <div class="mobile-language-group">
+                <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
+                <div class="mobile-language-options">
+                  <button class="mobile-language-option active" data-lang="en" type="button">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="a-mobile" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                        <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                          fill="#fff" />
+                      </mask>
+                      <g mask="url(#a-mobile)">
+                        <path
+                          d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                          fill="#eee" />
+                        <path
+                          d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                          fill="#0052b4" />
+                        <path
+                          d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                          fill="#d80027" />
+                      </g>
+                    </svg>
+                    <span>English</span>
+                  </button>
+                  <button class="mobile-language-option" data-lang="de" type="button">
+                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <mask id="mask0_307_1346_mobile" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6"
+                        width="36" height="36">
+                        <path
+                          d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                          fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_307_1346_mobile)">
+                        <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                        <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                        <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                      </g>
+                    </svg>
+                    <span>Deutsch</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="shadow-bar"></div>
+    <main>
+      <section class="intro">
+        <div class="profile-image">
+          <div class="profile-image-inner">
+           <img src="img/homepage/Profil.png" alt="Profilbild von Maik Isaak">
+          </div>
+        </div>
+        <div class="intro-text">
+            <h1>Hey there,<br>I'm <span class="highlight">Maik</span></h1>
+            <span class="divider"></span>
+          <p class="subline"><span class="highlight">UI/UX</span> und <span class="highlight">Product Designer</span><br>Ich beobachte, bewege, hinterfrage<br>und gestalte daraus Erlebnisse.</p>
+          <p class="third-line">Aktuell am Gestalten @ <span class="highlight">Vodafone</span></p>
+        </div>
+      </section>
+      <section>
+         <h2 class="h2-section">
+          <span class="title-text">
+            UI/UX-Projekte
+          </span>
+        </h2>
+        <a href="html/recommendation-page.html" class="projectcard projectcard--full">
+          <div class="project-image">
+            <img src="img/recommendation-page/project-card-6.jpg" alt="Projekt: Recommendation Page">
+          </div>
+          <div class="projectcard-content">
+            <h3>Recommendation Page</h3>
+            <ul class="tags">
+              <li class="tag">UI/UX-Design</li>
+              <li class="tag">Prototyping</li>
+              <li class="tag">UX-Strategy</li>
+              <li class="tag">Research</li>
+            </ul>
+            <p>
+              All-in-One Funnelpage: Vertragsverlängerungen
+              im Überblick behalten, Benachrichtigen für Bestandskunden ermöglichen und Angebote personalisiert
+              präsentieren.
+            </p>
+          </div>
+        </a>
+
+        <a href="html/device-financing.html" class="projectcard projectcard--half">
+          <div class="project-image">
+            <img src="img/device-financing/project-card-5.jpg" alt="Projekt: Device Financing">
+          </div>
+          <div class="projectcard-content">
+            <h3>Device Financing</h3>
+            <ul class="tags">
+              <li class="tag">UX-Design</li>
+              <li class="tag">Prototyping</li>
+              <li class="tag">Accessibility</li>
+              <li class="tag">Research</li>
+              <li class="tag">UI-Komponentenentwicklung</li>
+            </ul>
+            <p>
+              Flexible Ratenzahlungen über 12, 24 oder 36 Monate beim Kauf eines Smartphones mit Tarif in Kooperation
+              mit der Bank.
+            </p>
+          </div>
+        </a>
+
+        <a href="" class="projectcard projectcard--half">
+          <div class="project-image">
+            <img src="img/insighter/project-card-4.jpg" alt="Projekt: InSIGHTer">
+          </div>
+          <div class="projectcard-content">
+            <h3>InSIGHTer</h3>
+            <ul class="tags">
+              <li class="tag">UI/UX-Design</li>
+              <li class="tag">Prototyping</li>
+              <li class="tag">UX-Research</li>
+              <li class="tag">App Design</li>
+            </ul>
+            <p>
+              Konzept einer Nachhaltigkeits-App für Smartphones und Smartwatches.
+            </p>
+          </div>
+        </a>
+      </section>
+      <section>
+        <h2 class="h2-section">
+          <span class="title-text">
+            Produktdesign-Projekte
+          </span>
+        </h2>
+
+        <a href="" class="projectcard projectcard--full">
+          <div class="project-image">
+            <img src="img/cleanace/project-card-3.jpg" alt="Projekt: CLEANACE">
+          </div>
+          <div class="projectcard-content">
+            <h3>CLEANACE</h3>
+            <ul class="tags">
+              <li class="tag">Produktdesign</li>
+              <li class="tag">Konzeptidee</li>
+              <li class="tag">3D-Modelling</li>
+              <li class="tag">CAD</li>
+              <li class="tag">Barrierefreiheit</li>
+            </ul>
+            <p>
+              Konzept einer barrierefreien „Nasszelle“, die alle Funktionen eines modernen Badezimmers vereint.
+            </p>
+          </div>
+        </a>
+
+        <a href="" class="projectcard projectcard--half">
+          <div class="project-image">
+            <img src="img/beauty-love/project-card-2.jpg" alt="Projekt: BeautyLove">
+          </div>
+          <div class="projectcard-content">
+            <h3>BeautyLove</h3>
+            <ul class="tags">
+              <li class="tag">Verpackungsdesign</li>
+              <li class="tag">Nachhaltigkeit</li>
+              <li class="tag">Abwicklung</li>
+              <li class="tag">Kooperation</li>
+            </ul>
+            <p>
+              Entwicklung von zwei nachhaltigen Verpackungskonzepte für ein Hautpflegeprodukt auf Basis natürlicher
+              Inhaltsstoffe.
+            </p>
+          </div>
+        </a>
+
+        <a href="" class="projectcard projectcard--half">
+          <div class="project-image">
+            <img src="img/stick/project-card-1.jpg" alt="Projekt: STICK">
+          </div>
+          <div class="projectcard-content">
+            <h3>STICK</h3>
+            <ul class="tags">
+              <li class="tag">Produktdesign</li>
+              <li class="tag">Nachhaltigkeit</li>
+              <li class="tag">Design-Thinking</li>
+              <li class="tag">Modellbau</li>
+            </ul>
+            <p>
+              Entwurf eines minimalistischen faltbaren Kleiderbügels aus Holz und Leder, der durch klare Geometrie,
+              Stabilität und Eleganz verbindet.
+            </p>
+          </div>
+        </a>
+      </section>
+    </main>
+  <footer>
+    <div class="footer-content">
+      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="mailto:maik.isaak94@gmail.com" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Linkedin-Icon" viewBox="0 0 48 48">
+              <path class="color-2"
+                d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+              <path class="color-1"
+                d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM37.4561 18.8096C37.4561 18.8096 24.9778 27.4101 23.7627 27.8574C22.5696 27.4314 10.0273 18.8096 10.0273 18.8096V31.001C10.0274 32.6937 10.3914 33.0322 12.085 33.0322H35.3994C37.1331 33.0322 37.456 32.7348 37.4561 31.001V18.8096ZM12.085 14.7461C10.3638 14.7461 10.0273 15.2752 10.0273 16.5078L10.0479 16.6973C10.0479 16.6973 22.4386 25.1215 23.7627 25.582C25.1598 25.047 37.3913 16.5528 37.4561 16.5078L37.4365 16.4199C37.4365 15.1868 37.0722 14.7462 35.3994 14.7461H12.085Z" />
+             </svg>
+            <span class="contact-email-label">Email</span>
+            </a>
+          </li>
+          <li>
+           <a href="https://www.linkedin.com/in/maikisaak" target="_blank" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Email-Icon" viewBox="0 0 48 48">
+               <path class="color-2"
+                d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+               <path class="color-1"
+                d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM12.4238 34.2861H17.7256V18.2197H12.4238V34.2861ZM31.6172 17.8975C28.8609 17.8975 27.1526 19.1492 26.2627 20.2812V18.2197H20.9609V34.2861H26.2627C26.2627 34.2861 26.2627 29.2278 26.2627 26.0654C26.2627 24.1674 26.9105 22.261 29.4961 22.2607C32.4184 22.2607 32.4014 24.7445 32.3877 26.6689C32.3699 29.1843 32.4121 31.7522 32.4121 34.2861H37.7148V25.8066C37.6699 20.3924 36.2586 17.8975 31.6172 17.8975ZM15.1016 10.2861C13.3886 10.2862 12 11.5845 12 13.1865C12 14.7886 13.3886 16.0878 15.1016 16.0879C16.8145 16.0879 18.2031 14.7886 18.2031 13.1865C18.2031 11.5845 16.8145 10.2861 15.1016 10.2861Z" />
+             </svg>
+            <span class="contact-linkedin-label">LinkedIn</span>
+            </a>
+         </li>
+        </ul>
+      </nav>
+      <p>&copy;2026. Created by Maik Isaak.</p>
+    </div>
+  </footer>
+
+</body>
+
+<!-- Sterne Script -->
+
+<script>
+  const starsLayer = document.getElementById("stars-layer");
+  const isMobileStarsViewport = window.matchMedia("(max-width: 639px)").matches;
+  const starCount = isMobileStarsViewport ? 500 : 1000;
+  const appearDuration = 60;
+
+  // Schleife, die Sterne nacheinander erzeugt
+  for (let i = 0; i < starCount; i++) {
+    // Erstelle ein neues <div>-Element (ein Kasten)
+    const star = document.createElement("div");
+    // Weise ihm die CSS-Klasse "star" zu
+    star.className = "star";
+
+    // Zufällige horizontale und vertikale Position (zwischen 0 und 100 Viewport-Breiten bzw. Höhen)
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+
+    // Zufällige Größe zwischen 1px und 3px
+    const size = Math.random() * 2 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    starsLayer.appendChild(star);
+
+    // Zufällige Dauer der Animationen
+    const riseDuration = 75 + Math.random() * 150; // Dauer des "Aufsteigens"
+    const blinkDuration = 5 + Math.random() * 10; // Dauer des "Blinkens"
+
+    // Setze Animations-Dauer für beide Animationen (Blinken und Aufsteigen)
+    star.style.animationDuration = `${blinkDuration}s, ${riseDuration}s`;
+
+    // Jeder Stern bekommt eine zufällige Startverzögerung zwischen 0 und 45s
+    const delay = Math.random() * appearDuration;
+    star.style.animationDelay = `${delay}s, ${delay}s`;
+  }
+
+
+
+  const switcher = document.getElementById("language-switcher");
+  const languageButton = switcher.querySelector(".language-button");
+  const options = switcher.querySelectorAll(".language-option");
+
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
+  const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
+  const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
+
+  const i18n = {
+    en: {
+      metaTitle: "Maik Isaak - Portfolio",
+      logoAriaLabel: "Home",
+      languageButtonAriaLabel: "Choose language",
+      mobileMenuButtonAriaLabel: "Open menu",
+      mobileLanguageLabel: "Language",
+      nav: ["Home", "About", "Archive", "Resume"],
+      introHeading: "Hey there,<br>I'm <span class=\"highlight\">Maik</span>",
+      introSubline: "<span class=\"highlight\">UI/UX</span> and <span class=\"highlight\">Product Designer</span><br>I observe, move, question,<br>and turn that into experiences.",
+      introThirdLine: "Currently designing @ <span class=\"highlight\">Vodafone</span>",
+      sectionTitles: ["UI/UX Projects", "Product Design Projects"],
+      sectionTitlesMobile: ["UI/UX Projects", "Product Design"],
+      projects: [
+        {
+          title: "Recommendation Page",
+          tags: ["UI/UX Design", "Prototyping", "UX Strategy", "Research"],
+          description: "All-in-one funnel page: Keep contract renewals in view, enable notifications for existing customers, and present personalized offers.",
+          imageAlt: "Project: Recommendation Page"
+        },
+        {
+          title: "Device Financing",
+          tags: ["UX Design", "Prototyping", "Accessibility", "Research", "UI Component Development"],
+          description: "Flexible installment payments over 12, 24, or 36 months when purchasing a smartphone with a tariff in cooperation with the bank.",
+          imageAlt: "Project: Device Financing"
+        },
+        {
+          title: "InSIGHTer",
+          tags: ["UI/UX Design", "Prototyping", "UX Research", "App Design"],
+          description: "Concept for a sustainability app for smartphones and smartwatches.",
+          imageAlt: "Project: InSIGHTer"
+        },
+        {
+          title: "CLEANACE",
+          tags: ["Product Design", "Concept Idea", "3D Modeling", "CAD", "Accessibility"],
+          description: "Concept of an accessible \"wet room\" that combines all functions of a modern bathroom.",
+          imageAlt: "Project: CLEANACE"
+        },
+        {
+          title: "BeautyLove",
+          tags: ["Packaging Design", "Sustainability", "Flat Pattern", "Cooperation"],
+          description: "Development of two sustainable packaging concepts for a skincare product based on natural ingredients.",
+          imageAlt: "Project: BeautyLove"
+        },
+        {
+          title: "STICK",
+          tags: ["Product Design", "Sustainability", "Design Thinking", "Model Making"],
+          description: "Design of a minimalist foldable clothes hanger made of wood and leather, combining clear geometry, stability, and elegance.",
+          imageAlt: "Project: STICK"
+        }
+      ],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "Email",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    },
+    de: {
+      metaTitle: "Maik Isaak - Portfolio",
+      logoAriaLabel: "Startseite",
+      languageButtonAriaLabel: "Sprache auswählen",
+      mobileMenuButtonAriaLabel: "Menü öffnen",
+      mobileLanguageLabel: "Sprache",
+      nav: ["Home", "About", "Archiv", "Lebenslauf"],
+      introHeading: "Hey there,<br>I'm <span class=\"highlight\">Maik</span>",
+      introSubline: "<span class=\"highlight\">UI/UX-</span> und <span class=\"highlight\">Produktdesigner</span><br>Ich beobachte, bewege, hinterfrage<br>und gestalte daraus Erlebnisse.",
+      introThirdLine: "Aktuell am Gestalten @ <span class=\"highlight\">Vodafone</span>",
+      sectionTitles: ["UI/UX-Projekte", "Produktdesign-Projekte"],
+      sectionTitlesMobile: ["UI/UX-Projekte", "Produktdesign"],
+      projects: [
+        {
+          title: "Recommendation Page",
+          tags: ["UI/UX-Design", "Prototyping", "UX-Strategie", "Research"],
+          description: "All-in-One Funnelpage: Vertragsverlängerungen im Überblick behalten, Benachrichtigungen für Bestandskunden ermöglichen und Angebote personalisiert präsentieren.",
+          imageAlt: "Projekt: Recommendation Page"
+        },
+        {
+          title: "Device Financing",
+          tags: ["UX-Design", "Prototyping", "Barrierefreiheit", "Research", "UI-Komponentenentwicklung"],
+          description: "Flexible Ratenzahlungen über 12, 24 oder 36 Monate beim Kauf eines Smartphones mit Tarif in Kooperation mit der Bank.",
+          imageAlt: "Projekt: Device Financing"
+        },
+        {
+          title: "InSIGHTer",
+          tags: ["UI/UX-Design", "Prototyping", "UX-Research", "App-Design"],
+          description: "Konzept einer Nachhaltigkeits-App für Smartphones und Smartwatches.",
+          imageAlt: "Projekt: InSIGHTer"
+        },
+        {
+          title: "CLEANACE",
+          tags: ["Produktdesign", "Konzeptidee", "3D-Modelling", "CAD", "Barrierefreiheit"],
+          description: "Konzept einer barrierefreien Nasszelle, die alle Funktionen eines modernen Badezimmers vereint.",
+          imageAlt: "Projekt: CLEANACE"
+        },
+        {
+          title: "BeautyLove",
+          tags: ["Verpackungsdesign", "Nachhaltigkeit", "Abwicklung", "Kooperation"],
+          description: "Entwicklung von zwei nachhaltigen Verpackungskonzepten für ein Hautpflegeprodukt auf Basis natürlicher Inhaltsstoffe.",
+          imageAlt: "Projekt: BeautyLove"
+        },
+        {
+          title: "STICK",
+          tags: ["Produktdesign", "Nachhaltigkeit", "Design Thinking", "Modellbau"],
+          description: "Entwurf eines minimalistischen faltbaren Kleiderbügels aus Holz und Leder, der klare Geometrie, Stabilität und Eleganz verbindet.",
+          imageAlt: "Projekt: STICK"
+        }
+      ],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "E-Mail",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    }
+  };
+
+  function closeLanguageMenu() {
+    switcher.classList.remove("open");
+    languageButton.setAttribute("aria-expanded", "false");
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("open");
+    mobileMenuButton.setAttribute("aria-expanded", "false");
+  }
+
+  function applyLanguage(lang) {
+    const selectedLang = i18n[lang] ? lang : "en";
+    const translations = i18n[selectedLang];
+
+    document.documentElement.lang = selectedLang;
+    document.title = translations.metaTitle;
+
+    const logo = document.querySelector(".logo");
+    const navLinks = document.querySelectorAll(".navigation-item a");
+    const introHeading = document.querySelector(".intro-text h1");
+    const introSubline = document.querySelector(".subline");
+    const introThirdLine = document.querySelector(".third-line");
+    const sectionTitles = document.querySelectorAll(".title-text");
+    const sectionHeadings = document.querySelectorAll(".h2-section");
+    const projectCards = document.querySelectorAll(".projectcard");
+    const footerHeading = document.querySelector(".h2-footer");
+    const emailLabel = document.querySelector(".contact-email-label");
+    const linkedInLabel = document.querySelector(".contact-linkedin-label");
+    const footerCopyright = document.querySelector(".footer-content > p");
+
+    logo.setAttribute("aria-label", translations.logoAriaLabel);
+    languageButton.setAttribute("aria-label", translations.languageButtonAriaLabel);
+    mobileMenuButton.setAttribute("aria-label", translations.mobileMenuButtonAriaLabel);
+    mobileLanguageLabelText.textContent = translations.mobileLanguageLabel;
+
+    navLinks.forEach((link, index) => {
+      link.textContent = translations.nav[index];
+    });
+    mobileNavLinks.forEach((link, index) => {
+      link.textContent = translations.nav[index];
+    });
+
+    introHeading.innerHTML = translations.introHeading;
+    introSubline.innerHTML = translations.introSubline;
+    introThirdLine.innerHTML = translations.introThirdLine;
+
+    const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+    const currentSectionTitles = isMobileViewport && translations.sectionTitlesMobile
+      ? translations.sectionTitlesMobile
+      : translations.sectionTitles;
+
+    sectionTitles.forEach((title, index) => {
+      title.textContent = currentSectionTitles[index] || translations.sectionTitles[index];
+    });
+
+    sectionHeadings.forEach((heading, index) => {
+      heading.setAttribute("aria-label", translations.sectionTitles[index]);
+    });
+
+    projectCards.forEach((card, index) => {
+      const project = translations.projects[index];
+      const cardTitle = card.querySelector("h3");
+      const cardTags = card.querySelectorAll(".tag");
+      const cardDescription = card.querySelector(".projectcard-content p");
+      const cardImage = card.querySelector(".project-image img");
+
+      cardTitle.textContent = project.title;
+      cardTags.forEach((tag, tagIndex) => {
+        tag.textContent = project.tags[tagIndex];
+      });
+      cardDescription.textContent = project.description;
+      cardImage.setAttribute("alt", project.imageAlt);
+    });
+
+    footerHeading.textContent = translations.footerHeading;
+    emailLabel.textContent = translations.footerEmailLabel;
+    linkedInLabel.textContent = translations.footerLinkedInLabel;
+    footerCopyright.innerHTML = translations.footerCopyright;
+
+    options.forEach((option) => {
+      const isActive = option.dataset.lang === selectedLang;
+      option.classList.toggle("active", isActive);
+      option.setAttribute("aria-checked", isActive ? "true" : "false");
+    });
+    mobileLanguageOptions.forEach((option) => {
+      option.classList.toggle("active", option.dataset.lang === selectedLang);
+    });
+
+    const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+    const newSvg = activeOption.querySelector("svg").cloneNode(true);
+    languageButton.innerHTML = "";
+    languageButton.appendChild(newSvg);
+
+    localStorage.setItem("preferredLanguage", selectedLang);
+  }
+
+  languageButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !switcher.classList.contains("open");
+    switcher.classList.toggle("open");
+    languageButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    closeMobileMenu();
+  });
+
+  document.addEventListener("click", () => {
+    closeLanguageMenu();
+    closeMobileMenu();
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      applyLanguage(option.dataset.lang);
+      closeLanguageMenu();
+    });
+  });
+
+  mobileMenuButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !mobileMenu.classList.contains("open");
+    mobileMenu.classList.toggle("open");
+    mobileMenuButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    closeLanguageMenu();
+  });
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
+  });
+
+  mobileLanguageOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      applyLanguage(option.dataset.lang);
+      closeMobileMenu();
+    });
+  });
+
+  const savedLanguage = localStorage.getItem("preferredLanguage");
+  const browserLanguage = (navigator.language || "en").slice(0, 2).toLowerCase();
+  const initialLanguage = i18n[savedLanguage] ? savedLanguage : (i18n[browserLanguage] ? browserLanguage : "en");
+  applyLanguage(initialLanguage);
+
+  window.addEventListener("resize", () => {
+    applyLanguage(document.documentElement.lang || "en");
+  });
+</script>
+
+</html>
