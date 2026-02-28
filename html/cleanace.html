@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLEANACE – Maik Isaak</title>
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body class="project-page">
+  <div id="stars-layer"></div>
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo" aria-label="Startseite">
+        <svg xmlns="http://www.w3.org/2000/svg" alt="Maik Isaak Logo" viewBox="0 0 24 24">
+          <path class="color-1" d="M20,3.07v17.85c2.45-2.2,4-5.38,4-8.93s-1.55-6.73-4-8.93Z" />
+          <path class="color-1" d="M4,3.07C1.55,5.27,0,8.45,0,12s1.55,6.73,4,8.93V3.07Z" />
+          <path class="color-2" d="M16,8.64l-4,4-4-4v14.66c1.25.44,2.6.7,4,.7s2.75-.25,4-.7v-14.66Z" />
+          <path class="color-2" d="M12,6.99l5.6-5.6c-1.67-.88-3.58-1.39-5.6-1.39s-3.93.51-5.6,1.39l5.6,5.6Z" />
+        </svg>
+      </a>
+      <ul>
+        <li class="navigation-item"><a href="../index.html">Home</a></li>
+        <li class="navigation-item"><a href="#about">About</a></li>
+        <li class="navigation-item"><a href="#archiv">Archiv</a></li>
+        <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
+        <li class="language-item" id="language-switcher">
+          <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <mask id="a-current" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                  fill="#fff" />
+              </mask>
+              <g mask="url(#a-current)">
+                <path
+                  d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                  fill="#eee" />
+                <path
+                  d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                  fill="#0052b4" />
+                <path
+                  d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                  fill="#d80027" />
+              </g>
+            </svg>
+          </button>
+          <div class="language-dropdown" role="menu">
+            <button class="language-option active" data-lang="en" role="menuitemradio" aria-checked="true">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <mask id="a-desktop-en" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                  <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                    fill="#fff" />
+                </mask>
+                <g mask="url(#a-desktop-en)">
+                  <path
+                    d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                    fill="#eee" />
+                  <path
+                    d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                    fill="#0052b4" />
+                  <path
+                    d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                    fill="#d80027" />
+                </g>
+              </svg>
+              <span>English</span>
+            </button>
+            <button class="language-option" data-lang="de" role="menuitemradio" aria-checked="false">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_307_1346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6" width="36"
+                  height="36">
+                  <path
+                    d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                    fill="white" />
+                </mask>
+                <g mask="url(#mask0_307_1346)">
+                  <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                  <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                  <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                </g>
+              </svg>
+              <span>Deutsch</span>
+            </button>
+          </div>
+        </li>
+        <li class="mobile-menu-item" id="mobile-menu">
+          <button class="mobile-menu-button" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+            <svg class="mobile-menu-icon mobile-menu-icon--burger" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg class="mobile-menu-icon mobile-menu-icon--close" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="mobile-menu-dropdown" role="menu">
+            <a class="mobile-navigation-link" href="../index.html">Home</a>
+            <a class="mobile-navigation-link" href="#about">About</a>
+            <a class="mobile-navigation-link" href="#archiv">Archiv</a>
+            <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
+            <div class="mobile-language-group">
+              <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
+              <div class="mobile-language-options">
+                <button class="mobile-language-option active" data-lang="en" type="button">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="a-mobile" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                      <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                        fill="#fff" />
+                    </mask>
+                    <g mask="url(#a-mobile)">
+                      <path
+                        d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                        fill="#eee" />
+                      <path
+                        d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                        fill="#0052b4" />
+                      <path
+                        d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                        fill="#d80027" />
+                    </g>
+                  </svg>
+                  <span>English</span>
+                </button>
+                <button class="mobile-language-option" data-lang="de" type="button">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_307_1346_mobile" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6"
+                      width="36" height="36">
+                      <path
+                        d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                        fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_307_1346_mobile)">
+                      <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                      <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                      <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                    </g>
+                  </svg>
+                  <span>Deutsch</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="shadow-bar"></div>
+  <main>
+    <section class="project-intro">
+      <h1>CLEANACE</h1>
+      <div class="project-intro-text">
+        <p class="subline">Konzept einer barrierefreien „Nasszelle“, die alle Funktionen eines modernen Badezimmers
+          vereint.</p>
+        <ul class="info-group icon-text-list">
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.6666 2.66675C19.7275 2.66675 20.7449 3.08818 21.4951 3.83832C22.2452 4.58847 22.6666 5.60588 22.6666 6.66675V8.00008H25.3333C26.3942 8.00008 27.4116 8.42151 28.1617 9.17166C28.9119 9.9218 29.3333 10.9392 29.3333 12.0001V24.0001C29.3333 25.0609 28.9119 26.0784 28.1617 26.8285C27.4116 27.5787 26.3942 28.0001 25.3333 28.0001H6.66663C5.60576 28.0001 4.58834 27.5787 3.8382 26.8285C3.08805 26.0784 2.66663 25.0609 2.66663 24.0001V12.0001C2.66663 10.9392 3.08805 9.9218 3.8382 9.17166C4.58834 8.42151 5.60576 8.00008 6.66663 8.00008H9.33329V6.66675C9.33329 5.60588 9.75472 4.58847 10.5049 3.83832C11.255 3.08818 12.2724 2.66675 13.3333 2.66675H18.6666ZM18.6666 5.33342H13.3333C12.9797 5.33342 12.6405 5.47389 12.3905 5.72394C12.1404 5.97399 12 6.31313 12 6.66675V8.00008H20V6.66675C20 6.31313 19.8595 5.97399 19.6094 5.72394C19.3594 5.47389 19.0202 5.33342 18.6666 5.33342Z" />
+            </svg>
+            <span>Universitätsprojekt</span>
+          </li>
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 2.66663C13.3629 2.66663 10.7851 3.44861 8.59242 4.9137C6.39977 6.37878 4.6908 8.46116 3.68163 10.8975C2.67246 13.3339 2.40842 16.0147 2.92289 18.6012C3.43736 21.1876 4.70724 23.5633 6.57194 25.428C8.43664 27.2927 10.8124 28.5626 13.3988 29.0771C15.9852 29.5916 18.6661 29.3275 21.1025 28.3184C23.5388 27.3092 25.6212 25.6002 27.0863 23.4076C28.5514 21.2149 29.3334 18.637 29.3334 16C29.3334 14.249 28.9885 12.5152 28.3184 10.8975C27.6484 9.27984 26.6662 7.80998 25.4281 6.57187C24.19 5.33375 22.7201 4.35163 21.1025 3.68157C19.4848 3.0115 17.751 2.66663 16 2.66663ZM19.4 21.1066C19.1853 21.257 18.9288 21.3363 18.6667 21.3333C18.4471 21.3322 18.2312 21.2768 18.0381 21.1721C17.845 21.0674 17.6808 20.9167 17.56 20.7333L14.8934 16.7333C14.7476 16.5163 14.6687 16.2613 14.6667 16V9.33329C14.6667 8.97967 14.8072 8.64053 15.0572 8.39048C15.3073 8.14044 15.6464 7.99996 16 7.99996C16.3536 7.99996 16.6928 8.14044 16.9428 8.39048C17.1929 8.64053 17.3334 8.97967 17.3334 9.33329V15.6L19.7734 19.2666C19.9663 19.5606 20.0354 19.9189 19.9655 20.2635C19.8955 20.6081 19.6923 20.9111 19.4 21.1066Z" />
+            </svg>
+            <span>3 Monate</span>
+          </li>
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.96228 27.3372C1.96228 28.7864 3.30603 29.9622 4.96228 29.9622H26.9623C28.6185 29.9622 29.9623 28.7864 29.9623 27.3372V12.4622H1.96228V27.3372ZM21.9623 16.6184C21.9623 16.2575 22.2998 15.9622 22.7123 15.9622H25.2123C25.6248 15.9622 25.9623 16.2575 25.9623 16.6184V18.8059C25.9623 19.1668 25.6248 19.4622 25.2123 19.4622H22.7123C22.2998 19.4622 21.9623 19.1668 21.9623 18.8059V16.6184ZM21.9623 23.6184C21.9623 23.2575 22.2998 22.9622 22.7123 22.9622H25.2123C25.6248 22.9622 25.9623 23.2575 25.9623 23.6184V25.8059C25.9623 26.1668 25.6248 26.4622 25.2123 26.4622H22.7123C22.2998 26.4622 21.9623 26.1668 21.9623 25.8059V23.6184ZM13.9623 16.6184C13.9623 16.2575 14.2998 15.9622 14.7123 15.9622H17.2123C17.6248 15.9622 17.9623 16.2575 17.9623 16.6184V18.8059C17.9623 19.1668 17.6248 19.4622 17.2123 19.4622H14.7123C14.2998 19.4622 13.9623 19.1668 13.9623 18.8059V16.6184ZM13.9623 23.6184C13.9623 23.2575 14.2998 22.9622 14.7123 22.9622H17.2123C17.6248 22.9622 17.9623 23.2575 17.9623 23.6184V25.8059C17.9623 26.1668 17.6248 26.4622 17.2123 26.4622H14.7123C14.2998 26.4622 13.9623 26.1668 13.9623 25.8059V23.6184ZM5.96228 16.6184C5.96228 16.2575 6.29978 15.9622 6.71228 15.9622H9.21228C9.62478 15.9622 9.96228 16.2575 9.96228 16.6184V18.8059C9.96228 19.1668 9.62478 19.4622 9.21228 19.4622H6.71228C6.29978 19.4622 5.96228 19.1668 5.96228 18.8059V16.6184ZM5.96228 23.6184C5.96228 23.2575 6.29978 22.9622 6.71228 22.9622H9.21228C9.62478 22.9622 9.96228 23.2575 9.96228 23.6184V25.8059C9.96228 26.1668 9.62478 26.4622 9.21228 26.4622H6.71228C6.29978 26.4622 5.96228 26.1668 5.96228 25.8059V23.6184ZM26.9623 5.46216H23.9623V2.83716C23.9623 2.35591 23.5123 1.96216 22.9623 1.96216H20.9623C20.4123 1.96216 19.9623 2.35591 19.9623 2.83716V5.46216H11.9623V2.83716C11.9623 2.35591 11.5123 1.96216 10.9623 1.96216H8.96228C8.41228 1.96216 7.96228 2.35591 7.96228 2.83716V5.46216H4.96228C3.30603 5.46216 1.96228 6.63794 1.96228 8.08716V10.7122H29.9623V8.08716C29.9623 6.63794 28.6185 5.46216 26.9623 5.46216Z" />
+            </svg>
+            <span>2022</span>
+          </li>
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.79 4.03625C19.5737 2.72313 17.875 2 16 2C14.115 2 12.4106 2.71875 11.2 4.02375C9.97624 5.34312 9.37999 7.13625 9.51999 9.0725C9.79749 12.8925 12.7044 16 16 16C19.2956 16 22.1975 12.8931 22.4794 9.07375C22.6212 7.155 22.0212 5.36562 20.79 4.03625ZM27 30H4.99999C4.71203 30.0037 4.42686 29.9433 4.16522 29.8229C3.90358 29.7026 3.67206 29.5254 3.48749 29.3044C3.08124 28.8187 2.91749 28.1556 3.03874 27.485C3.56624 24.5588 5.21249 22.1006 7.79999 20.375C10.0987 18.8431 13.0106 18 16 18C18.9894 18 21.9012 18.8437 24.2 20.375C26.7875 22.1 28.4337 24.5581 28.9612 27.4844C29.0825 28.155 28.9187 28.8181 28.5125 29.3037C28.328 29.5249 28.0965 29.7022 27.8349 29.8226C27.5732 29.9431 27.288 30.0037 27 30Z" />
+            </svg>
+            <span>1 Person</span>
+          </li>
+        </ul>
+        <ul class="tags">
+          <li class="tag">Produktdesign</li>
+          <li class="tag">Konzeptidee</li>
+          <li class="tag">3D-Modelling</li>
+          <li class="tag">CAD</li>
+          <li class="tag">Barrierefreiheit</li>
+        </ul>
+      </div>
+      <div class="project-intro-image">
+        <img src="../img/cleanace/project-card-3.jpg" alt="Projektbild CLEANACE">
+      </div>
+    </section>
+    <section>
+      <h2 class="h2-section">
+        <span class="title-text">Overview</span>
+      </h2>
+      <div class="six-six-columns video-settings">
+        <div class="project-section-aside project-section-aside--no-fill">
+          <p>
+            CLEANACE ist ein Designkonzept einer „Nasszelle“, das alle verpflichtenden Kriterien eines modernen,
+            funktionalen Badezimmers mit erweiterter Barrierefreiheit erfüllt.
+            Daher spielt es keine Rolle, ob man alt oder jung, groß oder klein ist, wo man herkommt oder welche
+            Beeinträchtigung man hat. Dieses Badezimmer ist für alle gemacht.
+          </p>
+          <p>
+            Der Markenname CLEANACE setzt sich aus zwei englischen Wörtern zusammen: CLEAN und ACE. Dieser steht für
+            erstklassige Hygiene und die Verbindung zwischen Wasser, Ausstattung und Erlebnis.
+          </p>
+        </div>
+        <div class="image-gallery">
+          <div class="first-row">
+            <div>
+              <video src="../mp4/cleanace.mp4" autoplay muted loop playsinline aria-label="CLEANACE Video"></video>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="image-gallery">
+        <div class="first-row">
+          <div><img src="../img/cleanace/cleanace-1.jpg" alt="CLEANACE 01"></div>
+          <div><img src="../img/cleanace/cleanace-2.jpg" alt="CLEANACE 02"></div>
+          <div><img src="../img/cleanace/cleanace-3.jpg" alt="CLEANACE 03"></div>
+        </div>
+        <div class="second-row">
+          <div><img src="../img/cleanace/cleanace-4.jpg" alt="CLEANACE 04"></div>
+          <div><img src="../img/cleanace/cleanace-5.jpg" alt="CLEANACE 05"></div>
+          <div><img src="../img/cleanace/cleanace-6.jpg" alt="CLEANACE 06"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2 class="h2-section">
+        <span class="title-text">Technische Details</span>
+      </h2>
+      <div class="six-six-columns">
+        <div class="project-section-aside project-section-aside--no-fill">
+          <p>
+            Die Abmessungen und Einrichtungen von CLEANACE sind auf das Wesentliche reduziert, um sowohl Material als
+            auch Raum zu sparen. Es verfügt über einen universellen Abfluss sowie einen universellen Wasserzugang. Der
+            Raum ist darauf ausgelegt, nass zu werden, was sowohl die Nutzung als auch die Reinigung erheblich
+            vereinfacht.
+          </p>
+          <div class="headline-text">
+            <h3>Funktionen von CLEANACE</h3>
+            <ul class="project-bullets icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>eine barrierefreie Toilette mit höhenverstellbarem Sitz, passend zur persönlichen
+                  Körpergröße</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>die Möglichkeit, die Toilette im Sitzen oder in der Hocke zu nutzen</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>ein multifunktionaler Duschkopf mit Regulierung der Wasserstrahlstärke</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>ausziehbare Wände als Schutz vor Wasser – sie ersetzen zudem die Funktion eines
+                  Waschbeckens</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>ein Stahlgitter als Abdeckung der Toilette, sodass man beim Duschen sicher darauf stehen
+                  kann</span>
+              </li>
+            </ul>
+          </div>
+          <div class="headline-text">
+            <h3>Technische Informationen</h3>
+            <ul class="project-bullets icon-text-list">
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Neigung: 1,25° zum Abfluss hin</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Maße: 1,50 × 2,30 m</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Material: Porzellan, Edelstahl</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>integriertes Heizsystem in Toilette und Boden – gegen Nässe und Kälte</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 32 32" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="13" width="16" height="6" rx="3" />
+                </svg>
+                <span>Belüftungssystem gegen Schimmelbildung</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="first-row">
+            <div><img src="../img/cleanace/technical-drawing-1.jpg" alt="CLEANACE 01"></div>
+          </div>
+          <div class="second-row">
+            <div><img src="../img/cleanace/technical-drawing-2.jpg" alt="CLEANACE 02"></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-ideation-duo cleanace-drawing-duo">
+          <div class="project-research-media"><img src="../img/cleanace/drawing-1.jpg"></div>
+          <div class="project-research-media"><img src="../img/cleanace/drawing-2.jpg"></div>
+          <div class="project-research-media"><img src="../img/cleanace/drawing-3.jpg"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="mailto:maik.isaak94@gmail.com" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Linkedin-Icon" viewBox="0 0 48 48">
+                <path class="color-2"
+                  d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+                <path class="color-1"
+                  d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM37.4561 18.8096C37.4561 18.8096 24.9778 27.4101 23.7627 27.8574C22.5696 27.4314 10.0273 18.8096 10.0273 18.8096V31.001C10.0274 32.6937 10.3914 33.0322 12.085 33.0322H35.3994C37.1331 33.0322 37.456 32.7348 37.4561 31.001V18.8096ZM12.085 14.7461C10.3638 14.7461 10.0273 15.2752 10.0273 16.5078L10.0479 16.6973C10.0479 16.6973 22.4386 25.1215 23.7627 25.582C25.1598 25.047 37.3913 16.5528 37.4561 16.5078L37.4365 16.4199C37.4365 15.1868 37.0722 14.7462 35.3994 14.7461H12.085Z" />
+              </svg>
+              <span class="contact-email-label">Email</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/maikisaak" target="_blank" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Email-Icon" viewBox="0 0 48 48">
+                <path class="color-2"
+                  d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+                <path class="color-1"
+                  d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM12.4238 34.2861H17.7256V18.2197H12.4238V34.2861ZM31.6172 17.8975C28.8609 17.8975 27.1526 19.1492 26.2627 20.2812V18.2197H20.9609V34.2861H26.2627C26.2627 34.2861 26.2627 29.2278 26.2627 26.0654C26.2627 24.1674 26.9105 22.261 29.4961 22.2607C32.4184 22.2607 32.4014 24.7445 32.3877 26.6689C32.3699 29.1843 32.4121 31.7522 32.4121 34.2861H37.7148V25.8066C37.6699 20.3924 36.2586 17.8975 31.6172 17.8975ZM15.1016 10.2861C13.3886 10.2862 12 11.5845 12 13.1865C12 14.7886 13.3886 16.0878 15.1016 16.0879C16.8145 16.0879 18.2031 14.7886 18.2031 13.1865C18.2031 11.5845 16.8145 10.2861 15.1016 10.2861Z" />
+              </svg>
+              <span class="contact-linkedin-label">LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>&copy;2026. Created by Maik Isaak.</p>
+    </div>
+  </footer>
+
+</body>
+
+<!-- Sterne Script -->
+
+<script>
+  const starsLayer = document.getElementById("stars-layer");
+  const isMobileStarsViewport = window.matchMedia("(max-width: 639px)").matches;
+  const starCount = isMobileStarsViewport ? 500 : 1000;
+  const appearDuration = 60;
+
+  // Schleife, die Sterne nacheinander erzeugt
+  for (let i = 0; i < starCount; i++) {
+    // Erstelle ein neues <div>-Element (ein Kasten)
+    const star = document.createElement("div");
+    // Weise ihm die CSS-Klasse "star" zu
+    star.className = "star";
+
+    // Zufällige horizontale und vertikale Position (zwischen 0 und 100 Viewport-Breiten bzw. Höhen)
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+
+    // Zufällige Größe zwischen 1px und 3px
+    const size = Math.random() * 2 + 1;
+    star.style.width = size + "px";
+    star.style.height = size + "px";
+
+    starsLayer.appendChild(star);
+
+    // Zufällige Dauer der Animationen
+    const riseDuration = 75 + Math.random() * 150; // Dauer des "Aufsteigens"
+    const blinkDuration = 5 + Math.random() * 10; // Dauer des "Blinkens"
+
+    // Setze Animations-Dauer für beide Animationen (Blinken und Aufsteigen)
+    star.style.animationDuration = `${blinkDuration}s, ${riseDuration}s`;
+
+    // Jeder Stern bekommt eine zufällige Startverzögerung zwischen 0 und 45s
+    const delay = Math.random() * appearDuration;
+    star.style.animationDelay = `${delay}s, ${delay}s`;
+  }
+
+
+
+  const switcher = document.getElementById("language-switcher");
+  const languageButton = switcher.querySelector(".language-button");
+  const options = switcher.querySelectorAll(".language-option");
+
+  const mobileMenu = document.getElementById("mobile-menu");
+  const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
+  const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
+  const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
+
+  const i18n = {
+    en: {
+      metaTitle: "CLEANACE - Maik Isaak",
+      logoAriaLabel: "Home",
+      languageButtonAriaLabel: "Choose language",
+      mobileMenuButtonAriaLabel: "Open menu",
+      mobileLanguageLabel: "Language",
+      nav: ["Home", "About", "Archive", "Resume"],
+      sectionTitles: ["Problem & Goals", "Process", "Synthesis", "Ideation & Improvement", "Final Designs", "Accessibility", "Project Takeaways"],
+      sectionTitlesMobile: ["Problem & Goals", "Process", "Synthesis", "Ideation", "Final Designs", "Accessibility", "Takeaways"],
+      processTitles: ["Synthesis", "Ideation & Improvement", "Final Designs", "Accessibility"],
+      processItems: [
+        "Insights",
+        "Appinio Testing",
+        "Device selection",
+        "Device and tariff configuration",
+        "Price overview",
+        "Add-ons",
+        "Specification",
+        "UI component audits",
+        "Re-audits (2025)"
+      ],
+      introTitle: "CLEANACE",
+      introSubline: "Concept of an accessible wet room that combines all functions of a modern bathroom.",
+      introInfo: ["Concept project", "4 months", "2022", "3 people"],
+      introTags: ["Product Design", "Concept Idea", "3D Modelling", "CAD"],
+      problemText: "With the introduction of <strong>two new financing terms</strong> (12 and 36 months) for device financing, several adjustments are required in the New Customer Flow: new installment discounting, transparent price communication across terms, and legally compliant communication. To ensure long-term consistency, numerous interfaces between Legal, Editorial, Frontend, and Backend must be aligned.",
+      problemItems: [
+        "Design and concept new and existing UI components in the new-customer flow, specifically for the Device Financing model.",
+        "Create detailed specifications, align with stakeholders, and present to developers and project managers.",
+        "Review and audit these components based on current WCAG accessibility criteria."
+      ],
+      synthesisHeadings: ["Insights", "Appinio Testing"],
+      synthesisParagraphs: [
+        "I joined the team in late 2023 during the development phase to help redesign the mobile and tariff new-customer flow. Beyond the existing design, major parts of the overall Device Financing flow had to be rethought and aligned with different stakeholders.",
+        "Several tests had already been conducted, so many core ideas were validated. One large online test with 1,000 participants was still pending. For this, I built a compact prototype tested via Appinio, an independent market-research platform for anonymous, GDPR-compliant user surveys. Key findings:",
+        "Based on these findings, we developed multiple iterative solution approaches as a team. These are confidential and therefore cannot be described in detail here."
+      ],
+      synthesisInsights: [
+        "Financing smartphones together with a mobile tariff is an established and trusted model.",
+        "There were still ambiguities in the flow, especially around installment logic, discount logic, and the complex promotional price overview."
+      ],
+      ideationIntro: "The installment-payment topic required us to adapt or newly build multiple existing UI components in the new-customer flow. All updated elements had to align with Vodafone's internal style guides.",
+      ideationCardTitles: ["Device Selection", "Device and Tariff Configuration", "Price Overview", "Add-ons"],
+      ideationBullets: [
+        "Each device card now includes an additional <strong>One-Time Cost (OTC)</strong> that reflects costs for 12, 24, or 36 monthly installments. If users change the installment option later and return to the device overview, prices update dynamically.",
+        "The \"From\" price always shows the lowest available price across all installment options.",
+        "Two additional checks: <strong>\"Monthly Rate for Your Smartphone\"</strong> and <strong>\"Check Your New Tariff\"</strong> to keep installment and tariff selection transparent.",
+        "Introduction of a <strong>Sticky Bar</strong> in the mobile viewport to show real-time price changes for tariff and installment selections.",
+        "New iterative <strong>price summary</strong> in a tabular structure.",
+        "Display of <strong>\"Stairway Cases\"</strong>, e.g. when a 12-month installment is combined with a tariff that normally runs 24 months.",
+        "A new <strong>Promotional Card</strong> summarizes installment-related discounts.",
+        "Extended and more transparent price overview in the header area."
+      ],
+      specificationHeading: "Specification",
+      specificationIntro: "For all newly developed or revised components, I created detailed <strong>specifications</strong> that served as implementation guidance for the engineering team. These were iteratively refined with UX teams and additional stakeholders in alignments and refinements. The specifications covered, among other things:",
+      specificationBullets: [
+        "Component anatomy including SEO, editorial, and development guidelines",
+        "Definition of all variants and states (e.g. hover, selected, disabled)",
+        "Design tokens for consistent spacing, color, and typography values",
+        "Responsive behavior for desktop, tablet, and mobile"
+      ],
+      accessibilityHeadings: ["ACT I - Audits for UI Components", "ACT II - Re-Audits (2025)"],
+      accessibilityLeftParagraphs: [
+        "Alongside the Device Financing project, I audited all specified UI components for digital accessibility.",
+        "The basis was <strong>BITV</strong>, the German regulation that makes <strong>WCAG 2.1/2.2 Level AA</strong> binding. This ensured the products meet legal requirements under the <strong>EU Accessibility Act 2025</strong> while also serving people with disabilities. The results also fed into the UI specifications."
+      ],
+      accessibilityRightParagraphs: [
+        "While the first audit cycle was component-based, accessibility became increasingly important. In 2025, we therefore conducted full <strong>page audits</strong>, evaluated more flow-based against current BITV criteria."
+      ],
+      accessibilitySubheadings: ["Tasks", "Tasks"],
+      accessibilityBullets: [
+        "Auditing online sales components (e.g. ProductCard, PromoPrice, Sticky Bar) and documenting results in Vodafone intranet (Confluence).",
+        "Creating recommendations and UX guidelines for accessible evolution of the design system.",
+        "Supporting and consulting the development team in implementing accessible patterns.",
+        "Auditing complete pages in both new-customer and contract-renewal flows (hardware & propositions) based on current BITV criteria, including documentation in Confluence.",
+        "Collaboration with the development team to implement accessibility improvements on optimized pages."
+      ],
+      takeaways: [
+        "<strong>Presentation:</strong><br>Preparation and delivery of presentations for different stakeholders.",
+        "<strong>Design system:</strong><br>Documentation and specification of UI components.",
+        "<strong>Figma:</strong><br>Expanded skills professionally (auto layout and component creation).",
+        "<strong>Accessibility:</strong><br>Deepened work with WCAG 2.2 and BITV guidelines for accessible design."
+      ],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "Email",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    },
+    de: {
+      metaTitle: "CLEANACE - Maik Isaak",
+      logoAriaLabel: "Startseite",
+      languageButtonAriaLabel: "Sprache auswählen",
+      mobileMenuButtonAriaLabel: "Menü öffnen",
+      mobileLanguageLabel: "Sprache",
+      nav: ["Home", "About", "Archiv", "Lebenslauf"],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "E-Mail",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    }
+  };
+
+  const originalContent = {};
+
+  function captureOriginals() {
+    originalContent.introTitle = document.querySelector(".project-intro h1")?.innerHTML || "";
+    originalContent.introSubline = document.querySelector(".project-intro .subline")?.innerHTML || "";
+    originalContent.introInfo = Array.from(document.querySelectorAll(".project-intro .info-group .icon-text span")).map((el) => el.textContent);
+    originalContent.introTags = Array.from(document.querySelectorAll(".project-intro .tags .tag")).map((el) => el.textContent);
+    originalContent.sectionTitles = Array.from(document.querySelectorAll(".h2-section .title-text")).map((el) => el.textContent);
+    originalContent.processTitles = Array.from(document.querySelectorAll(".process-step .h3-step-text")).map((el) => el.textContent);
+    originalContent.processItems = Array.from(document.querySelectorAll(".process-step .step-text li")).map((el) => el.textContent);
+    originalContent.takeaways = Array.from(document.querySelectorAll(".project-takeaways-list span")).map((el) => el.innerHTML);
+    originalContent.problemText = document.querySelector(".project-two-column .project-details-text")?.innerHTML || "";
+    originalContent.problemItems = Array.from(document.querySelectorAll(".project-two-column .project-details-list .icon-text span")).map((el) => el.innerHTML);
+    originalContent.synthesisHeadings = Array.from(document.querySelectorAll("#synthese .project-synthesis-text h3")).map((el) => el.textContent);
+    originalContent.synthesisParagraphs = Array.from(document.querySelectorAll("#synthese .project-synthesis-text > p")).map((el) => el.innerHTML);
+    originalContent.synthesisInsights = Array.from(document.querySelectorAll("#synthese .project-synthesis-insight-card span")).map((el) => el.innerHTML);
+    originalContent.ideationIntro = document.querySelector("#ideation .project-ideation-improvements-intro p")?.innerHTML || "";
+    originalContent.ideationCardTitles = Array.from(document.querySelectorAll("#ideation .project-ideation-card h3")).map((el) => el.textContent);
+    originalContent.ideationBullets = Array.from(document.querySelectorAll("#ideation .project-ideation-card .project-bullets span")).map((el) => el.innerHTML);
+    originalContent.specificationHeading = document.querySelector("#spezifikation .project-research-text h3")?.textContent || "";
+    originalContent.specificationIntro = document.querySelector("#spezifikation .project-research-text > p")?.innerHTML || "";
+    originalContent.specificationBullets = Array.from(document.querySelectorAll("#spezifikation .project-bullets span")).map((el) => el.innerHTML);
+    originalContent.accessibilityHeadings = Array.from(document.querySelectorAll("#accessibility .project-research-half h3")).map((el) => el.textContent);
+    originalContent.accessibilityLeftParagraphs = Array.from(document.querySelectorAll("#accessibility .project-research-half--left > p")).map((el) => el.innerHTML);
+    originalContent.accessibilityRightParagraphs = Array.from(document.querySelectorAll("#accessibility .project-research-half--right > p")).map((el) => el.innerHTML);
+    originalContent.accessibilitySubheadings = Array.from(document.querySelectorAll("#accessibility h4")).map((el) => el.textContent);
+    originalContent.accessibilityBullets = Array.from(document.querySelectorAll("#accessibility .project-bullets span")).map((el) => el.innerHTML);
+    originalContent.footerHeading = document.querySelector(".h2-footer")?.textContent || "";
+    originalContent.footerEmailLabel = document.querySelector(".contact-email-label")?.textContent || "";
+    originalContent.footerLinkedInLabel = document.querySelector(".contact-linkedin-label")?.textContent || "";
+    originalContent.footerCopyright = document.querySelector(".footer-content > p")?.innerHTML || "";
+  }
+
+  function setTextList(selector, values) {
+    const nodes = document.querySelectorAll(selector);
+    nodes.forEach((node, index) => {
+      if (values[index] !== undefined) {
+        node.textContent = values[index];
+      }
+    });
+  }
+
+  function setHtmlList(selector, values) {
+    const nodes = document.querySelectorAll(selector);
+    nodes.forEach((node, index) => {
+      if (values[index] !== undefined) {
+        node.innerHTML = values[index];
+      }
+    });
+  }
+
+  function setHtml(node, value) {
+    if (node && value !== undefined) {
+      node.innerHTML = value;
+    }
+  }
+
+  function closeLanguageMenu() {
+    switcher.classList.remove("open");
+    languageButton.setAttribute("aria-expanded", "false");
+  }
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove("open");
+    mobileMenuButton.setAttribute("aria-expanded", "false");
+  }
+
+  function applyLanguage(lang) {
+    const selectedLang = i18n[lang] ? lang : "en";
+    const translations = i18n[selectedLang];
+    const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+
+    document.documentElement.lang = selectedLang;
+    document.title = translations.metaTitle;
+
+    const logo = document.querySelector(".logo");
+    const navLinks = document.querySelectorAll(".navigation-item a");
+    const footerHeading = document.querySelector(".h2-footer");
+    const emailLabel = document.querySelector(".contact-email-label");
+    const linkedInLabel = document.querySelector(".contact-linkedin-label");
+    const footerCopyright = document.querySelector(".footer-content > p");
+
+    logo.setAttribute("aria-label", translations.logoAriaLabel);
+    languageButton.setAttribute("aria-label", translations.languageButtonAriaLabel);
+    mobileMenuButton.setAttribute("aria-label", translations.mobileMenuButtonAriaLabel);
+    mobileLanguageLabelText.textContent = translations.mobileLanguageLabel;
+
+    navLinks.forEach((link, index) => {
+      link.textContent = translations.nav[index];
+    });
+    mobileNavLinks.forEach((link, index) => {
+      link.textContent = translations.nav[index];
+    });
+
+    if (selectedLang === "en") {
+      const sectionTitles = isMobileViewport ? translations.sectionTitlesMobile : translations.sectionTitles;
+      setTextList(".h2-section .title-text", sectionTitles);
+      setTextList(".process-step .h3-step-text", translations.processTitles);
+      setTextList(".process-step .step-text li", translations.processItems);
+
+      setHtml(document.querySelector(".project-intro h1"), translations.introTitle);
+      setHtml(document.querySelector(".project-intro .subline"), translations.introSubline);
+      setTextList(".project-intro .info-group .icon-text span", translations.introInfo);
+      setTextList(".project-intro .tags .tag", translations.introTags);
+
+      setHtml(document.querySelector(".project-two-column .project-details-text"), translations.problemText);
+      setHtmlList(".project-two-column .project-details-list .icon-text span", translations.problemItems);
+
+      setTextList("#synthese .project-synthesis-text h3", translations.synthesisHeadings);
+      setHtmlList("#synthese .project-synthesis-text > p", translations.synthesisParagraphs);
+      setHtmlList("#synthese .project-synthesis-insight-card span", translations.synthesisInsights);
+
+      setHtml(document.querySelector("#ideation .project-ideation-improvements-intro p"), translations.ideationIntro);
+      setTextList("#ideation .project-ideation-card h3", translations.ideationCardTitles);
+      setHtmlList("#ideation .project-ideation-card .project-bullets span", translations.ideationBullets);
+
+      setTextList("#spezifikation .project-research-text h3", [translations.specificationHeading]);
+      setHtml(document.querySelector("#spezifikation .project-research-text > p"), translations.specificationIntro);
+      setHtmlList("#spezifikation .project-bullets span", translations.specificationBullets);
+
+      setTextList("#accessibility .project-research-half h3", translations.accessibilityHeadings);
+      setHtmlList("#accessibility .project-research-half--left > p", translations.accessibilityLeftParagraphs);
+      setHtmlList("#accessibility .project-research-half--right > p", translations.accessibilityRightParagraphs);
+      setTextList("#accessibility h4", translations.accessibilitySubheadings);
+      setHtmlList("#accessibility .project-bullets span", translations.accessibilityBullets);
+
+      setHtmlList(".project-takeaways-list span", translations.takeaways);
+    } else {
+      setHtml(document.querySelector(".project-intro h1"), originalContent.introTitle);
+      setHtml(document.querySelector(".project-intro .subline"), originalContent.introSubline);
+      setTextList(".project-intro .info-group .icon-text span", originalContent.introInfo);
+      setTextList(".project-intro .tags .tag", originalContent.introTags);
+      setTextList(".h2-section .title-text", originalContent.sectionTitles);
+      setTextList(".process-step .h3-step-text", originalContent.processTitles);
+      setTextList(".process-step .step-text li", originalContent.processItems);
+      setHtml(document.querySelector(".project-two-column .project-details-text"), originalContent.problemText);
+      setHtmlList(".project-two-column .project-details-list .icon-text span", originalContent.problemItems);
+      setTextList("#synthese .project-synthesis-text h3", originalContent.synthesisHeadings);
+      setHtmlList("#synthese .project-synthesis-text > p", originalContent.synthesisParagraphs);
+      setHtmlList("#synthese .project-synthesis-insight-card span", originalContent.synthesisInsights);
+      setHtml(document.querySelector("#ideation .project-ideation-improvements-intro p"), originalContent.ideationIntro);
+      setTextList("#ideation .project-ideation-card h3", originalContent.ideationCardTitles);
+      setHtmlList("#ideation .project-ideation-card .project-bullets span", originalContent.ideationBullets);
+      setTextList("#spezifikation .project-research-text h3", [originalContent.specificationHeading]);
+      setHtml(document.querySelector("#spezifikation .project-research-text > p"), originalContent.specificationIntro);
+      setHtmlList("#spezifikation .project-bullets span", originalContent.specificationBullets);
+      setTextList("#accessibility .project-research-half h3", originalContent.accessibilityHeadings);
+      setHtmlList("#accessibility .project-research-half--left > p", originalContent.accessibilityLeftParagraphs);
+      setHtmlList("#accessibility .project-research-half--right > p", originalContent.accessibilityRightParagraphs);
+      setTextList("#accessibility h4", originalContent.accessibilitySubheadings);
+      setHtmlList("#accessibility .project-bullets span", originalContent.accessibilityBullets);
+      setHtmlList(".project-takeaways-list span", originalContent.takeaways);
+    }
+
+    footerHeading.textContent = translations.footerHeading;
+    emailLabel.textContent = translations.footerEmailLabel;
+    linkedInLabel.textContent = translations.footerLinkedInLabel;
+    footerCopyright.innerHTML = translations.footerCopyright;
+
+    options.forEach((option) => {
+      const isActive = option.dataset.lang === selectedLang;
+      option.classList.toggle("active", isActive);
+      option.setAttribute("aria-checked", isActive ? "true" : "false");
+    });
+    mobileLanguageOptions.forEach((option) => {
+      option.classList.toggle("active", option.dataset.lang === selectedLang);
+    });
+
+    const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+    const newSvg = activeOption.querySelector("svg").cloneNode(true);
+    languageButton.innerHTML = "";
+    languageButton.appendChild(newSvg);
+
+    localStorage.setItem("preferredLanguage", selectedLang);
+  }
+
+  languageButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !switcher.classList.contains("open");
+    switcher.classList.toggle("open");
+    languageButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    closeMobileMenu();
+  });
+
+  document.addEventListener("click", () => {
+    closeLanguageMenu();
+    closeMobileMenu();
+  });
+
+  options.forEach((option) => {
+    option.addEventListener("click", () => {
+      applyLanguage(option.dataset.lang);
+      closeLanguageMenu();
+    });
+  });
+
+  mobileMenuButton.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const willOpen = !mobileMenu.classList.contains("open");
+    mobileMenu.classList.toggle("open");
+    mobileMenuButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+    closeLanguageMenu();
+  });
+
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMobileMenu();
+    });
+  });
+
+  mobileLanguageOptions.forEach((option) => {
+    option.addEventListener("click", () => {
+      applyLanguage(option.dataset.lang);
+      closeMobileMenu();
+    });
+  });
+
+  captureOriginals();
+  const savedLanguage = localStorage.getItem("preferredLanguage");
+  const browserLanguage = (navigator.language || "en").slice(0, 2).toLowerCase();
+  const initialLanguage = i18n[savedLanguage] ? savedLanguage : (i18n[browserLanguage] ? browserLanguage : "en");
+  applyLanguage(initialLanguage);
+
+  window.addEventListener("resize", () => {
+    applyLanguage(document.documentElement.lang || "en");
+  });
+</script>
+
+</html>
