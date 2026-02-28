@@ -93,6 +93,13 @@
                 </svg>
                 <span>Deutsch</span>
               </button>
+              <button class="language-option" data-lang="ja" role="menuitemradio" aria-checked="false">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="18" fill="#ffffff" />
+                  <circle cx="24" cy="24" r="8" fill="#bc002d" />
+                </svg>
+                <span>日本語</span>
+              </button>
             </div>
           </li>
           <li class="mobile-menu-item" id="mobile-menu">
@@ -147,6 +154,13 @@
                       </g>
                     </svg>
                     <span>Deutsch</span>
+                  </button>
+                  <button class="mobile-language-option" data-lang="ja" type="button">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="24" cy="24" r="18" fill="#ffffff" />
+                      <circle cx="24" cy="24" r="8" fill="#bc002d" />
+                    </svg>
+                    <span>日本語</span>
                   </button>
                 </div>
               </div>
@@ -216,7 +230,7 @@
           </div>
         </a>
 
-        <a href="" class="projectcard projectcard--half">
+        <a href="html/insighter.html" class="projectcard projectcard--half">
           <div class="project-image">
             <img src="img/insighter/project-card-4.jpg" alt="Projekt: InSIGHTer">
           </div>
@@ -241,7 +255,7 @@
           </span>
         </h2>
 
-        <a href="" class="projectcard projectcard--full">
+        <a href="html/cleanace.html" class="projectcard projectcard--full">
           <div class="project-image">
             <img src="img/cleanace/project-card-3.jpg" alt="Projekt: CLEANACE">
           </div>
@@ -260,7 +274,7 @@
           </div>
         </a>
 
-        <a href="" class="projectcard projectcard--half">
+        <a href="html/beautylove.html" class="projectcard projectcard--half">
           <div class="project-image">
             <img src="img/beauty-love/project-card-2.jpg" alt="Projekt: BeautyLove">
           </div>
@@ -279,7 +293,7 @@
           </div>
         </a>
 
-        <a href="" class="projectcard projectcard--half">
+        <a href="html/stick.html" class="projectcard projectcard--half">
           <div class="project-image">
             <img src="img/stick/project-card-1.jpg" alt="Projekt: STICK">
           </div>
@@ -492,6 +506,61 @@
       ],
       footerHeading: "Wanna Get in touch? Let's Connect!",
       footerEmailLabel: "E-Mail",
+      footerLinkedInLabel: "LinkedIn",
+      footerCopyright: "&copy;2026. Created by Maik Isaak."
+    },
+    ja: {
+      metaTitle: "Maik Isaak - ポートフォリオ",
+      logoAriaLabel: "ホーム",
+      languageButtonAriaLabel: "言語を選択",
+      mobileMenuButtonAriaLabel: "メニューを開く",
+      mobileLanguageLabel: "言語",
+      nav: ["ホーム", "自己紹介", "アーカイブ", "履歴書"],
+      introHeading: "Hey there,<br>I'm <span class=\"highlight\">Maik</span>",
+      introSubline: "<span class=\"highlight\">UI/UX</span> と <span class=\"highlight\">プロダクトデザイナー</span><br>観察し、動き、問い直し、<br>体験へとデザインします。",
+      introThirdLine: "現在 @ <span class=\"highlight\">Vodafone</span> でデザイン中",
+      sectionTitles: ["UI/UX プロジェクト", "プロダクトデザインプロジェクト"],
+      sectionTitlesMobile: ["UI/UX プロジェクト", "プロダクトデザイン"],
+      projects: [
+        {
+          title: "Recommendation Page",
+          tags: ["UI/UX デザイン", "プロトタイピング", "UX 戦略", "リサーチ"],
+          description: "契約更新を一画面で把握し、既存顧客向け通知を可能にし、パーソナライズされた提案を提示するオールインワンのファネルページ。",
+          imageAlt: "プロジェクト: Recommendation Page"
+        },
+        {
+          title: "Device Financing",
+          tags: ["UX デザイン", "プロトタイピング", "アクセシビリティ", "リサーチ", "UI コンポーネント開発"],
+          description: "銀行との連携により、料金プラン付きスマートフォン購入時に 12・24・36 か月の分割払いを提供。",
+          imageAlt: "プロジェクト: Device Financing"
+        },
+        {
+          title: "InSIGHTer",
+          tags: ["UI/UX デザイン", "プロトタイピング", "UX リサーチ", "アプリデザイン"],
+          description: "スマートフォンとスマートウォッチ向けサステナビリティアプリのコンセプト。",
+          imageAlt: "プロジェクト: InSIGHTer"
+        },
+        {
+          title: "CLEANACE",
+          tags: ["プロダクトデザイン", "コンセプト", "3D モデリング", "CAD", "アクセシビリティ"],
+          description: "現代的なバスルーム機能を統合した、アクセシブルなウェットルームのコンセプト。",
+          imageAlt: "プロジェクト: CLEANACE"
+        },
+        {
+          title: "BeautyLove",
+          tags: ["パッケージデザイン", "サステナビリティ", "展開図", "協業"],
+          description: "天然由来成分のスキンケア製品向けに、持続可能なパッケージ案を 2 種開発。",
+          imageAlt: "プロジェクト: BeautyLove"
+        },
+        {
+          title: "STICK",
+          tags: ["プロダクトデザイン", "サステナビリティ", "デザイン思考", "モデル制作"],
+          description: "木材とレザーを用いた、幾何学性・安定性・上品さを備えるミニマルな折りたたみハンガーの設計。",
+          imageAlt: "プロジェクト: STICK"
+        }
+      ],
+      footerHeading: "Wanna Get in touch? Let's Connect!",
+      footerEmailLabel: "メール",
       footerLinkedInLabel: "LinkedIn",
       footerCopyright: "&copy;2026. Created by Maik Isaak."
     }
