@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About – Maik Isaak</title>
+  <link rel="icon" type="image/png" href="../favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+  <link rel="shortcut icon" href="../favicon/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png" />
+  <meta name="apple-mobile-web-app-title" content="MyWebSite" />
+  <link rel="manifest" href="../favicon/site.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+  <div id="stars-layer"></div>
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo" aria-label="Home">
+        <svg xmlns="http://www.w3.org/2000/svg" alt="Maik Isaak Logo" viewBox="0 0 24 24">
+          <path class="color-1" d="M20,3.07v17.85c2.45-2.2,4-5.38,4-8.93s-1.55-6.73-4-8.93Z" />
+          <path class="color-1" d="M4,3.07C1.55,5.27,0,8.45,0,12s1.55,6.73,4,8.93V3.07Z" />
+          <path class="color-2" d="M16,8.64l-4,4-4-4v14.66c1.25.44,2.6.7,4,.7s2.75-.25,4-.7v-14.66Z" />
+          <path class="color-2" d="M12,6.99l5.6-5.6c-1.67-.88-3.58-1.39-5.6-1.39s-3.93.51-5.6,1.39l5.6,5.6Z" />
+        </svg>
+      </a>
+      <ul>
+        <li class="navigation-item"><a href="../index.html">Home</a></li>
+        <li class="navigation-item active"><a href="about.html">About</a></li>
+        <li class="navigation-item"><a href="../index.html#archiv">Archiv</a></li>
+        <li class="navigation-item"><a href="../index.html#lebenslauf">Lebenslauf</a></li>
+        <li class="language-item" id="language-switcher">
+          <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <mask id="a-current" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                  fill="#fff" />
+              </mask>
+              <g mask="url(#a-current)">
+                <path
+                  d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                  fill="#eee" />
+                <path
+                  d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                  fill="#0052b4" />
+                <path
+                  d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                  fill="#d80027" />
+              </g>
+            </svg>
+          </button>
+          <div class="language-dropdown" role="menu">
+            <button class="language-option active" data-lang="en" role="menuitemradio" aria-checked="true">
+              <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                <mask id="a-desktop-en" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                  <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                    fill="#fff" />
+                </mask>
+                <g mask="url(#a-desktop-en)">
+                  <path
+                    d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                    fill="#eee" />
+                  <path
+                    d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                    fill="#0052b4" />
+                  <path
+                    d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                    fill="#d80027" />
+                </g>
+              </svg>
+              <span>English</span>
+            </button>
+            <button class="language-option" data-lang="de" role="menuitemradio" aria-checked="false">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_307_1346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6" width="36"
+                  height="36">
+                  <path
+                    d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                    fill="white" />
+                </mask>
+                <g mask="url(#mask0_307_1346)">
+                  <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                  <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                  <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                </g>
+              </svg>
+              <span>Deutsch</span>
+            </button>
+          </div>
+        </li>
+        <li class="mobile-menu-item" id="mobile-menu">
+          <button class="mobile-menu-button" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+            <svg class="mobile-menu-icon mobile-menu-icon--burger" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg class="mobile-menu-icon mobile-menu-icon--close" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="mobile-menu-dropdown" role="menu">
+            <a class="mobile-navigation-link" href="../index.html">Home</a>
+            <a class="mobile-navigation-link active" href="about.html">About</a>
+            <a class="mobile-navigation-link" href="../index.html#archiv">Archiv</a>
+            <a class="mobile-navigation-link" href="../index.html#lebenslauf">Lebenslauf</a>
+            <div class="mobile-language-group">
+              <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
+              <div class="mobile-language-options">
+                <button class="mobile-language-option active" data-lang="en" type="button">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="a-mobile-about" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                      <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                        fill="#fff" />
+                    </mask>
+                    <g mask="url(#a-mobile-about)">
+                      <path
+                        d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                        fill="#eee" />
+                      <path
+                        d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                        fill="#0052b4" />
+                      <path
+                        d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                        fill="#d80027" />
+                    </g>
+                  </svg>
+                  <span>English</span>
+                </button>
+                <button class="mobile-language-option" data-lang="de" type="button">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_307_1346_mobile_about" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6"
+                      y="6" width="36" height="36">
+                      <path
+                        d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                        fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_307_1346_mobile_about)">
+                      <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                      <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                      <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                    </g>
+                  </svg>
+                  <span>Deutsch</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-intro">
+      <h1>Hi, I'm Maik</h1>
+      <div class="about-image">
+        <img src="../img/about/about.png">
+      </div>
+    </section>
+    <section>
+      <h2 class="h2-section">
+        <span class="title-text" id="about-title-main">About Me</span>
+      </h2>
+      <div class="six-six-columns headline-text">
+        <div class="project-section-aside project-section-aside--no-fill about-me-copy">
+          <p>
+            Aktuell arbeite ich bei Vodafone als UX Design Specialist. Dort bin ich an zahlreichen Projekten sowie
+            UX-Research-Testings beteiligt, insbesondere im Neu- und Bestandskundensektor rund um Geräte und Tarife.
+            Derzeit liegt mein Schwerpunkt vor allem auf der Erstellung von Visuals für Kampagnen-Promotions im Bereich
+            Smartphone-Angebote sowie auf der Einhaltung der Accessibility-Richtlinien.
+          </p>
+          <p>
+            Zuvor studierte ich Design an der FH Münster, wo ich die Möglichkeit hatte, an verschiedenen Projekten aus
+            den Bereichen Kommunikations-, Medien-, Illustrations- und Produktdesign zu arbeiten.
+          </p>
+          <p>
+            Die herausfordernden Aufgaben in meinen bisherigen Projekten haben meinen Wunsch verstärkt, mich intensiver
+            mit modernen Themen und nutzerzentrierten Problemlösungsansätzen auseinanderzusetzen.
+          </p>
+        </div>
+        <div class="project-section-aside project-section-aside--no-fill about-me-copy">
+          <p>
+            Meine Hobbys prägen maßgeblich die kreativen Ansätze, die ich in meine heutige Arbeit als UX Designer
+            einbringe.
+          </p>
+          <p>
+            <strong>- Reisen</strong> eröffnet mir neue Perspektiven und Eindrücke unterschiedlicher Kulturen. Dadurch
+            lerne ich, die Welt mit anderen Augen zu sehen und entwickle ein tieferes Verständnis sowie mehr Empathie
+            für verschiedene Sichtweisen und Verhaltensmuster.
+          </p>
+          <p>
+            <strong>- Sport und Fitness</strong> stärken meine Disziplin und meinen Leistungswillen – Eigenschaften, die
+            mir helfen, fokussiert auf Ziele hinzuarbeiten, bis sich am Ende der Erfolg zeigt.
+          </p>
+          <p>
+            <strong>- Tanzen und Zeichnen</strong> inspirieren mich kontinuierlich weiter und schärfen meinen Blick für
+            minutiöse Details, aus denen sich oft große Ideen entfalten.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+    <section>
+      <h2 class="h2-section">
+        <span class="title-text" id="about-title-skills">Fähigkeiten</span>
+      </h2>
+      <div class="about-skills-layout">
+        <div class="project-section-aside project-section-aside--no-fill about-skills-tech">
+          <h3 id="about-skills-it-title">IT-Skills</h3>
+          <ul class="about-skills-grid">
+            <li><img src="../img/about/skill-figma.svg" alt="Figma"><span>Figma</span></li>
+            <li><img src="../img/about/skill-xd.svg" alt="XD"><span>XD</span></li>
+            <li><img src="../img/about/skill-photoshop.svg" alt="Photoshop"><span>Photoshop</span></li>
+            <li><img src="../img/about/skill-illustrator.svg" alt="Illustrator"><span>Illustrator</span></li>
+            <li><img src="../img/about/skill-indesign.svg" alt="InDesign"><span>InDesign</span></li>
+            <li><img src="../img/about/skill-premiere.svg" alt="Premiere"><span>Premiere</span></li>
+            <li><img src="../img/about/skill-html.svg" alt="HTML"><span>HTML</span></li>
+            <li><img src="../img/about/skill-css.svg" alt="CSS"><span>CSS</span></li>
+            <li><img src="../img/about/skill-solidworks.svg" alt="SolidWorks"><span>SolidWorks</span></li>
+            <li><img src="../img/about/skill-siemens-nx.svg" alt="Siemens NX"><span>Siemens NX</span></li>
+            <li><img src="../img/about/skill-autocad.svg" alt="AutoCAD"><span>AutoCAD</span></li>
+            <li><img src="../img/about/skill-ms-office.svg" alt="MS Office"><span>MS Office</span></li>
+          </ul>
+        </div>
+        <div class="project-section-aside project-section-aside--no-fill about-skills-exp">
+          <h3 id="about-skills-exp-title">Erfahrungen</h3>
+          <ul class="about-skills-list">
+            <li>UX/UI-Design</li>
+            <li>UX Research</li>
+            <li>Wireframing</li>
+            <li>Prototyping</li>
+            <li>Specifications</li>
+            <li>Design Systems</li>
+            <li>Accessibility</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="mailto:maik.isaak94@gmail.com" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Linkedin-Icon" viewBox="0 0 48 48">
+                <path class="color-2"
+                  d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+                <path class="color-1"
+                  d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM37.4561 18.8096C37.4561 18.8096 24.9778 27.4101 23.7627 27.8574C22.5696 27.4314 10.0273 18.8096 10.0273 18.8096V31.001C10.0274 32.6937 10.3914 33.0322 12.085 33.0322H35.3994C37.1331 33.0322 37.456 32.7348 37.4561 31.001V18.8096ZM12.085 14.7461C10.3638 14.7461 10.0273 15.2752 10.0273 16.5078L10.0479 16.6973C10.0479 16.6973 22.4386 25.1215 23.7627 25.582C25.1598 25.047 37.3913 16.5528 37.4561 16.5078L37.4365 16.4199C37.4365 15.1868 37.0722 14.7462 35.3994 14.7461H12.085Z" />
+              </svg>
+              <span>Email</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/maikisaak" target="_blank" class="footer-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" alt="Email-Icon" viewBox="0 0 48 48">
+                <path class="color-2"
+                  d="M48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48C37.2548 48 48 37.2548 48 24Z" />
+                <path class="color-1"
+                  d="M24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24C0 10.7452 10.7452 0 24 0ZM12.4238 34.2861H17.7256V18.2197H12.4238V34.2861ZM31.6172 17.8975C28.8609 17.8975 27.1526 19.1492 26.2627 20.2812V18.2197H20.9609V34.2861H26.2627C26.2627 34.2861 26.2627 29.2278 26.2627 26.0654C26.2627 24.1674 26.9105 22.261 29.4961 22.2607C32.4184 22.2607 32.4014 24.7445 32.3877 26.6689C32.3699 29.1843 32.4121 31.7522 32.4121 34.2861H37.7148V25.8066C37.6699 20.3924 36.2586 17.8975 31.6172 17.8975ZM15.1016 10.2861C13.3886 10.2862 12 11.5845 12 13.1865C12 14.7886 13.3886 16.0878 15.1016 16.0879C16.8145 16.0879 18.2031 14.7886 18.2031 13.1865C18.2031 11.5845 16.8145 10.2861 15.1016 10.2861Z" />
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p>&copy;2026. Created by Maik Isaak.</p>
+    </div>
+  </footer>
+
+  <script>
+    const starsLayer = document.getElementById("stars-layer");
+    const isMobileStarsViewport = window.matchMedia("(max-width: 639px)").matches;
+    const starCount = isMobileStarsViewport ? 500 : 1000;
+    const appearDuration = 60;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement("div");
+      star.className = "star";
+      star.style.left = Math.random() * 100 + "vw";
+      star.style.top = Math.random() * 100 + "vh";
+      const size = Math.random() * 2 + 1;
+      star.style.width = size + "px";
+      star.style.height = size + "px";
+      starsLayer.appendChild(star);
+
+      const riseDuration = 75 + Math.random() * 150;
+      const blinkDuration = 5 + Math.random() * 10;
+      star.style.animationDuration = `${blinkDuration}s, ${riseDuration}s`;
+
+      const delay = Math.random() * appearDuration;
+      star.style.animationDelay = `${delay}s, ${delay}s`;
+    }
+
+    const switcher = document.getElementById("language-switcher");
+    const languageButton = switcher.querySelector(".language-button");
+    const options = switcher.querySelectorAll(".language-option");
+
+    const mobileMenu = document.getElementById("mobile-menu");
+    const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
+    const navLinks = document.querySelectorAll(".navigation-item a");
+    const mobileNavLinks = document.querySelectorAll(".mobile-navigation-link");
+    const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
+    const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
+    const heroTitle = document.querySelector(".project-intro h1");
+    const aboutMainTitle = document.getElementById("about-title-main");
+    const aboutSkillsTitle = document.getElementById("about-title-skills");
+    const aboutParagraphs = document.querySelectorAll(".about-me-copy p");
+    const aboutSkillsItTitle = document.getElementById("about-skills-it-title");
+    const aboutSkillsExpTitle = document.getElementById("about-skills-exp-title");
+    const aboutExpItems = document.querySelectorAll(".about-skills-list li");
+    const footerHeading = document.querySelector(".h2-footer");
+    const footerLabels = document.querySelectorAll(".footer-icon span");
+
+    const i18n = {
+      de: {
+        metaTitle: "About – Maik Isaak",
+        languageButtonAriaLabel: "Sprache auswählen",
+        mobileMenuButtonAriaLabel: "Menü öffnen",
+        mobileLanguageLabel: "Sprache",
+        nav: ["Home", "About", "Archiv", "Lebenslauf"],
+        heroTitle: "Hi, I'm Maik",
+        aboutMainTitle: "About Me",
+        aboutSkillsTitle: "Fähigkeiten",
+        aboutParagraphs: [
+          "Aktuell arbeite ich bei Vodafone als UX Design Specialist. Dort bin ich an zahlreichen Projekten sowie UX-Research-Testings beteiligt, insbesondere im Neu- und Bestandskundensektor rund um Geräte und Tarife. Derzeit liegt mein Schwerpunkt vor allem auf der Erstellung von Visuals für Kampagnen-Promotions im Bereich Smartphone-Angebote sowie auf der Einhaltung der Accessibility-Richtlinien.",
+          "Zuvor studierte ich Design an der FH Münster, wo ich die Möglichkeit hatte, an verschiedenen Projekten aus den Bereichen Kommunikations-, Medien-, Illustrations- und Produktdesign zu arbeiten.",
+          "Die herausfordernden Aufgaben in meinen bisherigen Projekten haben meinen Wunsch verstärkt, mich intensiver mit modernen Themen und nutzerzentrierten Problemlösungsansätzen auseinanderzusetzen.",
+          "Meine Hobbys prägen maßgeblich die kreativen Ansätze, die ich in meine heutige Arbeit als UX Designer einbringe.",
+          "<strong>- Reisen</strong> eröffnet mir neue Perspektiven und Eindrücke unterschiedlicher Kulturen. Dadurch lerne ich, die Welt mit anderen Augen zu sehen und entwickle ein tieferes Verständnis sowie mehr Empathie für verschiedene Sichtweisen und Verhaltensmuster.",
+          "<strong>- Sport und Fitness</strong> stärken meine Disziplin und meinen Leistungswillen - Eigenschaften, die mir helfen, fokussiert auf Ziele hinzuarbeiten, bis sich am Ende der Erfolg zeigt.",
+          "<strong>- Tanzen und Zeichnen</strong> inspirieren mich kontinuierlich weiter und schärfen meinen Blick für minutiöse Details, aus denen sich oft große Ideen entfalten."
+        ],
+        skillsItTitle: "IT-Skills",
+        skillsExpTitle: "Erfahrungen",
+        expItems: ["UX/UI-Design", "UX Research", "Wireframing", "Prototyping", "Specifications", "Design Systems", "Accessibility"],
+        footerHeading: "Wanna Get in touch? Let’s Connect!",
+        footerLabels: ["Email", "LinkedIn"]
+      },
+      en: {
+        metaTitle: "About – Maik Isaak",
+        languageButtonAriaLabel: "Choose language",
+        mobileMenuButtonAriaLabel: "Open menu",
+        mobileLanguageLabel: "Language",
+        nav: ["Home", "About", "Archive", "Resume"],
+        heroTitle: "Hi, I'm Maik",
+        aboutMainTitle: "About Me",
+        aboutSkillsTitle: "Skills",
+        aboutParagraphs: [
+          "I currently work at Vodafone as a UX Design Specialist. I contribute to numerous projects and UX research tests, especially in new- and existing-customer journeys around devices and tariffs. My current focus is creating campaign visuals for smartphone offers and ensuring accessibility compliance.",
+          "Before that, I studied Design at FH Münster, where I worked on projects in communication, media, illustration, and product design.",
+          "The challenging tasks in my previous projects strengthened my drive to dive deeper into modern topics and user-centered problem solving.",
+          "My hobbies strongly shape the creative approaches I bring into my work as a UX designer today.",
+          "<strong>- Traveling</strong> gives me new perspectives and impressions of different cultures. It helps me see the world from different angles and build empathy for diverse viewpoints and behavior patterns.",
+          "<strong>- Sports and fitness</strong> strengthen my discipline and determination - qualities that help me stay focused on goals until results are achieved.",
+          "<strong>- Dancing and drawing</strong> keep inspiring me and sharpen my eye for detail, where big ideas often begin."
+        ],
+        skillsItTitle: "IT Skills",
+        skillsExpTitle: "Experience",
+        expItems: ["UX/UI Design", "UX Research", "Wireframing", "Prototyping", "Specifications", "Design Systems", "Accessibility"],
+        footerHeading: "Wanna Get in touch? Let’s Connect!",
+        footerLabels: ["Email", "LinkedIn"]
+      }
+    };
+
+    function applyLanguage(lang) {
+      const selectedLang = i18n[lang] ? lang : "en";
+      const t = i18n[selectedLang];
+
+      document.documentElement.lang = selectedLang;
+      document.title = t.metaTitle;
+      languageButton.setAttribute("aria-label", t.languageButtonAriaLabel);
+      mobileMenuButton.setAttribute("aria-label", t.mobileMenuButtonAriaLabel);
+      mobileLanguageLabelText.textContent = t.mobileLanguageLabel;
+
+      navLinks.forEach((link, index) => {
+        if (t.nav[index]) link.textContent = t.nav[index];
+      });
+      mobileNavLinks.forEach((link, index) => {
+        if (t.nav[index]) link.textContent = t.nav[index];
+      });
+
+      heroTitle.textContent = t.heroTitle;
+      aboutMainTitle.textContent = t.aboutMainTitle;
+      aboutSkillsTitle.textContent = t.aboutSkillsTitle;
+      aboutSkillsItTitle.textContent = t.skillsItTitle;
+      aboutSkillsExpTitle.textContent = t.skillsExpTitle;
+
+      aboutParagraphs.forEach((p, index) => {
+        if (t.aboutParagraphs[index] !== undefined) {
+          p.innerHTML = t.aboutParagraphs[index];
+        }
+      });
+
+      aboutExpItems.forEach((item, index) => {
+        if (t.expItems[index] !== undefined) {
+          item.textContent = t.expItems[index];
+        }
+      });
+
+      footerHeading.textContent = t.footerHeading;
+      footerLabels.forEach((label, index) => {
+        if (t.footerLabels[index] !== undefined) {
+          label.textContent = t.footerLabels[index];
+        }
+      });
+
+      options.forEach((option) => {
+        const isActive = option.dataset.lang === selectedLang;
+        option.classList.toggle("active", isActive);
+        option.setAttribute("aria-checked", isActive ? "true" : "false");
+      });
+      mobileLanguageOptions.forEach((option) => {
+        option.classList.toggle("active", option.dataset.lang === selectedLang);
+      });
+
+      const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+      const newSvg = activeOption.querySelector("svg").cloneNode(true);
+      languageButton.innerHTML = "";
+      languageButton.appendChild(newSvg);
+
+      localStorage.setItem("preferredLanguage", selectedLang);
+    }
+
+    function closeLanguageMenu() {
+      switcher.classList.remove("open");
+      languageButton.setAttribute("aria-expanded", "false");
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove("open");
+      mobileMenuButton.setAttribute("aria-expanded", "false");
+    }
+
+    languageButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willOpen = !switcher.classList.contains("open");
+      switcher.classList.toggle("open");
+      languageButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      closeMobileMenu();
+    });
+
+    options.forEach((option) => {
+      option.addEventListener("click", () => {
+        applyLanguage(option.dataset.lang);
+        closeLanguageMenu();
+      });
+    });
+
+    mobileLanguageOptions.forEach((option) => {
+      option.addEventListener("click", () => {
+        applyLanguage(option.dataset.lang);
+        closeMobileMenu();
+      });
+    });
+
+    mobileMenuButton.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const willOpen = !mobileMenu.classList.contains("open");
+      mobileMenu.classList.toggle("open");
+      mobileMenuButton.setAttribute("aria-expanded", willOpen ? "true" : "false");
+      closeLanguageMenu();
+    });
+
+    document.addEventListener("click", () => {
+      closeLanguageMenu();
+      closeMobileMenu();
+    });
+
+    const savedLanguage = localStorage.getItem("preferredLanguage");
+    const browserLanguage = (navigator.language || "en").slice(0, 2).toLowerCase();
+    const initialLanguage = i18n[savedLanguage] ? savedLanguage : (i18n[browserLanguage] ? browserLanguage : "en");
+    applyLanguage(initialLanguage);
+  </script>
+</body>
+
+</html>
