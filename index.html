@@ -34,8 +34,8 @@
         <ul>
           <li class="navigation-item"><a href="#home">Home</a></li>
           <li class="navigation-item"><a href="html/about.html">About</a></li>
-          <li class="navigation-item"><a href="#archiv">Archiv</a></li>
-          <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
+          <li class="navigation-item"><a href="html/archive.html">Archiv</a></li>
+          <li class="navigation-item"><a class="resume-link" href="img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a></li>
           <li class="language-item" id="language-switcher">
             <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
               <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -114,8 +114,8 @@
             <div class="mobile-menu-dropdown" role="menu">
               <a class="mobile-navigation-link" href="#home">Home</a>
               <a class="mobile-navigation-link" href="html/about.html">About</a>
-              <a class="mobile-navigation-link" href="#archiv">Archiv</a>
-              <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
+              <a class="mobile-navigation-link" href="html/archive.html">Archiv</a>
+              <a class="mobile-navigation-link resume-link" href="img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a>
               <div class="mobile-language-group">
                 <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
                 <div class="mobile-language-options">
@@ -395,6 +395,20 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
   const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const resumeLinks = document.querySelectorAll(".resume-link");
+
+  function updateResumeLinks(selectedLang) {
+    const resumeBasePath = window.location.pathname.includes("/html/") ? "../img/resume/" : "img/resume/";
+    const resumeFile = selectedLang === "de" ? "Bewerbung_Maik_Isaak.pdf" : "Resume_Maik_Isaak.pdf";
+    const resumeHref = resumeBasePath + resumeFile;
+
+    resumeLinks.forEach((link) => {
+      link.setAttribute("href", resumeHref);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
   const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
   const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
 
@@ -607,6 +621,8 @@
     mobileNavLinks.forEach((link, index) => {
       link.textContent = translations.nav[index];
     });
+
+      updateResumeLinks(selectedLang);
 
     introHeading.innerHTML = translations.introHeading;
     introSubline.innerHTML = translations.introSubline;
