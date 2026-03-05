@@ -34,8 +34,8 @@
       <ul>
         <li class="navigation-item"><a href="../index.html">Home</a></li>
         <li class="navigation-item"><a href="about.html">About</a></li>
-        <li class="navigation-item"><a href="#archiv">Archiv</a></li>
-        <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
+        <li class="navigation-item"><a href="archive.html">Archiv</a></li>
+        <li class="navigation-item"><a class="resume-link" href="../img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a></li>
         <li class="language-item" id="language-switcher">
           <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
             <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +109,8 @@
           <div class="mobile-menu-dropdown" role="menu">
             <a class="mobile-navigation-link" href="../index.html">Home</a>
             <a class="mobile-navigation-link" href="about.html">About</a>
-            <a class="mobile-navigation-link" href="#archiv">Archiv</a>
-            <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
+            <a class="mobile-navigation-link" href="archive.html">Archiv</a>
+            <a class="mobile-navigation-link resume-link" href="../img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a>
             <div class="mobile-language-group">
               <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
               <div class="mobile-language-options">
@@ -430,6 +430,20 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
   const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const resumeLinks = document.querySelectorAll(".resume-link");
+
+  function updateResumeLinks(selectedLang) {
+    const resumeBasePath = window.location.pathname.includes("/html/") ? "../img/resume/" : "img/resume/";
+    const resumeFile = selectedLang === "de" ? "Bewerbung_Maik_Isaak.pdf" : "Resume_Maik_Isaak.pdf";
+    const resumeHref = resumeBasePath + resumeFile;
+
+    resumeLinks.forEach((link) => {
+      link.setAttribute("href", resumeHref);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
   const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
   const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
 
@@ -441,81 +455,33 @@
       mobileMenuButtonAriaLabel: "Open menu",
       mobileLanguageLabel: "Language",
       nav: ["Home", "About", "Archive", "Resume"],
-      sectionTitles: ["Problem & Goals", "Process", "Synthesis", "Ideation & Improvement", "Final Designs", "Accessibility", "Project Takeaways"],
-      sectionTitlesMobile: ["Problem & Goals", "Process", "Synthesis", "Ideation", "Final Designs", "Accessibility", "Takeaways"],
-      processTitles: ["Synthesis", "Ideation & Improvement", "Final Designs", "Accessibility"],
-      processItems: [
-        "Insights",
-        "Appinio Testing",
-        "Device selection",
-        "Device and tariff configuration",
-        "Price overview",
-        "Add-ons",
-        "Specification",
-        "UI component audits",
-        "Re-audits (2025)"
-      ],
+      sectionTitles: ["Overview", "Technical Details"],
+      sectionTitlesMobile: ["Overview", "Tech. Details"],
+      processTitles: [],
+      processItems: [],
       introTitle: "CLEANACE",
       introSubline: "Concept of an accessible wet room that combines all functions of a modern bathroom.",
-      introInfo: ["Concept project", "4 months", "2022", "3 people"],
-      introTags: ["Product Design", "Concept Idea", "3D Modelling", "CAD"],
-      problemText: "With the introduction of <strong>two new financing terms</strong> (12 and 36 months) for device financing, several adjustments are required in the New Customer Flow: new installment discounting, transparent price communication across terms, and legally compliant communication. To ensure long-term consistency, numerous interfaces between Legal, Editorial, Frontend, and Backend must be aligned.",
-      problemItems: [
-        "Design and concept new and existing UI components in the new-customer flow, specifically for the Device Financing model.",
-        "Create detailed specifications, align with stakeholders, and present to developers and project managers.",
-        "Review and audit these components based on current WCAG accessibility criteria."
+      introInfo: ["University project", "3 months", "2022", "1 person"],
+      introTags: ["Product Design", "Concept Idea", "3D Modelling", "CAD", "Accessibility"],
+      overviewParagraphs: [
+        "CLEANACE is a design concept of a \"wet room\" that fulfills all essential requirements of a modern, functional bathroom with extended accessibility. Therefore, it does not matter whether someone is old or young, tall or short, where they come from, or which impairment they have. This bathroom is made for everyone.",
+        "The brand name CLEANACE combines the two English words CLEAN and ACE. It stands for first-class hygiene and the connection between water, equipment, and experience."
       ],
-      synthesisHeadings: ["Insights", "Appinio Testing"],
-      synthesisParagraphs: [
-        "I joined the team in late 2023 during the development phase to help redesign the mobile and tariff new-customer flow. Beyond the existing design, major parts of the overall Device Financing flow had to be rethought and aligned with different stakeholders.",
-        "Several tests had already been conducted, so many core ideas were validated. One large online test with 1,000 participants was still pending. For this, I built a compact prototype tested via Appinio, an independent market-research platform for anonymous, GDPR-compliant user surveys. Key findings:",
-        "Based on these findings, we developed multiple iterative solution approaches as a team. These are confidential and therefore cannot be described in detail here."
+      technicalIntro: "The dimensions and features of CLEANACE are reduced to the essentials to save both material and space. It has a universal drain and a universal water connection. The room is designed to get wet, which simplifies both usage and cleaning significantly.",
+      technicalHeadings: ["CLEANACE Functions", "Technical Information"],
+      technicalFunctionBullets: [
+        "an accessible toilet with a height-adjustable seat, tailored to personal body height",
+        "the option to use the toilet seated or in a squat position",
+        "a multifunctional shower head with adjustable water pressure",
+        "extendable walls as splash protection, which additionally replace the function of a sink",
+        "a steel grid cover over the toilet, so users can safely stand on it while showering"
       ],
-      synthesisInsights: [
-        "Financing smartphones together with a mobile tariff is an established and trusted model.",
-        "There were still ambiguities in the flow, especially around installment logic, discount logic, and the complex promotional price overview."
-      ],
-      ideationIntro: "The installment-payment topic required us to adapt or newly build multiple existing UI components in the new-customer flow. All updated elements had to align with Vodafone's internal style guides.",
-      ideationCardTitles: ["Device Selection", "Device and Tariff Configuration", "Price Overview", "Add-ons"],
-      ideationBullets: [
-        "Each device card now includes an additional <strong>One-Time Cost (OTC)</strong> that reflects costs for 12, 24, or 36 monthly installments. If users change the installment option later and return to the device overview, prices update dynamically.",
-        "The \"From\" price always shows the lowest available price across all installment options.",
-        "Two additional checks: <strong>\"Monthly Rate for Your Smartphone\"</strong> and <strong>\"Check Your New Tariff\"</strong> to keep installment and tariff selection transparent.",
-        "Introduction of a <strong>Sticky Bar</strong> in the mobile viewport to show real-time price changes for tariff and installment selections.",
-        "New iterative <strong>price summary</strong> in a tabular structure.",
-        "Display of <strong>\"Stairway Cases\"</strong>, e.g. when a 12-month installment is combined with a tariff that normally runs 24 months.",
-        "A new <strong>Promotional Card</strong> summarizes installment-related discounts.",
-        "Extended and more transparent price overview in the header area."
-      ],
-      specificationHeading: "Specification",
-      specificationIntro: "For all newly developed or revised components, I created detailed <strong>specifications</strong> that served as implementation guidance for the engineering team. These were iteratively refined with UX teams and additional stakeholders in alignments and refinements. The specifications covered, among other things:",
-      specificationBullets: [
-        "Component anatomy including SEO, editorial, and development guidelines",
-        "Definition of all variants and states (e.g. hover, selected, disabled)",
-        "Design tokens for consistent spacing, color, and typography values",
-        "Responsive behavior for desktop, tablet, and mobile"
-      ],
-      accessibilityHeadings: ["ACT I - Audits for UI Components", "ACT II - Re-Audits (2025)"],
-      accessibilityLeftParagraphs: [
-        "Alongside the Device Financing project, I audited all specified UI components for digital accessibility.",
-        "The basis was <strong>BITV</strong>, the German regulation that makes <strong>WCAG 2.1/2.2 Level AA</strong> binding. This ensured the products meet legal requirements under the <strong>EU Accessibility Act 2025</strong> while also serving people with disabilities. The results also fed into the UI specifications."
-      ],
-      accessibilityRightParagraphs: [
-        "While the first audit cycle was component-based, accessibility became increasingly important. In 2025, we therefore conducted full <strong>page audits</strong>, evaluated more flow-based against current BITV criteria."
-      ],
-      accessibilitySubheadings: ["Tasks", "Tasks"],
-      accessibilityBullets: [
-        "Auditing online sales components (e.g. ProductCard, PromoPrice, Sticky Bar) and documenting results in Vodafone intranet (Confluence).",
-        "Creating recommendations and UX guidelines for accessible evolution of the design system.",
-        "Supporting and consulting the development team in implementing accessible patterns.",
-        "Auditing complete pages in both new-customer and contract-renewal flows (hardware & propositions) based on current BITV criteria, including documentation in Confluence.",
-        "Collaboration with the development team to implement accessibility improvements on optimized pages."
-      ],
-      takeaways: [
-        "<strong>Presentation:</strong><br>Preparation and delivery of presentations for different stakeholders.",
-        "<strong>Design system:</strong><br>Documentation and specification of UI components.",
-        "<strong>Figma:</strong><br>Expanded skills professionally (auto layout and component creation).",
-        "<strong>Accessibility:</strong><br>Deepened work with WCAG 2.2 and BITV guidelines for accessible design."
+      technicalInfoBullets: [
+        "Slope: 1.25° toward the drain",
+        "Dimensions: 1.50 × 2.30 m",
+        "Material: porcelain, stainless steel",
+        "integrated heating system in toilet and floor against moisture and cold",
+        "ventilation system to prevent mold growth"
       ],
       footerHeading: "Wanna Get in touch? Let's Connect!",
       footerEmailLabel: "Email",
@@ -529,6 +495,7 @@
       mobileMenuButtonAriaLabel: "Menü öffnen",
       mobileLanguageLabel: "Sprache",
       nav: ["Home", "About", "Archiv", "Lebenslauf"],
+      sectionTitlesMobile: ["Overview", "Techn. Details"],
       footerHeading: "Wanna Get in touch? Let's Connect!",
       footerEmailLabel: "E-Mail",
       footerLinkedInLabel: "LinkedIn",
@@ -546,6 +513,11 @@
     originalContent.sectionTitles = Array.from(document.querySelectorAll(".h2-section .title-text")).map((el) => el.textContent);
     originalContent.processTitles = Array.from(document.querySelectorAll(".process-step .h3-step-text")).map((el) => el.textContent);
     originalContent.processItems = Array.from(document.querySelectorAll(".process-step .step-text li")).map((el) => el.textContent);
+    originalContent.overviewParagraphs = Array.from(document.querySelectorAll(".video-settings .project-section-aside p")).map((el) => el.innerHTML);
+    originalContent.technicalIntro = document.querySelector(".six-six-columns:not(.video-settings) .project-section-aside > p")?.innerHTML || "";
+    originalContent.technicalHeadings = Array.from(document.querySelectorAll(".six-six-columns:not(.video-settings) .headline-text h3")).map((el) => el.textContent);
+    originalContent.technicalFunctionBullets = Array.from(document.querySelectorAll(".six-six-columns:not(.video-settings) .headline-text:first-of-type .project-bullets span")).map((el) => el.innerHTML);
+    originalContent.technicalInfoBullets = Array.from(document.querySelectorAll(".six-six-columns:not(.video-settings) .headline-text:last-of-type .project-bullets span")).map((el) => el.innerHTML);
     originalContent.takeaways = Array.from(document.querySelectorAll(".project-takeaways-list span")).map((el) => el.innerHTML);
     originalContent.problemText = document.querySelector(".project-two-column .project-details-text")?.innerHTML || "";
     originalContent.problemItems = Array.from(document.querySelectorAll(".project-two-column .project-details-list .icon-text span")).map((el) => el.innerHTML);
@@ -630,64 +602,39 @@
       link.textContent = translations.nav[index];
     });
 
+      updateResumeLinks(selectedLang);
+
     if (selectedLang === "en") {
       const sectionTitles = isMobileViewport ? translations.sectionTitlesMobile : translations.sectionTitles;
       setTextList(".h2-section .title-text", sectionTitles);
-      setTextList(".process-step .h3-step-text", translations.processTitles);
-      setTextList(".process-step .step-text li", translations.processItems);
+      setTextList(".process-step .h3-step-text", translations.processTitles || []);
+      setTextList(".process-step .step-text li", translations.processItems || []);
 
       setHtml(document.querySelector(".project-intro h1"), translations.introTitle);
       setHtml(document.querySelector(".project-intro .subline"), translations.introSubline);
       setTextList(".project-intro .info-group .icon-text span", translations.introInfo);
       setTextList(".project-intro .tags .tag", translations.introTags);
-
-      setHtml(document.querySelector(".project-two-column .project-details-text"), translations.problemText);
-      setHtmlList(".project-two-column .project-details-list .icon-text span", translations.problemItems);
-
-      setTextList("#synthese .project-synthesis-text h3", translations.synthesisHeadings);
-      setHtmlList("#synthese .project-synthesis-text > p", translations.synthesisParagraphs);
-      setHtmlList("#synthese .project-synthesis-insight-card span", translations.synthesisInsights);
-
-      setHtml(document.querySelector("#ideation .project-ideation-improvements-intro p"), translations.ideationIntro);
-      setTextList("#ideation .project-ideation-card h3", translations.ideationCardTitles);
-      setHtmlList("#ideation .project-ideation-card .project-bullets span", translations.ideationBullets);
-
-      setTextList("#spezifikation .project-research-text h3", [translations.specificationHeading]);
-      setHtml(document.querySelector("#spezifikation .project-research-text > p"), translations.specificationIntro);
-      setHtmlList("#spezifikation .project-bullets span", translations.specificationBullets);
-
-      setTextList("#accessibility .project-research-half h3", translations.accessibilityHeadings);
-      setHtmlList("#accessibility .project-research-half--left > p", translations.accessibilityLeftParagraphs);
-      setHtmlList("#accessibility .project-research-half--right > p", translations.accessibilityRightParagraphs);
-      setTextList("#accessibility h4", translations.accessibilitySubheadings);
-      setHtmlList("#accessibility .project-bullets span", translations.accessibilityBullets);
-
-      setHtmlList(".project-takeaways-list span", translations.takeaways);
+      setHtmlList(".video-settings .project-section-aside p", translations.overviewParagraphs);
+      setHtml(document.querySelector(".six-six-columns:not(.video-settings) .project-section-aside > p"), translations.technicalIntro);
+      setTextList(".six-six-columns:not(.video-settings) .headline-text h3", translations.technicalHeadings);
+      setHtmlList(".six-six-columns:not(.video-settings) .headline-text:first-of-type .project-bullets span", translations.technicalFunctionBullets);
+      setHtmlList(".six-six-columns:not(.video-settings) .headline-text:last-of-type .project-bullets span", translations.technicalInfoBullets);
     } else {
       setHtml(document.querySelector(".project-intro h1"), originalContent.introTitle);
       setHtml(document.querySelector(".project-intro .subline"), originalContent.introSubline);
       setTextList(".project-intro .info-group .icon-text span", originalContent.introInfo);
       setTextList(".project-intro .tags .tag", originalContent.introTags);
-      setTextList(".h2-section .title-text", originalContent.sectionTitles);
-      setTextList(".process-step .h3-step-text", originalContent.processTitles);
-      setTextList(".process-step .step-text li", originalContent.processItems);
-      setHtml(document.querySelector(".project-two-column .project-details-text"), originalContent.problemText);
-      setHtmlList(".project-two-column .project-details-list .icon-text span", originalContent.problemItems);
-      setTextList("#synthese .project-synthesis-text h3", originalContent.synthesisHeadings);
-      setHtmlList("#synthese .project-synthesis-text > p", originalContent.synthesisParagraphs);
-      setHtmlList("#synthese .project-synthesis-insight-card span", originalContent.synthesisInsights);
-      setHtml(document.querySelector("#ideation .project-ideation-improvements-intro p"), originalContent.ideationIntro);
-      setTextList("#ideation .project-ideation-card h3", originalContent.ideationCardTitles);
-      setHtmlList("#ideation .project-ideation-card .project-bullets span", originalContent.ideationBullets);
-      setTextList("#spezifikation .project-research-text h3", [originalContent.specificationHeading]);
-      setHtml(document.querySelector("#spezifikation .project-research-text > p"), originalContent.specificationIntro);
-      setHtmlList("#spezifikation .project-bullets span", originalContent.specificationBullets);
-      setTextList("#accessibility .project-research-half h3", originalContent.accessibilityHeadings);
-      setHtmlList("#accessibility .project-research-half--left > p", originalContent.accessibilityLeftParagraphs);
-      setHtmlList("#accessibility .project-research-half--right > p", originalContent.accessibilityRightParagraphs);
-      setTextList("#accessibility h4", originalContent.accessibilitySubheadings);
-      setHtmlList("#accessibility .project-bullets span", originalContent.accessibilityBullets);
-      setHtmlList(".project-takeaways-list span", originalContent.takeaways);
+      const sectionTitles = isMobileViewport && translations.sectionTitlesMobile
+        ? translations.sectionTitlesMobile
+        : originalContent.sectionTitles;
+      setTextList(".h2-section .title-text", sectionTitles);
+      setTextList(".process-step .h3-step-text", originalContent.processTitles || []);
+      setTextList(".process-step .step-text li", originalContent.processItems || []);
+      setHtmlList(".video-settings .project-section-aside p", originalContent.overviewParagraphs || []);
+      setHtml(document.querySelector(".six-six-columns:not(.video-settings) .project-section-aside > p"), originalContent.technicalIntro);
+      setTextList(".six-six-columns:not(.video-settings) .headline-text h3", originalContent.technicalHeadings || []);
+      setHtmlList(".six-six-columns:not(.video-settings) .headline-text:first-of-type .project-bullets span", originalContent.technicalFunctionBullets || []);
+      setHtmlList(".six-six-columns:not(.video-settings) .headline-text:last-of-type .project-bullets span", originalContent.technicalInfoBullets || []);
     }
 
     footerHeading.textContent = translations.footerHeading;

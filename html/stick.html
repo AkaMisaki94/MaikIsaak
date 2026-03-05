@@ -21,29 +21,49 @@
 
 <body>
   <div id="stars-layer"></div>
-    <header>
-      <nav class="navbar">
-        <a href="../index.html" class="logo" aria-label="Startseite">
-          <svg xmlns="http://www.w3.org/2000/svg" alt="Maik Isaak Logo" viewBox="0 0 24 24">
-            <path class="color-1" d="M20,3.07v17.85c2.45-2.2,4-5.38,4-8.93s-1.55-6.73-4-8.93Z" />
-            <path class="color-1" d="M4,3.07C1.55,5.27,0,8.45,0,12s1.55,6.73,4,8.93V3.07Z" />
-            <path class="color-2" d="M16,8.64l-4,4-4-4v14.66c1.25.44,2.6.7,4,.7s2.75-.25,4-.7v-14.66Z" />
-            <path class="color-2" d="M12,6.99l5.6-5.6c-1.67-.88-3.58-1.39-5.6-1.39s-3.93.51-5.6,1.39l5.6,5.6Z" />
-          </svg>
-        </a>
-        <ul>
-          <li class="navigation-item"><a href="../index.html">Home</a></li>
-          <li class="navigation-item"><a href="about.html">About</a></li>
-          <li class="navigation-item"><a href="#archiv">Archiv</a></li>
-          <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
-          <li class="language-item" id="language-switcher">
-            <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+  <header>
+    <nav class="navbar">
+      <a href="../index.html" class="logo" aria-label="Startseite">
+        <svg xmlns="http://www.w3.org/2000/svg" alt="Maik Isaak Logo" viewBox="0 0 24 24">
+          <path class="color-1" d="M20,3.07v17.85c2.45-2.2,4-5.38,4-8.93s-1.55-6.73-4-8.93Z" />
+          <path class="color-1" d="M4,3.07C1.55,5.27,0,8.45,0,12s1.55,6.73,4,8.93V3.07Z" />
+          <path class="color-2" d="M16,8.64l-4,4-4-4v14.66c1.25.44,2.6.7,4,.7s2.75-.25,4-.7v-14.66Z" />
+          <path class="color-2" d="M12,6.99l5.6-5.6c-1.67-.88-3.58-1.39-5.6-1.39s-3.93.51-5.6,1.39l5.6,5.6Z" />
+        </svg>
+      </a>
+      <ul>
+        <li class="navigation-item"><a href="../index.html">Home</a></li>
+        <li class="navigation-item"><a href="about.html">About</a></li>
+        <li class="navigation-item"><a href="archive.html">Archiv</a></li>
+        <li class="navigation-item"><a class="resume-link" href="../img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a></li>
+        <li class="language-item" id="language-switcher">
+          <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
+            <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <mask id="a-current" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                  fill="#fff" />
+              </mask>
+              <g mask="url(#a-current)">
+                <path
+                  d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                  fill="#eee" />
+                <path
+                  d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                  fill="#0052b4" />
+                <path
+                  d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                  fill="#d80027" />
+              </g>
+            </svg>
+          </button>
+          <div class="language-dropdown" role="menu">
+            <button class="language-option active" data-lang="en" role="menuitemradio" aria-checked="true">
               <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                <mask id="a-current" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                <mask id="a-desktop-en" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
                   <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
                     fill="#fff" />
                 </mask>
-                <g mask="url(#a-current)">
+                <g mask="url(#a-desktop-en)">
                   <path
                     d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
                     fill="#eee" />
@@ -55,190 +75,193 @@
                     fill="#d80027" />
                 </g>
               </svg>
+              <span>English</span>
             </button>
-            <div class="language-dropdown" role="menu">
-              <button class="language-option active" data-lang="en" role="menuitemradio" aria-checked="true">
-                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <mask id="a-desktop-en" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
-                    <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
-                      fill="#fff" />
-                  </mask>
-                  <g mask="url(#a-desktop-en)">
-                    <path
-                      d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
-                      fill="#eee" />
-                    <path
-                      d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
-                      fill="#0052b4" />
-                    <path
-                      d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
-                      fill="#d80027" />
-                  </g>
-                </svg>
-                <span>English</span>
-              </button>
-              <button class="language-option" data-lang="de" role="menuitemradio" aria-checked="false">
-                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <mask id="mask0_307_1346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6"
-                    width="36" height="36">
-                    <path
-                      d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
-                      fill="white" />
-                  </mask>
-                  <g mask="url(#mask0_307_1346)">
-                    <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
-                    <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
-                    <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
-                  </g>
-                </svg>
-                <span>Deutsch</span>
-              </button>
-            </div>
-          </li>
-          <li class="mobile-menu-item" id="mobile-menu">
-            <button class="mobile-menu-button" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
-              <svg class="mobile-menu-icon mobile-menu-icon--burger" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            <button class="language-option" data-lang="de" role="menuitemradio" aria-checked="false">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_307_1346" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6" width="36"
+                  height="36">
+                  <path
+                    d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                    fill="white" />
+                </mask>
+                <g mask="url(#mask0_307_1346)">
+                  <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                  <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                  <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                </g>
               </svg>
-              <svg class="mobile-menu-icon mobile-menu-icon--close" viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
-              </svg>
+              <span>Deutsch</span>
             </button>
-            <div class="mobile-menu-dropdown" role="menu">
-              <a class="mobile-navigation-link" href="../index.html">Home</a>
-              <a class="mobile-navigation-link" href="about.html">About</a>
-              <a class="mobile-navigation-link" href="#archiv">Archiv</a>
-              <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
-              <div class="mobile-language-group">
-                <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
-                <div class="mobile-language-options">
-                  <button class="mobile-language-option active" data-lang="en" type="button">
-                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <mask id="a-mobile" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
-                        <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
-                          fill="#fff" />
-                      </mask>
-                      <g mask="url(#a-mobile)">
-                        <path
-                          d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
-                          fill="#eee" />
-                        <path
-                          d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
-                          fill="#0052b4" />
-                        <path
-                          d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
-                          fill="#d80027" />
-                      </g>
-                    </svg>
-                    <span>English</span>
-                  </button>
-                  <button class="mobile-language-option" data-lang="de" type="button">
-                    <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <mask id="mask0_307_1346_mobile" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6"
-                        y="6" width="36" height="36">
-                        <path
-                          d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
-                          fill="white" />
-                      </mask>
-                      <g mask="url(#mask0_307_1346_mobile)">
-                        <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
-                        <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
-                        <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
-                      </g>
-                    </svg>
-                    <span>Deutsch</span>
-                  </button>
-                </div>
+          </div>
+        </li>
+        <li class="mobile-menu-item" id="mobile-menu">
+          <button class="mobile-menu-button" aria-haspopup="true" aria-expanded="false" aria-label="Open menu">
+            <svg class="mobile-menu-icon mobile-menu-icon--burger" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg class="mobile-menu-icon mobile-menu-icon--close" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true">
+              <path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <div class="mobile-menu-dropdown" role="menu">
+            <a class="mobile-navigation-link" href="../index.html">Home</a>
+            <a class="mobile-navigation-link" href="about.html">About</a>
+            <a class="mobile-navigation-link" href="archive.html">Archiv</a>
+            <a class="mobile-navigation-link resume-link" href="../img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a>
+            <div class="mobile-language-group">
+              <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
+              <div class="mobile-language-options">
+                <button class="mobile-language-option active" data-lang="en" type="button">
+                  <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="a-mobile" height="36" maskUnits="userSpaceOnUse" width="36" x="6" y="6">
+                      <path d="m24 42c9.9411 0 18-8.0589 18-18s-8.0589-18-18-18-18 8.0589-18 18 8.0589 18 18 18z"
+                        fill="#fff" />
+                    </mask>
+                    <g mask="url(#a-mobile)">
+                      <path
+                        d="m6 6 .5625 1.54688-.5625 1.61718v1.61714l2.25 3.7969-2.25 3.7969v2.25l2.25 3.375-2.25 3.375v2.25l2.25 3.7969-2.25 3.7969v4.7812l1.54688-.5625 1.61718.5625h1.61714l3.7969-2.25 3.7969 2.25h2.25l3.375-2.25 3.375 2.25h2.25l3.7969-2.25 3.7969 2.25h4.7812l-.5625-1.5469.5625-1.6172v-1.6171l-2.25-3.7969 2.25-3.7969v-2.25l-2.25-3.375 2.25-3.375v-2.25l-2.25-3.7969 2.25-3.7969v-4.7812l-1.5469.5625-1.6172-.5625h-1.6171l-3.7969 2.25-3.7969-2.25h-2.25l-3.375 2.25-3.375-2.25h-2.25l-3.7969 2.25-3.7969-2.25z"
+                        fill="#eee" />
+                      <path
+                        d="m29.625 6v7.5938l7.5938-7.5938zm12.375 4.7812-7.5938 7.5938h7.5938zm-36 7.5938h7.5938l-7.5938-7.5938zm4.7812-12.375 7.5938 7.5938v-7.5938zm7.5938 36v-7.5938l-7.5938 7.5938zm-12.375-4.7812 7.5938-7.5938h-7.5938zm36-7.5938h-7.5938l7.5938 7.5938zm-4.7812 12.375-7.5938-7.5938v7.5938z"
+                        fill="#0052b4" />
+                      <path
+                        d="m6 6v3.16406l9.2109 9.21094h3.1641zm14.625 0v14.625h-14.625v6.75h14.625v14.625h6.75v-14.625h14.625v-6.75h-14.625v-14.625zm18.2109 0-9.2109 9.2109v3.1641l12.375-12.375zm-20.4609 23.625-12.375 12.375h3.16406l9.21094-9.2109zm11.25 0 12.375 12.375v-3.1641l-9.2109-9.2109z"
+                        fill="#d80027" />
+                    </g>
+                  </svg>
+                  <span>English</span>
+                </button>
+                <button class="mobile-language-option" data-lang="de" type="button">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_307_1346_mobile" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="6" y="6"
+                      width="36" height="36">
+                      <path
+                        d="M24 42C33.9411 42 42 33.9411 42 24C42 14.0589 33.9411 6 24 6C14.0589 6 6 14.0589 6 24C6 33.9411 14.0589 42 24 42Z"
+                        fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_307_1346_mobile)">
+                      <path d="M6 30.2578L24.0492 28.4648L42 30.2578V42H6V30.2578Z" fill="#FFDA44" />
+                      <path d="M6 17.7422L23.9297 16.125L42 17.7422V30.2578H6V17.7422Z" fill="#D80027" />
+                      <path d="M6 6H42V17.7422H6V6Z" fill="#333333" />
+                    </g>
+                  </svg>
+                  <span>Deutsch</span>
+                </button>
               </div>
             </div>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="shadow-bar"></div>
+  <main>
+    <section class="project-intro">
+      <h1>STICK</h1>
+      <div class="project-intro-text">
+        <p class="subline">Entwurf eines minimalistischen faltbaren Kleiderbügels aus Holz und Leder, der durch klare
+          Geometrie, Stabilität und Eleganz verbindet.</p>
+        <ul class="info-group icon-text-list">
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M18.6666 2.66675C19.7275 2.66675 20.7449 3.08818 21.4951 3.83832C22.2452 4.58847 22.6666 5.60588 22.6666 6.66675V8.00008H25.3333C26.3942 8.00008 27.4116 8.42151 28.1617 9.17166C28.9119 9.9218 29.3333 10.9392 29.3333 12.0001V24.0001C29.3333 25.0609 28.9119 26.0784 28.1617 26.8285C27.4116 27.5787 26.3942 28.0001 25.3333 28.0001H6.66663C5.60576 28.0001 4.58834 27.5787 3.8382 26.8285C3.08805 26.0784 2.66663 25.0609 2.66663 24.0001V12.0001C2.66663 10.9392 3.08805 9.9218 3.8382 9.17166C4.58834 8.42151 5.60576 8.00008 6.66663 8.00008H9.33329V6.66675C9.33329 5.60588 9.75472 4.58847 10.5049 3.83832C11.255 3.08818 12.2724 2.66675 13.3333 2.66675H18.6666ZM18.6666 5.33342H13.3333C12.9797 5.33342 12.6405 5.47389 12.3905 5.72394C12.1404 5.97399 12 6.31313 12 6.66675V8.00008H20V6.66675C20 6.31313 19.8595 5.97399 19.6094 5.72394C19.3594 5.47389 19.0202 5.33342 18.6666 5.33342Z" />
+            </svg>
+            <span>Universitätsprojekt</span>
+          </li>
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M16 2.66663C13.3629 2.66663 10.7851 3.44861 8.59242 4.9137C6.39977 6.37878 4.6908 8.46116 3.68163 10.8975C2.67246 13.3339 2.40842 16.0147 2.92289 18.6012C3.43736 21.1876 4.70724 23.5633 6.57194 25.428C8.43664 27.2927 10.8124 28.5626 13.3988 29.0771C15.9852 29.5916 18.6661 29.3275 21.1025 28.3184C23.5388 27.3092 25.6212 25.6002 27.0863 23.4076C28.5514 21.2149 29.3334 18.637 29.3334 16C29.3334 14.249 28.9885 12.5152 28.3184 10.8975C27.6484 9.27984 26.6662 7.80998 25.4281 6.57187C24.19 5.33375 22.7201 4.35163 21.1025 3.68157C19.4848 3.0115 17.751 2.66663 16 2.66663ZM19.4 21.1066C19.1853 21.257 18.9288 21.3363 18.6667 21.3333C18.4471 21.3322 18.2312 21.2768 18.0381 21.1721C17.845 21.0674 17.6808 20.9167 17.56 20.7333L14.8934 16.7333C14.7476 16.5163 14.6687 16.2613 14.6667 16V9.33329C14.6667 8.97967 14.8072 8.64053 15.0572 8.39048C15.3073 8.14044 15.6464 7.99996 16 7.99996C16.3536 7.99996 16.6928 8.14044 16.9428 8.39048C17.1929 8.64053 17.3334 8.97967 17.3334 9.33329V15.6L19.7734 19.2666C19.9663 19.5606 20.0354 19.9189 19.9655 20.2635C19.8955 20.6081 19.6923 20.9111 19.4 21.1066Z" />
+            </svg>
+            <span>3 Monate</span>
+          </li>
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M1.96228 27.3372C1.96228 28.7864 3.30603 29.9622 4.96228 29.9622H26.9623C28.6185 29.9622 29.9623 28.7864 29.9623 27.3372V12.4622H1.96228V27.3372ZM21.9623 16.6184C21.9623 16.2575 22.2998 15.9622 22.7123 15.9622H25.2123C25.6248 15.9622 25.9623 16.2575 25.9623 16.6184V18.8059C25.9623 19.1668 25.6248 19.4622 25.2123 19.4622H22.7123C22.2998 19.4622 21.9623 19.1668 21.9623 18.8059V16.6184ZM21.9623 23.6184C21.9623 23.2575 22.2998 22.9622 22.7123 22.9622H25.2123C25.6248 22.9622 25.9623 23.2575 25.9623 23.6184V25.8059C25.9623 26.1668 25.6248 26.4622 25.2123 26.4622H22.7123C22.2998 26.4622 21.9623 26.1668 21.9623 25.8059V23.6184ZM13.9623 16.6184C13.9623 16.2575 14.2998 15.9622 14.7123 15.9622H17.2123C17.6248 15.9622 17.9623 16.2575 17.9623 16.6184V18.8059C17.9623 19.1668 17.6248 19.4622 17.2123 19.4622H14.7123C14.2998 19.4622 13.9623 19.1668 13.9623 18.8059V16.6184ZM13.9623 23.6184C13.9623 23.2575 14.2998 22.9622 14.7123 22.9622H17.2123C17.6248 22.9622 17.9623 23.2575 17.9623 23.6184V25.8059C17.9623 26.1668 17.6248 26.4622 17.2123 26.4622H14.7123C14.2998 26.4622 13.9623 26.1668 13.9623 25.8059V23.6184ZM5.96228 16.6184C5.96228 16.2575 6.29978 15.9622 6.71228 15.9622H9.21228C9.62478 15.9622 9.96228 16.2575 9.96228 16.6184V18.8059C9.96228 19.1668 9.62478 19.4622 9.21228 19.4622H6.71228C6.29978 19.4622 5.96228 19.1668 5.96228 18.8059V16.6184ZM5.96228 23.6184C5.96228 23.2575 6.29978 22.9622 6.71228 22.9622H9.21228C9.62478 22.9622 9.96228 23.2575 9.96228 23.6184V25.8059C9.96228 26.1668 9.62478 26.4622 9.21228 26.4622H6.71228C6.29978 26.4622 5.96228 26.1668 5.96228 25.8059V23.6184ZM26.9623 5.46216H23.9623V2.83716C23.9623 2.35591 23.5123 1.96216 22.9623 1.96216H20.9623C20.4123 1.96216 19.9623 2.35591 19.9623 2.83716V5.46216H11.9623V2.83716C11.9623 2.35591 11.5123 1.96216 10.9623 1.96216H8.96228C8.41228 1.96216 7.96228 2.35591 7.96228 2.83716V5.46216H4.96228C3.30603 5.46216 1.96228 6.63794 1.96228 8.08716V10.7122H29.9623V8.08716C29.9623 6.63794 28.6185 5.46216 26.9623 5.46216Z" />
+            </svg>
+            <span>2021</span>
+          </li>
+          <li class="icon-text">
+            <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.79 4.03625C19.5737 2.72313 17.875 2 16 2C14.115 2 12.4106 2.71875 11.2 4.02375C9.97624 5.34312 9.37999 7.13625 9.51999 9.0725C9.79749 12.8925 12.7044 16 16 16C19.2956 16 22.1975 12.8931 22.4794 9.07375C22.6212 7.155 22.0212 5.36562 20.79 4.03625ZM27 30H4.99999C4.71203 30.0037 4.42686 29.9433 4.16522 29.8229C3.90358 29.7026 3.67206 29.5254 3.48749 29.3044C3.08124 28.8187 2.91749 28.1556 3.03874 27.485C3.56624 24.5588 5.21249 22.1006 7.79999 20.375C10.0987 18.8431 13.0106 18 16 18C18.9894 18 21.9012 18.8437 24.2 20.375C26.7875 22.1 28.4337 24.5581 28.9612 27.4844C29.0825 28.155 28.9187 28.8181 28.5125 29.3037C28.328 29.5249 28.0965 29.7022 27.8349 29.8226C27.5732 29.9431 27.288 30.0037 27 30Z" />
+            </svg>
+            <span>2 Personen</span>
           </li>
         </ul>
-      </nav>
-    </header>
-    <div class="shadow-bar"></div>
-    <main>
-      <section class="project-intro">
-        <h1>STICK</h1>
-        <div class="project-intro-text">
-          <p class="subline">Entwurf eines minimalistischen faltbaren Kleiderbügels aus Holz und Leder, der durch klare Geometrie, Stabilität und Eleganz verbindet.</p>
-          <ul class="info-group icon-text-list">
-            <li class="icon-text">
-              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M18.6666 2.66675C19.7275 2.66675 20.7449 3.08818 21.4951 3.83832C22.2452 4.58847 22.6666 5.60588 22.6666 6.66675V8.00008H25.3333C26.3942 8.00008 27.4116 8.42151 28.1617 9.17166C28.9119 9.9218 29.3333 10.9392 29.3333 12.0001V24.0001C29.3333 25.0609 28.9119 26.0784 28.1617 26.8285C27.4116 27.5787 26.3942 28.0001 25.3333 28.0001H6.66663C5.60576 28.0001 4.58834 27.5787 3.8382 26.8285C3.08805 26.0784 2.66663 25.0609 2.66663 24.0001V12.0001C2.66663 10.9392 3.08805 9.9218 3.8382 9.17166C4.58834 8.42151 5.60576 8.00008 6.66663 8.00008H9.33329V6.66675C9.33329 5.60588 9.75472 4.58847 10.5049 3.83832C11.255 3.08818 12.2724 2.66675 13.3333 2.66675H18.6666ZM18.6666 5.33342H13.3333C12.9797 5.33342 12.6405 5.47389 12.3905 5.72394C12.1404 5.97399 12 6.31313 12 6.66675V8.00008H20V6.66675C20 6.31313 19.8595 5.97399 19.6094 5.72394C19.3594 5.47389 19.0202 5.33342 18.6666 5.33342Z" />
-              </svg>
-              <span>Universitätsprojekt</span>
-            </li>
-            <li class="icon-text">
-              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M16 2.66663C13.3629 2.66663 10.7851 3.44861 8.59242 4.9137C6.39977 6.37878 4.6908 8.46116 3.68163 10.8975C2.67246 13.3339 2.40842 16.0147 2.92289 18.6012C3.43736 21.1876 4.70724 23.5633 6.57194 25.428C8.43664 27.2927 10.8124 28.5626 13.3988 29.0771C15.9852 29.5916 18.6661 29.3275 21.1025 28.3184C23.5388 27.3092 25.6212 25.6002 27.0863 23.4076C28.5514 21.2149 29.3334 18.637 29.3334 16C29.3334 14.249 28.9885 12.5152 28.3184 10.8975C27.6484 9.27984 26.6662 7.80998 25.4281 6.57187C24.19 5.33375 22.7201 4.35163 21.1025 3.68157C19.4848 3.0115 17.751 2.66663 16 2.66663ZM19.4 21.1066C19.1853 21.257 18.9288 21.3363 18.6667 21.3333C18.4471 21.3322 18.2312 21.2768 18.0381 21.1721C17.845 21.0674 17.6808 20.9167 17.56 20.7333L14.8934 16.7333C14.7476 16.5163 14.6687 16.2613 14.6667 16V9.33329C14.6667 8.97967 14.8072 8.64053 15.0572 8.39048C15.3073 8.14044 15.6464 7.99996 16 7.99996C16.3536 7.99996 16.6928 8.14044 16.9428 8.39048C17.1929 8.64053 17.3334 8.97967 17.3334 9.33329V15.6L19.7734 19.2666C19.9663 19.5606 20.0354 19.9189 19.9655 20.2635C19.8955 20.6081 19.6923 20.9111 19.4 21.1066Z" />
-              </svg>
-              <span>3 Monate</span>
-            </li>
-            <li class="icon-text">
-              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M1.96228 27.3372C1.96228 28.7864 3.30603 29.9622 4.96228 29.9622H26.9623C28.6185 29.9622 29.9623 28.7864 29.9623 27.3372V12.4622H1.96228V27.3372ZM21.9623 16.6184C21.9623 16.2575 22.2998 15.9622 22.7123 15.9622H25.2123C25.6248 15.9622 25.9623 16.2575 25.9623 16.6184V18.8059C25.9623 19.1668 25.6248 19.4622 25.2123 19.4622H22.7123C22.2998 19.4622 21.9623 19.1668 21.9623 18.8059V16.6184ZM21.9623 23.6184C21.9623 23.2575 22.2998 22.9622 22.7123 22.9622H25.2123C25.6248 22.9622 25.9623 23.2575 25.9623 23.6184V25.8059C25.9623 26.1668 25.6248 26.4622 25.2123 26.4622H22.7123C22.2998 26.4622 21.9623 26.1668 21.9623 25.8059V23.6184ZM13.9623 16.6184C13.9623 16.2575 14.2998 15.9622 14.7123 15.9622H17.2123C17.6248 15.9622 17.9623 16.2575 17.9623 16.6184V18.8059C17.9623 19.1668 17.6248 19.4622 17.2123 19.4622H14.7123C14.2998 19.4622 13.9623 19.1668 13.9623 18.8059V16.6184ZM13.9623 23.6184C13.9623 23.2575 14.2998 22.9622 14.7123 22.9622H17.2123C17.6248 22.9622 17.9623 23.2575 17.9623 23.6184V25.8059C17.9623 26.1668 17.6248 26.4622 17.2123 26.4622H14.7123C14.2998 26.4622 13.9623 26.1668 13.9623 25.8059V23.6184ZM5.96228 16.6184C5.96228 16.2575 6.29978 15.9622 6.71228 15.9622H9.21228C9.62478 15.9622 9.96228 16.2575 9.96228 16.6184V18.8059C9.96228 19.1668 9.62478 19.4622 9.21228 19.4622H6.71228C6.29978 19.4622 5.96228 19.1668 5.96228 18.8059V16.6184ZM5.96228 23.6184C5.96228 23.2575 6.29978 22.9622 6.71228 22.9622H9.21228C9.62478 22.9622 9.96228 23.2575 9.96228 23.6184V25.8059C9.96228 26.1668 9.62478 26.4622 9.21228 26.4622H6.71228C6.29978 26.4622 5.96228 26.1668 5.96228 25.8059V23.6184ZM26.9623 5.46216H23.9623V2.83716C23.9623 2.35591 23.5123 1.96216 22.9623 1.96216H20.9623C20.4123 1.96216 19.9623 2.35591 19.9623 2.83716V5.46216H11.9623V2.83716C11.9623 2.35591 11.5123 1.96216 10.9623 1.96216H8.96228C8.41228 1.96216 7.96228 2.35591 7.96228 2.83716V5.46216H4.96228C3.30603 5.46216 1.96228 6.63794 1.96228 8.08716V10.7122H29.9623V8.08716C29.9623 6.63794 28.6185 5.46216 26.9623 5.46216Z" />
-              </svg>
-              <span>2021</span>
-            </li>
-            <li class="icon-text">
-              <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.79 4.03625C19.5737 2.72313 17.875 2 16 2C14.115 2 12.4106 2.71875 11.2 4.02375C9.97624 5.34312 9.37999 7.13625 9.51999 9.0725C9.79749 12.8925 12.7044 16 16 16C19.2956 16 22.1975 12.8931 22.4794 9.07375C22.6212 7.155 22.0212 5.36562 20.79 4.03625ZM27 30H4.99999C4.71203 30.0037 4.42686 29.9433 4.16522 29.8229C3.90358 29.7026 3.67206 29.5254 3.48749 29.3044C3.08124 28.8187 2.91749 28.1556 3.03874 27.485C3.56624 24.5588 5.21249 22.1006 7.79999 20.375C10.0987 18.8431 13.0106 18 16 18C18.9894 18 21.9012 18.8437 24.2 20.375C26.7875 22.1 28.4337 24.5581 28.9612 27.4844C29.0825 28.155 28.9187 28.8181 28.5125 29.3037C28.328 29.5249 28.0965 29.7022 27.8349 29.8226C27.5732 29.9431 27.288 30.0037 27 30Z" />
-              </svg>
-              <span>2 Personen</span>
-            </li>
-          </ul>
-          <ul class="tags">
-            <li class="tag">Produktdesign</li>
-            <li class="tag">Nachhaltigkeit</li>
-            <li class="tag">Design-Thinking</li>
-            <li class="tag">Modellbau</li>
-          </ul>
+        <ul class="tags">
+          <li class="tag">Produktdesign</li>
+          <li class="tag">Nachhaltigkeit</li>
+          <li class="tag">Design-Thinking</li>
+          <li class="tag">Modellbau</li>
+        </ul>
+      </div>
+      <div class="project-intro-image">
+        <img src="../img/stick/project-card-1.jpg" alt="Projektbild STICK">
+      </div>
+    </section>
+    <section>
+      <h2 class="h2-section">
+        <span class="title-text">Overview</span>
+      </h2>
+      <p>
+        Ausgehend von einem einfachen Objekt wie einem Kleiderbügel bestand die Aufgabe ein völlig neues, besonderes
+        Produkt zu entwickeln – inklusive klarer Entscheidungsgründe und einer dazu passenden, bedeutungsvollen
+        Geschichte. So kamen Ich und meine Kommilitonin schließlich dazu, einen eleganten Essstäbchen-/ X-förmigen/
+        geometrischen Kleiderbügel zu entwerfen und zu fertigen, den wir stolz <strong>STICK</strong> nannten.
+      </p>
+      <div class="image-gallery">
+        <div class="first-row">
+          <div><img src="../img/stick/stick-step-1.jpg" alt=""></div>
+          <div><img src="../img/stick/stick-step-2.jpg" alt=""></div>
+          <div><img src="../img/stick/stick-step-3.jpg" alt=""></div>
+          <div><img src="../img/stick/stick-step-4.jpg" alt=""></div>
         </div>
-        <div class="project-intro-image">
-          <img src="../img/stick/project-card-1.jpg" alt="Projektbild STICK">
-        </div>
+      </div>
+      <p>
+        STICK ist ein außergewöhnlicher Kleiderbügel, der aus drei Holzstäben, einem Lederriemen und ein paar Nägeln
+        besteht. Durch das perfekt passende Stecksystem und die flexiblen Gelenke lässt er sich mühelos zusammenfalten.
+        STICK ist bemerkenswert aufgrund seiner einzigartigen Geometrie, in der Eleganz und Stabilität vereint sind.
+        Außerdem bestehen alle verwendeten Materialien entweder aus industriellen Restbeständen oder aus
+        Massenproduktion. Die dadurch günstige Herstellung und die geringe Zahl unterschiedlicher Materialien machen
+        STICK zu einem sehr nachhaltigen Projekt.
+      </p>
       </section>
-       <section>
-        <h2 class="h2-section">
-          <span class="title-text">Overview</span>
-        </h2>
-        <p>
-          Ausgehend von einem einfachen Objekt wie einem Kleiderbügel bestand die Aufgabe ein völlig neues, besonderes Produkt zu entwickeln – inklusive klarer Entscheidungsgründe und einer dazu passenden, bedeutungsvollen Geschichte. So kamen Ich und meine Kommilitonin schließlich dazu, einen eleganten Essstäbchen-/ X-förmigen/ geometrischen Kleiderbügel zu entwerfen und zu fertigen, den wir stolz <strong>STICK</strong> nannten.
-        </p>
-        <div class="image-gallery">
-          <div class="first-row">
-            <div><img src="../img/stick/stick-step-1.jpg" alt=""></div>
-            <div><img src="../img/stick/stick-step-2.jpg" alt=""></div>
-            <div><img src="../img/stick/stick-step-3.jpg" alt=""></div>
-            <div><img src="../img/stick/stick-step-4.jpg" alt=""></div>
-          </div>
+      <section>
+      <h2 class="h2-section">
+        <span class="title-text">Poster</span>
+      </h2>
+      <div class="image-gallery">
+        <div class="first-row">
+          <div><img src="../img/stick/poster-1.jpg" alt=""></div>
+          <div><img src="../img/stick/poster-2.jpg" alt=""></div>
+          <div><img src="../img/stick/poster-3.jpg" alt=""></div>
         </div>
-        <p>
-          STICK ist ein außergewöhnlicher Kleiderbügel, der aus drei Holzstäben, einem Lederriemen und ein paar Nägeln besteht. Durch das perfekt passende Stecksystem und die flexiblen Gelenke lässt er sich mühelos zusammenfalten. STICK ist bemerkenswert aufgrund seiner einzigartigen Geometrie, in der Eleganz und Stabilität vereint sind. Außerdem bestehen alle verwendeten Materialien entweder aus industriellen Restbeständen oder aus Massenproduktion. Die dadurch günstige Herstellung und die geringe Zahl unterschiedlicher Materialien machen STICK zu einem sehr nachhaltigen Projekt.
-        </p>
-        <div class="image-gallery">
-          <div class="first-row">
-            <div><img src="../img/stick/poster-1.jpg" alt=""></div>
-            <div><img src="../img/stick/poster-2.jpg" alt=""></div>
-            <div><img src="../img/stick/poster-3.jpg" alt=""></div>
-          </div>
-        </div>
-        <div class="image-gallery">
-          <div class="first-row">
-            <div><img src="../img/stick/progress-1.jpg" alt=""></div>
-            <div><img src="../img/stick/progress-2.jpg" alt=""></div>
-            <div><img src="../img/stick/progress-3.jpg" alt=""></div>
-          </div>
-          <div class="second-row">
-            <div><img src="../img/stick/progress-4.jpg" alt=""></div>
-            <div><img src="../img/stick/progress-5.jpg" alt=""></div>
-            <div><img src="../img/stick/progress-6.jpg" alt=""></div>
-          </div>
-        </div>
+      </div>
       </section>
-    </main>
+      <section>
+      <h2 class="h2-section">
+        <span class="title-text">Entwicklung</span>
+      </h2>
+      <div class="image-gallery">
+        <div class="first-row">
+          <div><img src="../img/stick/progress-1.jpg" alt=""></div>
+          <div><img src="../img/stick/progress-2.jpg" alt=""></div>
+          <div><img src="../img/stick/progress-3.jpg" alt=""></div>
+        </div>
+        <div class="second-row">
+          <div><img src="../img/stick/progress-4.jpg" alt=""></div>
+          <div><img src="../img/stick/progress-5.jpg" alt=""></div>
+          <div><img src="../img/stick/progress-6.jpg" alt=""></div>
+        </div>
+      </div>
+    </section>
+  </main>
   <footer>
     <div class="footer-content">
       <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
@@ -321,6 +344,20 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
   const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const resumeLinks = document.querySelectorAll(".resume-link");
+
+  function updateResumeLinks(selectedLang) {
+    const resumeBasePath = window.location.pathname.includes("/html/") ? "../img/resume/" : "img/resume/";
+    const resumeFile = selectedLang === "de" ? "Bewerbung_Maik_Isaak.pdf" : "Resume_Maik_Isaak.pdf";
+    const resumeHref = resumeBasePath + resumeFile;
+
+    resumeLinks.forEach((link) => {
+      link.setAttribute("href", resumeHref);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
   const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
   const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
 
@@ -332,8 +369,8 @@
       mobileMenuButtonAriaLabel: "Open menu",
       mobileLanguageLabel: "Language",
       nav: ["Home", "About", "Archive", "Resume"],
-      sectionTitles: ["Overview"],
-      sectionTitlesMobile: ["Overview"],
+      sectionTitles: ["Overview", "Poster", "Development"],
+      sectionTitlesMobile: ["Overview", "Poster", "Development"],
       processTitles: [],
       processItems: [],
       introTitle: "STICK",
@@ -341,7 +378,7 @@
       introInfo: ["University project", "3 months", "2021", "2 people"],
       introTags: ["Product Design", "Sustainability", "Design Thinking", "Model Making"],
       overviewParagraphs: [
-        "Starting from a simple object like a clothes hanger, the task was to develop a completely new and distinctive product, including clear design decisions and a meaningful story. My classmate and I eventually designed and built an elegant chopstick-inspired, X-shaped geometric hanger that we proudly named STICK.",
+        "Starting from a simple object like a clothes hanger, the task was to develop a completely new and distinctive product, including clear design decisions and a meaningful story. My classmate and I eventually designed and built an elegant chopstick-inspired, X-shaped geometric hanger that we proudly named <strong>STICK</strong>.",
         "STICK is an unusual hanger made of three wooden sticks, a leather strap, and a few nails. Thanks to its precise interlocking system and flexible joints, it can be folded effortlessly. STICK stands out through its unique geometry, combining elegance and stability. In addition, all materials come either from industrial leftovers or mass production. The resulting low-cost production and small material palette make STICK a very sustainable project."
       ],
       footerHeading: "Wanna Get in touch? Let's Connect!",
@@ -457,6 +494,8 @@
     mobileNavLinks.forEach((link, index) => {
       link.textContent = translations.nav[index];
     });
+
+      updateResumeLinks(selectedLang);
 
     if (selectedLang === "en") {
       const sectionTitles = isMobileViewport ? translations.sectionTitlesMobile : translations.sectionTitles;

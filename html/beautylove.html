@@ -34,8 +34,8 @@
         <ul>
           <li class="navigation-item"><a href="../index.html">Home</a></li>
           <li class="navigation-item"><a href="about.html">About</a></li>
-          <li class="navigation-item"><a href="#archiv">Archiv</a></li>
-          <li class="navigation-item"><a href="#lebenslauf">Lebenslauf</a></li>
+          <li class="navigation-item"><a href="archive.html">Archiv</a></li>
+          <li class="navigation-item"><a class="resume-link" href="../img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a></li>
           <li class="language-item" id="language-switcher">
             <button class="language-button" aria-haspopup="true" aria-expanded="false" aria-label="Sprache auswählen">
               <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -109,8 +109,8 @@
             <div class="mobile-menu-dropdown" role="menu">
               <a class="mobile-navigation-link" href="../index.html">Home</a>
               <a class="mobile-navigation-link" href="about.html">About</a>
-              <a class="mobile-navigation-link" href="#archiv">Archiv</a>
-              <a class="mobile-navigation-link" href="#lebenslauf">Lebenslauf</a>
+              <a class="mobile-navigation-link" href="archive.html">Archiv</a>
+              <a class="mobile-navigation-link resume-link" href="../img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a>
               <div class="mobile-language-group">
                 <span class="mobile-language-label"><span class="mobile-language-label-text">Sprache</span></span>
                 <div class="mobile-language-options">
@@ -378,6 +378,20 @@
   const mobileMenu = document.getElementById("mobile-menu");
   const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
   const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
+  const resumeLinks = document.querySelectorAll(".resume-link");
+
+  function updateResumeLinks(selectedLang) {
+    const resumeBasePath = window.location.pathname.includes("/html/") ? "../img/resume/" : "img/resume/";
+    const resumeFile = selectedLang === "de" ? "Bewerbung_Maik_Isaak.pdf" : "Resume_Maik_Isaak.pdf";
+    const resumeHref = resumeBasePath + resumeFile;
+
+    resumeLinks.forEach((link) => {
+      link.setAttribute("href", resumeHref);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    });
+  }
+
   const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
   const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
 
@@ -406,7 +420,7 @@
       introTitle: "BEAUTYLOVE",
       introSubline: "Development of two sustainable packaging concepts for a skincare product based on natural ingredients.",
       introInfo: ["Cooperation project", "3 months", "2022", "4 people"],
-      introTags: ["Packaging Design", "Sustainability", "Execution", "Cooperation"],
+      introTags: ["Packaging Design", "Sustainability", "Flat Pattern", "Cooperation"],
       overviewText: "In a packaging challenge, our task was to develop packaging that perfectly fits a specific product. We used a skincare product as the basis, tested first design and technical dieline concepts as well as different cardboard materials, and then produced two distinct packaging concepts based on natural ingredients.",
       packagingParagraphs: [
         "The first package is literally inspired by a honeycomb and consists of two interlocking bands. The locking system includes two tabs on the inner band to ensure stable fixation. The outer band has a small tab with a narrow slot for secure closure. Two of the six sides remain open, so users can still look into the package and touch the product.",
@@ -584,6 +598,8 @@
     mobileNavLinks.forEach((link, index) => {
       link.textContent = translations.nav[index];
     });
+
+      updateResumeLinks(selectedLang);
 
     if (selectedLang === "en") {
       const sectionTitles = isMobileViewport ? translations.sectionTitlesMobile : translations.sectionTitles;
