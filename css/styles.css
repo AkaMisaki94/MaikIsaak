@@ -740,8 +740,9 @@ h1 {
     grid-template-rows: repeat(4, auto);
     grid-auto-flow: column;
     gap: 16px;
-    font-size: 1.25rem;
-    line-height: 1.2;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 300;
 }
 
 /* ---------- Section Heading ---------- */
@@ -1270,8 +1271,97 @@ h3 {
     height: auto;
     display: block;
     border-radius: inherit;
-    transform: translateY(-15%) scale(1.12);
-    transform-origin: center top;
+}
+
+.project-prototype-copy,
+.project-prototype-media,
+.project-prototype-device {
+    grid-column: 1 / -1;
+}
+
+.project-prototype-media,
+.project-prototype-device {
+    grid-column: 3 / 11;
+}
+
+.project-prototype-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+    align-items: flex-start;
+}
+
+.project-prototype-copy .project-reflection-list {
+    width: 100%;
+}
+
+.project-prototype-media,
+.project-prototype-device {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    align-self: center;
+}
+
+.project-prototype-media .project-research-media {
+    width: fit-content;
+    max-width: 100%;
+    background: transparent;
+    overflow: visible;
+    margin: 0 auto;
+}
+
+.project-prototype-media .project-research-media img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-prototype-device-frame {
+    --prototype-video-scale: 0.95;
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.project-prototype-device-frame>img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.project-prototype-device-frame>video {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: translate(-50%, -50%) scale(var(--prototype-video-scale));
+    border-radius: 8px;
+    clip-path: inset(0 round 8px);
+}
+
+.project-prototype-device-frame--bare {
+    width: 100%;
+    height: 100%;
+}
+
+.project-prototype-device-frame--bare>video {
+    position: static;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: contain;
 }
 
 .project-ideation-improvements {
@@ -1747,6 +1837,11 @@ footer p {
         font-size: 1.25rem;
     }
 
+    .about-skills-list {
+        font-size: 1.25rem;
+        line-height: 1.5;
+    }
+
     .icon-text-list svg,
     .icon-text-list .icon-text svg {
         width: 32px;
@@ -1951,20 +2046,43 @@ footer p {
     }
 
     .project-final-designs-logo-text {
-        grid-column: 1 / 8;
+        grid-column: 1 / 9;
     }
 
     .project-final-designs-logo-media {
-        grid-column: 8 / 13;
+        grid-column: 9 / 13;
     }
 
     .project-final-designs-duo-item {
         grid-column: span 6;
     }
+
+    .project-prototype-copy {
+        grid-column: 1 / 5;
+    }
+
+    .project-prototype-media {
+        grid-column: 5 / 9;
+    }
+
+    .project-prototype-device {
+        grid-column: 9 / 13;
+    }
+
+    .project-prototype-media .project-research-media,
+    .project-prototype-device-frame {
+        height: clamp(340px, 40vw, 560px);
+    }
+
+    .project-prototype-media .project-research-media img,
+    .project-prototype-device-frame>img {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 1023px) {
-
     #synthese .project-research-split>.project-research-half--left,
     #synthese .project-research-split>.project-synthesis-media {
         grid-column: 1 / -1;
@@ -2071,6 +2189,32 @@ footer p {
         grid-column: 1 / -1;
     }
 
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .project-prototype-copy {
+        grid-column: 1 / -1;
+    }
+
+    .project-prototype-media {
+        grid-column: 1 / 7;
+    }
+
+    .project-prototype-device {
+        grid-column: 7 / 13;
+    }
+
+    .project-prototype-media .project-research-media,
+    .project-prototype-device-frame {
+        height: clamp(340px, 52vw, 500px);
+    }
+
+    .project-prototype-media .project-research-media img,
+    .project-prototype-device-frame>img {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
