@@ -32,7 +32,7 @@
           </svg>
         </a>
         <ul>
-          <li class="navigation-item"><a href="#home">Home</a></li>
+          <li class="navigation-item active"><a href="#home">Home</a></li>
           <li class="navigation-item"><a href="html/about.html">About</a></li>
           <li class="navigation-item"><a href="html/archive.html">Archiv</a></li>
           <li class="navigation-item"><a class="resume-link" href="img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a></li>
@@ -93,13 +93,6 @@
                 </svg>
                 <span>Deutsch</span>
               </button>
-              <button class="language-option" data-lang="ja" role="menuitemradio" aria-checked="false">
-                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="24" cy="24" r="18" fill="#ffffff" />
-                  <circle cx="24" cy="24" r="8" fill="#bc002d" />
-                </svg>
-                <span>日本語</span>
-              </button>
             </div>
           </li>
           <li class="mobile-menu-item" id="mobile-menu">
@@ -112,7 +105,7 @@
               </svg>
             </button>
             <div class="mobile-menu-dropdown" role="menu">
-              <a class="mobile-navigation-link" href="#home">Home</a>
+              <a class="mobile-navigation-link active" href="#home">Home</a>
               <a class="mobile-navigation-link" href="html/about.html">About</a>
               <a class="mobile-navigation-link" href="html/archive.html">Archiv</a>
               <a class="mobile-navigation-link resume-link" href="img/resume/Resume_Maik_Isaak.pdf" target="_blank" rel="noopener noreferrer">Lebenslauf</a>
@@ -155,13 +148,6 @@
                     </svg>
                     <span>Deutsch</span>
                   </button>
-                  <button class="mobile-language-option" data-lang="ja" type="button">
-                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                      <circle cx="24" cy="24" r="18" fill="#ffffff" />
-                      <circle cx="24" cy="24" r="8" fill="#bc002d" />
-                    </svg>
-                    <span>日本語</span>
-                  </button>
                 </div>
               </div>
             </div>
@@ -174,7 +160,7 @@
       <section class="intro">
         <div class="profile-image">
           <div class="profile-image-inner">
-           <img src="img/homepage/Profil.png" alt="Profilbild von Maik Isaak">
+           <img src="img/homepage/Maik_Isaak.jpg" alt="Profilbild von Maik Isaak">
           </div>
         </div>
         <div class="intro-text">
@@ -350,69 +336,27 @@
 
 <!-- Sterne Script -->
 
+<script src="js/common-ui.js"></script>
 <script>
-  const starsLayer = document.getElementById("stars-layer");
-  const isMobileStarsViewport = window.matchMedia("(max-width: 639px)").matches;
-  const starCount = isMobileStarsViewport ? 500 : 1000;
-  const appearDuration = 60;
+const commonUi = window.initPortfolioCommonUi();
+if (!commonUi) {
+  throw new Error("Common UI initialization failed.");
+}
 
-  // Schleife, die Sterne nacheinander erzeugt
-  for (let i = 0; i < starCount; i++) {
-    // Erstelle ein neues <div>-Element (ein Kasten)
-    const star = document.createElement("div");
-    // Weise ihm die CSS-Klasse "star" zu
-    star.className = "star";
+const {
+  switcher,
+  languageButton,
+  options,
+  mobileMenu,
+  mobileMenuButton,
+  navLinks,
+  mobileNavLinks,
+  mobileLanguageLabelText,
+  mobileLanguageOptions,
+  updateResumeLinks,
+} = commonUi;
 
-    // Zufällige horizontale und vertikale Position (zwischen 0 und 100 Viewport-Breiten bzw. Höhen)
-    star.style.left = Math.random() * 100 + "vw";
-    star.style.top = Math.random() * 100 + "vh";
-
-    // Zufällige Größe zwischen 1px und 3px
-    const size = Math.random() * 2 + 1;
-    star.style.width = size + "px";
-    star.style.height = size + "px";
-
-    starsLayer.appendChild(star);
-
-    // Zufällige Dauer der Animationen
-    const riseDuration = 75 + Math.random() * 150; // Dauer des "Aufsteigens"
-    const blinkDuration = 5 + Math.random() * 10; // Dauer des "Blinkens"
-
-    // Setze Animations-Dauer für beide Animationen (Blinken und Aufsteigen)
-    star.style.animationDuration = `${blinkDuration}s, ${riseDuration}s`;
-
-    // Jeder Stern bekommt eine zufällige Startverzögerung zwischen 0 und 45s
-    const delay = Math.random() * appearDuration;
-    star.style.animationDelay = `${delay}s, ${delay}s`;
-  }
-
-
-
-  const switcher = document.getElementById("language-switcher");
-  const languageButton = switcher.querySelector(".language-button");
-  const options = switcher.querySelectorAll(".language-option");
-
-  const mobileMenu = document.getElementById("mobile-menu");
-  const mobileMenuButton = mobileMenu.querySelector(".mobile-menu-button");
-  const mobileNavLinks = mobileMenu.querySelectorAll(".mobile-navigation-link");
-  const resumeLinks = document.querySelectorAll(".resume-link");
-
-  function updateResumeLinks(selectedLang) {
-    const resumeBasePath = window.location.pathname.includes("/html/") ? "../img/resume/" : "img/resume/";
-    const resumeFile = selectedLang === "de" ? "Bewerbung_Maik_Isaak.pdf" : "Resume_Maik_Isaak.pdf";
-    const resumeHref = resumeBasePath + resumeFile;
-
-    resumeLinks.forEach((link) => {
-      link.setAttribute("href", resumeHref);
-      link.setAttribute("target", "_blank");
-      link.setAttribute("rel", "noopener noreferrer");
-    });
-  }
-
-  const mobileLanguageLabelText = mobileMenu.querySelector(".mobile-language-label-text");
-  const mobileLanguageOptions = mobileMenu.querySelectorAll(".mobile-language-option");
-
-  const i18n = {
+const i18n = {
     en: {
       metaTitle: "Maik Isaak - Portfolio",
       logoAriaLabel: "Home",
@@ -522,61 +466,6 @@
       footerEmailLabel: "E-Mail",
       footerLinkedInLabel: "LinkedIn",
       footerCopyright: "&copy;2026. Created by Maik Isaak."
-    },
-    ja: {
-      metaTitle: "Maik Isaak - ポートフォリオ",
-      logoAriaLabel: "ホーム",
-      languageButtonAriaLabel: "言語を選択",
-      mobileMenuButtonAriaLabel: "メニューを開く",
-      mobileLanguageLabel: "言語",
-      nav: ["ホーム", "自己紹介", "アーカイブ", "履歴書"],
-      introHeading: "Hey there,<br>I'm <span class=\"highlight\">Maik</span>",
-      introSubline: "<span class=\"highlight\">UI/UX</span> と <span class=\"highlight\">プロダクトデザイナー</span><br>観察し、動き、問い直し、<br>体験へとデザインします。",
-      introThirdLine: "現在 @ <span class=\"highlight\">Vodafone</span> でデザイン中",
-      sectionTitles: ["UI/UX プロジェクト", "プロダクトデザインプロジェクト"],
-      sectionTitlesMobile: ["UI/UX プロジェクト", "プロダクトデザイン"],
-      projects: [
-        {
-          title: "Recommendation Page",
-          tags: ["UI/UX デザイン", "プロトタイピング", "UX 戦略", "リサーチ"],
-          description: "契約更新を一画面で把握し、既存顧客向け通知を可能にし、パーソナライズされた提案を提示するオールインワンのファネルページ。",
-          imageAlt: "プロジェクト: Recommendation Page"
-        },
-        {
-          title: "Device Financing",
-          tags: ["UX デザイン", "プロトタイピング", "アクセシビリティ", "リサーチ", "UI コンポーネント開発"],
-          description: "銀行との連携により、料金プラン付きスマートフォン購入時に 12・24・36 か月の分割払いを提供。",
-          imageAlt: "プロジェクト: Device Financing"
-        },
-        {
-          title: "InSIGHTer",
-          tags: ["UI/UX デザイン", "プロトタイピング", "UX リサーチ", "アプリデザイン"],
-          description: "スマートフォンとスマートウォッチ向けサステナビリティアプリのコンセプト。",
-          imageAlt: "プロジェクト: InSIGHTer"
-        },
-        {
-          title: "CLEANACE",
-          tags: ["プロダクトデザイン", "コンセプト", "3D モデリング", "CAD", "アクセシビリティ"],
-          description: "現代的なバスルーム機能を統合した、アクセシブルなウェットルームのコンセプト。",
-          imageAlt: "プロジェクト: CLEANACE"
-        },
-        {
-          title: "BeautyLove",
-          tags: ["パッケージデザイン", "サステナビリティ", "展開図", "協業"],
-          description: "天然由来成分のスキンケア製品向けに、持続可能なパッケージ案を 2 種開発。",
-          imageAlt: "プロジェクト: BeautyLove"
-        },
-        {
-          title: "STICK",
-          tags: ["プロダクトデザイン", "サステナビリティ", "デザイン思考", "モデル制作"],
-          description: "木材とレザーを用いた、幾何学性・安定性・上品さを備えるミニマルな折りたたみハンガーの設計。",
-          imageAlt: "プロジェクト: STICK"
-        }
-      ],
-      footerHeading: "Wanna Get in touch? Let's Connect!",
-      footerEmailLabel: "メール",
-      footerLinkedInLabel: "LinkedIn",
-      footerCopyright: "&copy;2026. Created by Maik Isaak."
     }
   };
 
@@ -598,7 +487,6 @@
     document.title = translations.metaTitle;
 
     const logo = document.querySelector(".logo");
-    const navLinks = document.querySelectorAll(".navigation-item a");
     const introHeading = document.querySelector(".intro-text h1");
     const introSubline = document.querySelector(".subline");
     const introThirdLine = document.querySelector(".third-line");
@@ -670,7 +558,7 @@
       option.classList.toggle("active", option.dataset.lang === selectedLang);
     });
 
-    const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+    const activeOption = switcher.querySelector(`.language-option[data-lang=""]`);
     const newSvg = activeOption.querySelector("svg").cloneNode(true);
     languageButton.innerHTML = "";
     languageButton.appendChild(newSvg);

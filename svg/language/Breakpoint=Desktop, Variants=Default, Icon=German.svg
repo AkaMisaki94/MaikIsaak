@@ -1,0 +1,126 @@
+/* ---------- LOGO ---------- */
+
+.logo, .language-icon, .footer-icon {
+    display: block;
+    width: 2.5rem;
+}
+
+.logo .color-1,
+.logo .color-2,
+.footer-icon .color-1 {
+    fill: white;
+    transition: fill 0.25s ease;
+}
+
+.footer-icon .color-2 {
+    fill: var(--color-grey-05);
+    transition: fill 0.25s ease;
+}
+
+.logo:hover .color-2,
+.footer-icon:hover .color-2 {
+    fill: var(--color-primary);
+}
+
+.logo:hover .color-1 {
+    fill: var(--color-grey-03);
+}
+
+
+
+.navigation-item {
+    border-radius: 2rem;
+    transition: background-color 0.25s ease;
+}
+
+.language-item {
+    position: relative;
+    border-radius: 2rem;
+    transition: background-color 0.25s ease;
+}
+
+.navigation-item:hover,
+.language-item:hover {
+    background-color: var(--color-grey-03);
+}
+
+.language-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.language-button svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  pointer-events: none;
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  right: 0;
+  background: var(--color-grey-05);
+  border-radius: 1.25rem;
+  padding: 0.75rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  outline: 1px solid var(--color-grey-02);
+  min-width: 160px;
+}
+
+.language-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+}
+
+.language-item.open .language-dropdown {
+  display: flex;
+}
+
+.language-option:hover {
+  background-color: var(--color-grey-03);
+}
+
+.language-option.active {
+  background-color: #2a2a2a;
+  color: var(--color-primary);
+}
+
+.navigation-item a {
+    display: block;
+    color: var(--color-white);
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.shadow-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0; 
+    height: 106px;
+    z-index: 10; /* unter der Nav */
+    pointer-events: none;
+    opacity: 0.75;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,1) 0%,     /* oben 100% Schwarz */
+      rgba(0,0,0,0) 100%    /* unten 0% */
+    );
+    }
