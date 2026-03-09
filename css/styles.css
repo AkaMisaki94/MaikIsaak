@@ -2004,6 +2004,7 @@ footer p {
 
     .h2-section {
         font-size: 1.25rem;
+        gap: 24px;
     }
 
     .about-skills-grid {
