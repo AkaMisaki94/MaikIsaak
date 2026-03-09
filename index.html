@@ -301,7 +301,7 @@
     </main>
   <footer>
     <div class="footer-content">
-      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <h2 class="h2-footer">Wanna Get in touch? Let's Connect!</h2>
       <nav>
         <ul>
           <li>
@@ -558,10 +558,13 @@ const i18n = {
       option.classList.toggle("active", option.dataset.lang === selectedLang);
     });
 
-    const activeOption = switcher.querySelector(`.language-option[data-lang=""]`);
-    const newSvg = activeOption.querySelector("svg").cloneNode(true);
-    languageButton.innerHTML = "";
-    languageButton.appendChild(newSvg);
+    const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+    const activeSvg = activeOption?.querySelector("svg");
+    if (activeSvg) {
+      const newSvg = activeSvg.cloneNode(true);
+      languageButton.innerHTML = "";
+      languageButton.appendChild(newSvg);
+    }
 
     localStorage.setItem("preferredLanguage", selectedLang);
   }
