@@ -249,7 +249,7 @@
 
   <footer>
     <div class="footer-content">
-      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <h2 class="h2-footer">Wanna Get in touch? Let's Connect!</h2>
       <nav>
         <ul>
           <li>
@@ -300,6 +300,16 @@ const {
   updateResumeLinks,
 } = commonUi;
 
+const heroTitle = document.querySelector(".project-intro h1");
+const aboutMainTitle = document.getElementById("about-title-main");
+const aboutSkillsTitle = document.getElementById("about-title-skills");
+const aboutSkillsItTitle = document.getElementById("about-skills-it-title");
+const aboutSkillsExpTitle = document.getElementById("about-skills-exp-title");
+const aboutParagraphs = document.querySelectorAll(".about-me-copy p");
+const aboutExpItems = document.querySelectorAll(".about-skills-list li");
+const footerHeading = document.querySelector(".h2-footer");
+const footerLabels = document.querySelectorAll(".footer-icon span");
+
 const i18n = {
       de: {
         metaTitle: "About – Maik Isaak",
@@ -322,7 +332,7 @@ const i18n = {
         skillsItTitle: "IT-Skills",
         skillsExpTitle: "Erfahrungen",
         expItems: ["UX/UI-Design", "UX Research", "Wireframing", "Prototyping", "Specifications", "Design Systems", "Accessibility"],
-        footerHeading: "Wanna Get in touch? Let’s Connect!",
+        footerHeading: "Wanna Get in touch? Let's Connect!",
         footerLabels: ["Email", "LinkedIn"]
       },
       en: {
@@ -346,7 +356,7 @@ const i18n = {
         skillsItTitle: "IT Skills",
         skillsExpTitle: "Experience",
         expItems: ["UX/UI Design", "UX Research", "Wireframing", "Prototyping", "Specifications", "Design Systems", "Accessibility"],
-        footerHeading: "Wanna Get in touch? Let’s Connect!",
+        footerHeading: "Wanna Get in touch? Let's Connect!",
         footerLabels: ["Email", "LinkedIn"]
       }
     };
@@ -404,10 +414,13 @@ const i18n = {
         option.classList.toggle("active", option.dataset.lang === selectedLang);
       });
 
-      const activeOption = switcher.querySelector(`.language-option[data-lang=""]`);
-      const newSvg = activeOption.querySelector("svg").cloneNode(true);
-      languageButton.innerHTML = "";
-      languageButton.appendChild(newSvg);
+      const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+      const activeSvg = activeOption?.querySelector("svg");
+      if (activeSvg) {
+        const newSvg = activeSvg.cloneNode(true);
+        languageButton.innerHTML = "";
+        languageButton.appendChild(newSvg);
+      }
 
       localStorage.setItem("preferredLanguage", selectedLang);
     }

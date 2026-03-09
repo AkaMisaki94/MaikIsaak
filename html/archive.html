@@ -250,7 +250,7 @@
 
   <footer>
     <div class="footer-content">
-      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <h2 class="h2-footer">Wanna Get in touch? Let's Connect!</h2>
       <nav>
         <ul>
           <li>
@@ -302,6 +302,18 @@ const {
   updateResumeLinks,
 } = commonUi;
 
+const archiveTitle = document.getElementById("archive-title");
+const sectionWebsiteTitle = document.getElementById("section-website-title");
+const sectionWebsiteText = document.getElementById("section-website-text");
+const sectionWebsiteCta = document.getElementById("section-website-cta");
+const sectionRenderingsTitle = document.getElementById("section-renderings-title");
+const sectionRenderingsText = document.getElementById("section-renderings-text");
+const sectionDrawingsTitle = document.getElementById("section-drawings-title");
+const sectionIconsTitle = document.getElementById("section-icons-title");
+const sectionIconsText = document.getElementById("section-icons-text");
+const footerHeading = document.querySelector(".h2-footer");
+const footerLabels = document.querySelectorAll(".footer-icon span");
+
 const i18n = {
       de: {
         metaTitle: "Archiv – Maik Isaak",
@@ -318,7 +330,7 @@ const i18n = {
         drawingsTitle: "Zeichnungen",
         iconsTitle: "Iconserie",
         iconsText: "Iconserie auf Basis eines selbst entwickelten Rasters zum Thema „Japan“.",
-        footerHeading: "Wanna Get in touch? Let’s Connect!",
+        footerHeading: "Wanna Get in touch? Let's Connect!",
         footerLabels: ["Email", "LinkedIn"]
       },
       en: {
@@ -336,7 +348,7 @@ const i18n = {
         drawingsTitle: "Drawings",
         iconsTitle: "Icon Series",
         iconsText: "Icon series based on a custom-built grid around the topic \"Japan\".",
-        footerHeading: "Wanna Get in touch? Let’s Connect!",
+        footerHeading: "Wanna Get in touch? Let's Connect!",
         footerLabels: ["Email", "LinkedIn"]
       }
     };
@@ -386,10 +398,13 @@ const i18n = {
         option.classList.toggle("active", option.dataset.lang === selectedLang);
       });
 
-      const activeOption = switcher.querySelector(`.language-option[data-lang=""]`);
-      const newSvg = activeOption.querySelector("svg").cloneNode(true);
-      languageButton.innerHTML = "";
-      languageButton.appendChild(newSvg);
+      const activeOption = switcher.querySelector(`.language-option[data-lang="${selectedLang}"]`);
+      const activeSvg = activeOption?.querySelector("svg");
+      if (activeSvg) {
+        const newSvg = activeSvg.cloneNode(true);
+        languageButton.innerHTML = "";
+        languageButton.appendChild(newSvg);
+      }
 
       localStorage.setItem("preferredLanguage", selectedLang);
     }

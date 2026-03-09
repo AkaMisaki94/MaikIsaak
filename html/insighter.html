@@ -739,7 +739,7 @@
   </main>
   <footer>
     <div class="footer-content">
-      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <h2 class="h2-footer">Wanna Get in touch? Let's Connect!</h2>
       <nav>
         <ul>
           <li>
@@ -984,7 +984,7 @@ const i18n = {
   function applyLanguage(lang) {
     const selectedLang = i18n[lang] ? lang : "en";
     const translations = i18n[selectedLang];
-    const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+    const isMobileViewport = window.matchMedia("(max-width: 640px)").matches;
 
     document.documentElement.lang = selectedLang;
     document.title = translations.metaTitle;
@@ -1053,6 +1053,13 @@ const i18n = {
       setTextList(".project-intro .info-group .icon-text span", originalContent.introInfo);
       setTextList(".project-intro .tags .tag", originalContent.introTags);
       setTextList(".h2-section .title-text", originalContent.sectionTitles);
+      if (isMobileViewport) {
+        const sectionTitles = document.querySelectorAll(".h2-section .title-text");
+        const lastTitle = sectionTitles[sectionTitles.length - 1];
+        if (lastTitle) {
+          lastTitle.textContent = "Takeaways";
+        }
+      }
       setTextList(".process-step .h3-step-text", originalContent.processTitles);
       setTextList(".process-step .step-text li", originalContent.processItems);
       setHtml(document.querySelector(".project-two-column .project-details-text"), originalContent.problemText);

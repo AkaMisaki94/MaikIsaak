@@ -635,7 +635,7 @@
   </main>
   <footer>
     <div class="footer-content">
-      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <h2 class="h2-footer">Wanna Get in touch? Let's Connect!</h2>
       <nav>
         <ul>
           <li>
@@ -819,10 +819,12 @@ const i18n = {
     originalContent.takeaways = Array.from(document.querySelectorAll(".project-takeaways-list span")).map((el) => el.innerHTML);
     originalContent.problemText = document.querySelector(".project-two-column .project-details-text")?.innerHTML || "";
     originalContent.problemItems = Array.from(document.querySelectorAll(".project-two-column .project-details-list .icon-text span")).map((el) => el.innerHTML);
-    originalContent.synthesisHeadings = Array.from(document.querySelectorAll("#synthese .project-synthesis-text h3")).map((el) => el.textContent);
-    originalContent.synthesisParagraphs = Array.from(document.querySelectorAll("#synthese .project-synthesis-text > p")).map((el) => el.innerHTML);
+    originalContent.synthesisHeadings = Array.from(document.querySelectorAll("#synthese .headline-text h3")).map((el) => el.textContent);
+    originalContent.synthesisParagraphs = Array.from(
+      document.querySelectorAll("#synthese .headline-text p, #synthese .project-synthesis-text > p")
+    ).map((el) => el.innerHTML);
     originalContent.synthesisInsights = Array.from(document.querySelectorAll("#synthese .project-synthesis-insight-card span")).map((el) => el.innerHTML);
-    originalContent.ideationIntro = document.querySelector("#ideation .project-ideation-improvements-intro p")?.innerHTML || "";
+    originalContent.ideationIntro = document.querySelector("#ideation > p")?.innerHTML || "";
     originalContent.ideationCardTitles = Array.from(document.querySelectorAll("#ideation .project-ideation-card h3")).map((el) => el.textContent);
     originalContent.ideationBullets = Array.from(document.querySelectorAll("#ideation .project-ideation-card .project-bullets span")).map((el) => el.innerHTML);
     originalContent.specificationHeading = document.querySelector("#spezifikation .project-research-text h3")?.textContent || "";
@@ -876,7 +878,7 @@ const i18n = {
   function applyLanguage(lang) {
     const selectedLang = i18n[lang] ? lang : "en";
     const translations = i18n[selectedLang];
-    const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+    const isMobileViewport = window.matchMedia("(max-width: 640px)").matches;
 
     document.documentElement.lang = selectedLang;
     document.title = translations.metaTitle;
@@ -921,11 +923,11 @@ const i18n = {
       setHtml(document.querySelector(".project-two-column .project-details-text"), translations.problemText);
       setHtmlList(".project-two-column .project-details-list .icon-text span", translations.problemItems);
 
-      setTextList("#synthese .project-synthesis-text h3", translations.synthesisHeadings);
-      setHtmlList("#synthese .project-synthesis-text > p", translations.synthesisParagraphs);
+      setTextList("#synthese .headline-text h3", translations.synthesisHeadings);
+      setHtmlList("#synthese .headline-text p, #synthese .project-synthesis-text > p", translations.synthesisParagraphs);
       setHtmlList("#synthese .project-synthesis-insight-card span", translations.synthesisInsights);
 
-      setHtml(document.querySelector("#ideation .project-ideation-improvements-intro p"), translations.ideationIntro);
+      setHtml(document.querySelector("#ideation > p"), translations.ideationIntro);
       setTextList("#ideation .project-ideation-card h3", translations.ideationCardTitles);
       setHtmlList("#ideation .project-ideation-card .project-bullets span", translations.ideationBullets);
 
@@ -946,14 +948,24 @@ const i18n = {
       setTextList(".project-intro .info-group .icon-text span", originalContent.introInfo);
       setTextList(".project-intro .tags .tag", originalContent.introTags);
       setTextList(".h2-section .title-text", originalContent.sectionTitles);
+      if (isMobileViewport) {
+        const sectionTitles = document.querySelectorAll(".h2-section .title-text");
+        if (sectionTitles[3]) {
+          sectionTitles[3].textContent = "Ideation";
+        }
+        const lastTitle = sectionTitles[sectionTitles.length - 1];
+        if (lastTitle) {
+          lastTitle.textContent = "Takeaways";
+        }
+      }
       setTextList(".process-step .h3-step-text", originalContent.processTitles);
       setTextList(".process-step .step-text li", originalContent.processItems);
       setHtml(document.querySelector(".project-two-column .project-details-text"), originalContent.problemText);
       setHtmlList(".project-two-column .project-details-list .icon-text span", originalContent.problemItems);
-      setTextList("#synthese .project-synthesis-text h3", originalContent.synthesisHeadings);
-      setHtmlList("#synthese .project-synthesis-text > p", originalContent.synthesisParagraphs);
+      setTextList("#synthese .headline-text h3", originalContent.synthesisHeadings);
+      setHtmlList("#synthese .headline-text p, #synthese .project-synthesis-text > p", originalContent.synthesisParagraphs);
       setHtmlList("#synthese .project-synthesis-insight-card span", originalContent.synthesisInsights);
-      setHtml(document.querySelector("#ideation .project-ideation-improvements-intro p"), originalContent.ideationIntro);
+      setHtml(document.querySelector("#ideation > p"), originalContent.ideationIntro);
       setTextList("#ideation .project-ideation-card h3", originalContent.ideationCardTitles);
       setHtmlList("#ideation .project-ideation-card .project-bullets span", originalContent.ideationBullets);
       setTextList("#spezifikation .project-research-text h3", [originalContent.specificationHeading]);

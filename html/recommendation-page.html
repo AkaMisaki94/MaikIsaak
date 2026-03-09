@@ -771,7 +771,7 @@
   </main>
   <footer>
     <div class="footer-content">
-      <h2 class="h2-footer">Wanna Get in touch? Let’s Connect!</h2>
+      <h2 class="h2-footer">Wanna Get in touch? Let's Connect!</h2>
       <nav>
         <ul>
           <li>
@@ -1005,14 +1005,15 @@ const i18n = {
     originalContent.sectionTitles = Array.from(document.querySelectorAll(".h2-section .title-text")).map((el) => el.textContent);
     originalContent.processTitles = Array.from(document.querySelectorAll(".process-step .h3-step-text")).map((el) => el.textContent);
     originalContent.processItems = Array.from(document.querySelectorAll(".process-step .step-text li")).map((el) => el.textContent);
-    originalContent.projectHeadings = Array.from(document.querySelectorAll("main > section.project-research h3")).map((el) => el.textContent);
-    originalContent.reflectionSubheadings = Array.from(document.querySelectorAll(".project-reflection h4")).map((el) => el.textContent);
+    originalContent.projectHeadings = Array.from(
+      document.querySelectorAll("#research h3, #synthese h3, #ideation h3, #umsetzung h3, #reflektion h3")
+    ).map((el) => el.textContent);
+    originalContent.reflectionSubheadings = Array.from(document.querySelectorAll("#reflektion h4")).map((el) => el.textContent);
     originalContent.takeaways = Array.from(document.querySelectorAll(".project-takeaways-list span")).map((el) => el.innerHTML);
     originalContent.problemText = document.querySelector(".project-two-column .project-details-text")?.innerHTML || "";
     originalContent.problemItems = Array.from(document.querySelectorAll(".project-two-column .project-details-list .icon-text span")).map((el) => el.innerHTML);
 
-    const researchSections = document.querySelectorAll("main > section.project-research");
-    const researchSection = researchSections[0];
+    const researchSection = document.getElementById("research");
     if (researchSection) {
       const researchText = researchSection.querySelector(".project-research-content > .project-research-text");
       if (researchText) {
@@ -1032,20 +1033,20 @@ const i18n = {
       originalContent.personasList = Array.from(researchSection.querySelectorAll(".project-research-split--personas .project-research-half--right .project-bullets span")).map((el) => el.innerHTML);
     }
 
-    const synthesisSection = researchSections[1];
+    const synthesisSection = document.getElementById("synthese");
     if (synthesisSection) {
       originalContent.synthesisText = Array.from(synthesisSection.querySelectorAll(".project-research-text--right p")).map((el) => el.innerHTML);
     }
 
-    const ideationSection = researchSections[2];
+    const ideationSection = document.getElementById("ideation");
     if (ideationSection) {
       originalContent.ideationLowFi = Array.from(ideationSection.querySelectorAll(".project-research-text--left p")).map((el) => el.innerHTML);
       originalContent.ideationFinalIntro = ideationSection.querySelector(".project-ideation-final > p")?.innerHTML || "";
-      originalContent.ideationFinalLeft = Array.from(ideationSection.querySelectorAll(".project-ideation-bullets ul:first-child .project-bullets span")).map((el) => el.innerHTML);
-      originalContent.ideationFinalRight = Array.from(ideationSection.querySelectorAll(".project-ideation-bullets ul:last-child .project-bullets span")).map((el) => el.innerHTML);
+      originalContent.ideationFinalLeft = Array.from(ideationSection.querySelectorAll(".project-ideation-bullets ul:first-child span")).map((el) => el.innerHTML);
+      originalContent.ideationFinalRight = Array.from(ideationSection.querySelectorAll(".project-ideation-bullets ul:last-child span")).map((el) => el.innerHTML);
     }
 
-    const executionSection = document.querySelector("main > section.project-research.project-execution");
+    const executionSection = document.getElementById("umsetzung");
     if (executionSection) {
       const prototypeParagraphs = executionSection.querySelectorAll(".project-research-split > .project-research-text p");
       originalContent.executionPrototype = [prototypeParagraphs[0]?.innerHTML || "", prototypeParagraphs[1]?.innerHTML || ""];
@@ -1063,7 +1064,7 @@ const i18n = {
       }
     }
 
-    const reflectionSection = document.querySelector("main > section.project-research.project-reflection");
+    const reflectionSection = document.getElementById("reflektion");
     if (reflectionSection) {
       originalContent.reflectionIntro = reflectionSection.querySelector(".project-reflection-intro p")?.innerHTML || "";
       originalContent.reflectionPositive = Array.from(reflectionSection.querySelectorAll(".project-reflection-list--positive span")).map((el) => el.innerHTML);
@@ -1144,7 +1145,7 @@ const i18n = {
     });
 
     if (selectedLang === "en") {
-      const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
+      const isMobileViewport = window.matchMedia("(max-width: 640px)").matches;
       const currentSectionTitles = isMobileViewport && translations.sectionTitlesMobile
         ? translations.sectionTitlesMobile
         : translations.sectionTitles;
@@ -1158,15 +1159,14 @@ const i18n = {
       setTextList(".h2-section .title-text", currentSectionTitles);
       setTextList(".process-step .h3-step-text", translations.processTitles);
       setTextList(".process-step .step-text li", translations.processItems);
-      setTextList("main > section.project-research h3", translations.projectHeadings);
-      setTextList(".project-reflection h4", translations.reflectionSubheadings);
+      setTextList("#research h3, #synthese h3, #ideation h3, #umsetzung h3, #reflektion h3", translations.projectHeadings);
+      setTextList("#reflektion h4", translations.reflectionSubheadings);
       setHtmlList(".project-takeaways-list span", translations.takeaways);
 
       setHtml(document.querySelector(".project-two-column .project-details-text"), translations.problemText);
       setHtmlList(".project-two-column .project-details-list .icon-text span", translations.problemItems);
 
-      const researchSections = document.querySelectorAll("main > section.project-research");
-      const researchSection = researchSections[0];
+      const researchSection = document.getElementById("research");
       if (researchSection) {
         const researchText = researchSection.querySelector(".project-research-content > .project-research-text");
         if (researchText) {
@@ -1189,24 +1189,24 @@ const i18n = {
         setHtmlList(".project-research-split--personas .project-research-half--right .project-bullets span", translations.research.personas);
       }
 
-      const synthesisSection = researchSections[1];
+      const synthesisSection = document.getElementById("synthese");
       if (synthesisSection) {
         const p = synthesisSection.querySelectorAll(".project-research-text--right p");
         setHtml(p[0], translations.synthesis.text[0]);
         setHtml(p[1], translations.synthesis.text[1]);
       }
 
-      const ideationSection = researchSections[2];
+      const ideationSection = document.getElementById("ideation");
       if (ideationSection) {
         const lowFiParagraphs = ideationSection.querySelectorAll(".project-research-text--left p");
         setHtml(lowFiParagraphs[0], translations.ideation.lowFi[0]);
         setHtml(lowFiParagraphs[1], translations.ideation.lowFi[1]);
         setHtml(ideationSection.querySelector(".project-ideation-final > p"), translations.ideation.finalIntro);
-        setHtmlList(".project-ideation-bullets ul:first-child .project-bullets span", translations.ideation.finalBulletsLeft);
-        setHtmlList(".project-ideation-bullets ul:last-child .project-bullets span", translations.ideation.finalBulletsRight);
+        setHtmlList(".project-ideation-bullets ul:first-child span", translations.ideation.finalBulletsLeft);
+        setHtmlList(".project-ideation-bullets ul:last-child span", translations.ideation.finalBulletsRight);
       }
 
-      const executionSection = document.querySelector("main > section.project-research.project-execution");
+      const executionSection = document.getElementById("umsetzung");
       if (executionSection) {
         const prototypeParagraphs = executionSection.querySelectorAll(".project-research-split > .project-research-text p");
         setHtml(prototypeParagraphs[0], translations.execution.prototype[0]);
@@ -1228,7 +1228,7 @@ const i18n = {
         }
       }
 
-      const reflectionSection = document.querySelector("main > section.project-research.project-reflection");
+      const reflectionSection = document.getElementById("reflektion");
       if (reflectionSection) {
         setHtml(reflectionSection.querySelector(".project-reflection-intro p"), translations.reflection.intro);
         setHtmlList(".project-reflection-list--positive span", translations.reflection.positive);
@@ -1239,6 +1239,7 @@ const i18n = {
         setHtml(nextParagraphs[2], translations.reflection.next[2]);
       }
     } else {
+      const isMobileViewport = window.matchMedia("(max-width: 640px)").matches;
       const introTitle = document.querySelector(".project-intro h1");
       const introSubline = document.querySelector(".project-intro .subline");
       if (introTitle) introTitle.innerHTML = originalContent.introTitle;
@@ -1247,17 +1248,23 @@ const i18n = {
       setTextList(".project-intro .info-group .icon-text span", originalContent.introInfo);
       setTextList(".project-intro .tags .tag", originalContent.introTags);
       setTextList(".h2-section .title-text", originalContent.sectionTitles);
+      if (isMobileViewport) {
+        const sectionTitles = document.querySelectorAll(".h2-section .title-text");
+        const lastTitle = sectionTitles[sectionTitles.length - 1];
+        if (lastTitle) {
+          lastTitle.textContent = "Takeaways";
+        }
+      }
       setTextList(".process-step .h3-step-text", originalContent.processTitles);
       setTextList(".process-step .step-text li", originalContent.processItems);
-      setTextList("main > section.project-research h3", originalContent.projectHeadings);
-      setTextList(".project-reflection h4", originalContent.reflectionSubheadings);
+      setTextList("#research h3, #synthese h3, #ideation h3, #umsetzung h3, #reflektion h3", originalContent.projectHeadings);
+      setTextList("#reflektion h4", originalContent.reflectionSubheadings);
       setHtmlList(".project-takeaways-list span", originalContent.takeaways);
 
       setHtml(document.querySelector(".project-two-column .project-details-text"), originalContent.problemText);
       setHtmlList(".project-two-column .project-details-list .icon-text span", originalContent.problemItems);
 
-      const researchSections = document.querySelectorAll("main > section.project-research");
-      const researchSection = researchSections[0];
+      const researchSection = document.getElementById("research");
       if (researchSection) {
         const researchText = researchSection.querySelector(".project-research-content > .project-research-text");
         if (researchText) {
@@ -1279,24 +1286,24 @@ const i18n = {
         setHtmlList(".project-research-split--personas .project-research-half--right .project-bullets span", originalContent.personasList || []);
       }
 
-      const synthesisSection = researchSections[1];
+      const synthesisSection = document.getElementById("synthese");
       if (synthesisSection) {
         const p = synthesisSection.querySelectorAll(".project-research-text--right p");
         setHtml(p[0], originalContent.synthesisText?.[0]);
         setHtml(p[1], originalContent.synthesisText?.[1]);
       }
 
-      const ideationSection = researchSections[2];
+      const ideationSection = document.getElementById("ideation");
       if (ideationSection) {
         const lowFiParagraphs = ideationSection.querySelectorAll(".project-research-text--left p");
         setHtml(lowFiParagraphs[0], originalContent.ideationLowFi?.[0]);
         setHtml(lowFiParagraphs[1], originalContent.ideationLowFi?.[1]);
         setHtml(ideationSection.querySelector(".project-ideation-final > p"), originalContent.ideationFinalIntro);
-        setHtmlList(".project-ideation-bullets ul:first-child .project-bullets span", originalContent.ideationFinalLeft || []);
-        setHtmlList(".project-ideation-bullets ul:last-child .project-bullets span", originalContent.ideationFinalRight || []);
+        setHtmlList(".project-ideation-bullets ul:first-child span", originalContent.ideationFinalLeft || []);
+        setHtmlList(".project-ideation-bullets ul:last-child span", originalContent.ideationFinalRight || []);
       }
 
-      const executionSection = document.querySelector("main > section.project-research.project-execution");
+      const executionSection = document.getElementById("umsetzung");
       if (executionSection) {
         const prototypeParagraphs = executionSection.querySelectorAll(".project-research-split > .project-research-text p");
         setHtml(prototypeParagraphs[0], originalContent.executionPrototype?.[0]);
@@ -1318,7 +1325,7 @@ const i18n = {
         }
       }
 
-      const reflectionSection = document.querySelector("main > section.project-research.project-reflection");
+      const reflectionSection = document.getElementById("reflektion");
       if (reflectionSection) {
         setHtml(reflectionSection.querySelector(".project-reflection-intro p"), originalContent.reflectionIntro);
         setHtmlList(".project-reflection-list--positive span", originalContent.reflectionPositive || []);
@@ -1329,14 +1336,6 @@ const i18n = {
         setHtml(nextParagraphs[2], originalContent.reflectionNext?.[2]);
       }
 
-      const isMobileViewport = window.matchMedia("(max-width: 639px)").matches;
-      if (isMobileViewport) {
-        const sectionTitles = document.querySelectorAll(".h2-section .title-text");
-        const lastTitle = sectionTitles[sectionTitles.length - 1];
-        if (lastTitle) {
-          lastTitle.textContent = "Takeaways";
-        }
-      }
     }
 
     footerHeading.textContent = translations.footerHeading;
